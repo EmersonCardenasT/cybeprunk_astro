@@ -1,0 +1,588 @@
+---
+// FeaturedSamsungS25Ultra.astro — Producto Destacado Samsung S25 Ultra · Minimal · Steel / Olive
+---
+
+<section id="producto-samsung" class="fps-section">
+
+  <!-- BG -->
+  <div class="fps-bg" aria-hidden="true">
+    <div class="fps-grain"></div>
+    <div class="fps-line fps-line-top"></div>
+    <div class="fps-line fps-line-bottom"></div>
+    <span class="fps-ghost">S25</span>
+  </div>
+
+  <div class="fps-inner">
+
+    <!-- ══ LEFT: INFO ══ -->
+    <div class="fps-info">
+
+      <p class="fps-eyebrow" data-reveal>
+        <span class="eyebrow-pip"></span>
+        Producto Destacado · Samsung
+      </p>
+
+      <div class="fps-name-block" data-reveal>
+        <div class="fps-brand-row">
+          <!-- Samsung wordmark SVG -->
+          <svg class="fps-brand-svg" viewBox="0 0 110 18" fill="none">
+            <text x="0" y="14" font-family="'DM Sans','Helvetica Neue',sans-serif"
+              font-size="13" font-weight="600" letter-spacing="3" fill="currentColor">SAMSUNG</text>
+          </svg>
+        </div>
+        <h1 class="fps-model">
+          Galaxy S25
+          <span class="fps-model-out">Ultra</span>
+        </h1>
+      </div>
+
+      <!-- Price -->
+      <div class="fps-price-block" data-reveal>
+        <span class="fps-price-old">$1.499</span>
+        <span class="fps-price">$1.249</span>
+        <span class="fps-badge-save">Ahorrás $250</span>
+      </div>
+
+      <div class="fps-divider" data-reveal></div>
+
+      <!-- Specs -->
+      <div class="fps-specs" data-reveal>
+        <div class="spec-row">
+          <span class="spec-key">Chip</span>
+          <span class="spec-val">Snapdragon 8 Elite · Galaxy AI</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">Pantalla</span>
+          <span class="spec-val">6.9" QHD+ Dynamic AMOLED · 120Hz</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">Cámara</span>
+          <span class="spec-val">200 MP + 50 MP + 10 MP · 100× Zoom</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">Batería</span>
+          <span class="spec-val">5.000 mAh · Carga 45W · S-Pen</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">Storage</span>
+          <span class="spec-val">256 GB / 512 GB / 1 TB</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">Material</span>
+          <span class="spec-val">Titanio + Armor Aluminum</span>
+        </div>
+      </div>
+
+      <div class="fps-divider" data-reveal></div>
+
+      <!-- Color selector -->
+      <div class="fps-color-select" data-reveal>
+        <span class="fps-select-label">Color</span>
+        <div class="fps-colors" role="group" aria-label="Colores disponibles">
+          <button class="fps-chip active" data-color="Titanio Negro"   style="--c:#1c1c1e" aria-pressed="true"  aria-label="Titanio Negro"></button>
+          <button class="fps-chip"        data-color="Titanio Plata"   style="--c:#c8c8cc" aria-pressed="false" aria-label="Titanio Plata"></button>
+          <button class="fps-chip"        data-color="Titanio Violeta" style="--c:#6e5b8a" aria-pressed="false" aria-label="Titanio Violeta"></button>
+          <button class="fps-chip"        data-color="Titanio Verde"   style="--c:#4a6651" aria-pressed="false" aria-label="Titanio Verde"></button>
+          <span class="fps-color-label" id="fpsColorLabel">Titanio Negro</span>
+        </div>
+      </div>
+
+      <!-- Storage selector -->
+      <div class="fps-storage-select" data-reveal>
+        <span class="fps-select-label">Almacenamiento</span>
+        <div class="fps-storage-opts" role="group">
+          <button class="fps-stor-btn active" data-gb="256" aria-pressed="true">256 GB</button>
+          <button class="fps-stor-btn"        data-gb="512" aria-pressed="false">512 GB</button>
+          <button class="fps-stor-btn"        data-gb="1024" aria-pressed="false">1 TB</button>
+        </div>
+      </div>
+
+      <!-- CTAs -->
+      <div class="fps-ctas" data-reveal>
+        <a href="#contacto" class="fps-cta-primary">
+          Comprar ahora
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#contacto" class="fps-cta-ghost">Consultar stock</a>
+      </div>
+
+      <!-- Trust pills -->
+      <div class="fps-trust" data-reveal>
+        <div class="trust-pill">
+          <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+            <path d="M6 1L1 3.5v5C1 10.9 3.2 12 6 12s5-1.1 5-3.5v-5z" stroke="currentColor" stroke-width="1" stroke-linejoin="round"/>
+          </svg>
+          Garantía 12 meses
+        </div>
+        <div class="trust-pill">
+          <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+            <path d="M6 1l1.5 3 3.5.5-2.5 2.4.6 3.6L6 9 3 10.5l.6-3.6L1 4.5 4.5 4z" stroke="currentColor" stroke-width="1" stroke-linejoin="round"/>
+          </svg>
+          Original Samsung
+        </div>
+        <div class="trust-pill">
+          <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+            <circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1"/>
+            <path d="M6 3v3.5l2 2" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+          </svg>
+          Entrega 24 h
+        </div>
+        <div class="trust-pill">
+          <!-- S-Pen icon -->
+          <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+            <path d="M8 2L10 4 4.5 9.5l-2.5.5.5-2.5z" stroke="currentColor" stroke-width="1" stroke-linejoin="round"/>
+          </svg>
+          S-Pen incluido
+        </div>
+      </div>
+
+    </div><!-- /fps-info -->
+
+    <!-- ══ RIGHT: VISUAL ══ -->
+    <div class="fps-visual" data-reveal>
+
+      <!-- Badge -->
+      <div class="fps-badge-float">
+        <span class="badge-pip"></span>
+        Nuevo · 2025
+      </div>
+
+      <!-- Image -->
+      <div class="fps-img-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=900&q=85&auto=format&fit=crop"
+          alt="Samsung Galaxy S25 Ultra"
+          class="fps-img"
+          width="900"
+          loading="eager"
+          decoding="async"
+        />
+        <!-- Ambient glow -->
+        <div class="fps-glow fps-glow-main"></div>
+        <div class="fps-glow fps-glow-secondary"></div>
+      </div>
+
+      <!-- Key feature pills floating on image side -->
+      <div class="fps-feature-pills">
+        <div class="fps-feat-pill">
+          <span class="fps-feat-val">200 MP</span>
+          <span class="fps-feat-lbl">Cámara principal</span>
+        </div>
+        <div class="fps-feat-pill">
+          <span class="fps-feat-val">100×</span>
+          <span class="fps-feat-lbl">Space Zoom</span>
+        </div>
+        <div class="fps-feat-pill">
+          <span class="fps-feat-val">Galaxy AI</span>
+          <span class="fps-feat-lbl">Inteligencia integrada</span>
+        </div>
+      </div>
+
+    </div><!-- /fps-visual -->
+
+  </div><!-- /fps-inner -->
+</section>
+
+<style>
+  /* ── PALETTE ── */
+  :root {
+    --steel:    #4a6278;
+    --steel-lt: #7a98ae;
+    --olive:    #6b7c55;
+    --olive-lt: #8fa070;
+    --white:    #f4f3ef;
+    --black:    #0a0a0a;
+  }
+
+  /* Light */
+  .fps-section {
+    --bg:      #f4f3ef;
+    --bg-card: #ffffff;
+    --text:    #0a0a0a;
+    --muted:   rgba(10,10,10,0.42);
+    --border:  rgba(10,10,10,0.08);
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.4s, color 0.4s;
+  }
+  /* Dark */
+  :root.dark .fps-section {
+    --bg:      #0c0c0c;
+    --bg-card: #111111;
+    --text:    #f4f3ef;
+    --muted:   rgba(244,243,239,0.38);
+    --border:  rgba(244,243,239,0.07);
+  }
+  :root.dark .fps-model-out { -webkit-text-stroke: 1px rgba(244,243,239,0.28) !important; }
+
+  /* ── SECTION ── */
+  .fps-section {
+    position: relative;
+    padding: 120px 0 100px;
+    font-family: 'DM Sans', 'Helvetica Neue', sans-serif;
+    overflow: hidden;
+  }
+
+  /* ── BG ── */
+  .fps-bg { position: absolute; inset: 0; pointer-events: none; }
+  .fps-grain {
+    position: absolute; inset: 0; opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+    background-size: 256px;
+  }
+  .fps-line { position: absolute; left: 0; right: 0; height: 1px; background: var(--border); }
+  .fps-line-top    { top: 0; }
+  .fps-line-bottom { bottom: 0; }
+
+  /* Ghost watermark */
+  .fps-ghost {
+    position: absolute;
+    left: 48%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(14rem, 28vw, 26rem);
+    font-weight: 400;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--border);
+    line-height: 1;
+    user-select: none;
+    opacity: 0.55;
+    white-space: nowrap;
+  }
+
+  /* ── INNER ── */
+  .fps-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 44px;
+    display: grid;
+    /* Info left, visual right — reversed from iPhone component for variety */
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  @media (max-width: 960px)  { .fps-inner { grid-template-columns: 1fr; gap: 52px; } }
+  @media (max-width: 640px)  { .fps-inner { padding: 0 20px; } }
+
+  /* ── INFO ── */
+  .fps-info { display: flex; flex-direction: column; gap: 28px; }
+
+  /* Eyebrow */
+  .fps-eyebrow {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.65rem; letter-spacing: 0.26em;
+    text-transform: uppercase; color: var(--steel-lt); margin: 0;
+  }
+  .eyebrow-pip {
+    width: 7px; height: 7px; background: var(--olive-lt);
+    border-radius: 50%; box-shadow: 0 0 8px var(--olive); flex-shrink: 0;
+  }
+
+  /* Name block */
+  .fps-name-block { display: flex; flex-direction: column; gap: 8px; }
+  .fps-brand-row { display: flex; align-items: center; }
+  .fps-brand-svg {
+    height: 16px; width: auto;
+    color: var(--muted);
+  }
+  .fps-model {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: clamp(2.8rem, 5.5vw, 4.6rem);
+    font-weight: 400;
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+    color: var(--text);
+    margin: 0;
+  }
+  .fps-model-out {
+    display: block;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(10,10,10,0.35);
+    font-size: 0.88em;
+  }
+
+  /* Price */
+  .fps-price-block {
+    display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap;
+  }
+  .fps-price-old {
+    font-size: 1rem; text-decoration: line-through;
+    color: var(--muted); opacity: 0.55;
+  }
+  .fps-price {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.5rem; font-weight: 400;
+    color: var(--text); letter-spacing: -0.04em; line-height: 1;
+  }
+  .fps-badge-save {
+    font-size: 0.6rem; font-weight: 600; letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--olive-lt);
+    background: rgba(107,124,85,0.1);
+    border: 1px solid rgba(107,124,85,0.25);
+    padding: 4px 10px; align-self: center;
+  }
+
+  /* Divider */
+  .fps-divider { width: 100%; height: 1px; background: var(--border); }
+
+  /* Specs */
+  .fps-specs { display: flex; flex-direction: column; gap: 0; }
+  .spec-row {
+    display: flex; align-items: baseline; gap: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .spec-row:first-child { padding-top: 0; }
+  .spec-row:last-child  { border-bottom: none; padding-bottom: 0; }
+  .spec-key {
+    font-size: 0.62rem; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--muted);
+    flex-shrink: 0; width: 80px;
+  }
+  .spec-val { font-size: 0.82rem; color: var(--text); font-weight: 400; line-height: 1.4; }
+
+  /* Selectors */
+  .fps-select-label {
+    display: block;
+    font-size: 0.62rem; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 10px;
+  }
+
+  .fps-color-select, .fps-storage-select { display: flex; flex-direction: column; }
+
+  .fps-colors { display: flex; align-items: center; gap: 10px; }
+  .fps-chip {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--c);
+    border: 2px solid transparent;
+    outline: 1px solid rgba(10,10,10,0.12);
+    cursor: pointer;
+    transition: transform 0.2s, outline-color 0.2s, border-color 0.2s;
+  }
+  :root.dark .fps-chip { outline-color: rgba(244,243,239,0.15); }
+  .fps-chip.active {
+    border-color: var(--steel-lt); outline-color: var(--steel-lt);
+    transform: scale(1.18);
+  }
+  .fps-chip:hover:not(.active) { transform: scale(1.1); }
+  .fps-color-label {
+    font-size: 0.62rem; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--muted); margin-left: 4px;
+    transition: opacity 0.25s;
+  }
+
+  .fps-storage-opts { display: flex; gap: 8px; flex-wrap: wrap; }
+  .fps-stor-btn {
+    padding: 8px 20px; font-size: 0.7rem; font-weight: 500;
+    letter-spacing: 0.1em; border: 1px solid var(--border);
+    background: transparent; color: var(--muted); cursor: pointer;
+    transition: border-color 0.25s, color 0.25s, background 0.25s, box-shadow 0.25s;
+  }
+  .fps-stor-btn.active {
+    border-color: var(--steel); color: var(--text);
+    background: rgba(74,98,120,0.06);
+    box-shadow: 0 0 14px rgba(74,98,120,0.12);
+  }
+  .fps-stor-btn:hover:not(.active) { border-color: var(--steel-lt); color: var(--text); }
+
+  /* CTAs */
+  .fps-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+  .fps-cta-primary {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 32px; font-size: 0.7rem; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    text-decoration: none;
+    background: var(--text); color: var(--bg);
+    transition: background 0.25s, box-shadow 0.25s, gap 0.25s;
+  }
+  .fps-cta-primary:hover {
+    background: var(--steel); color: var(--white);
+    box-shadow: 0 6px 28px rgba(74,98,120,0.35); gap: 16px;
+  }
+  .fps-cta-ghost {
+    display: inline-flex; align-items: center;
+    padding: 14px 28px; font-size: 0.7rem; font-weight: 500;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid var(--border); color: var(--muted);
+    transition: border-color 0.25s, color 0.25s;
+  }
+  .fps-cta-ghost:hover { border-color: var(--olive); color: var(--olive-lt); }
+
+  /* Trust pills */
+  .fps-trust { display: flex; gap: 8px; flex-wrap: wrap; }
+  .trust-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 5px 11px; border: 1px solid var(--border);
+    font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--muted); background: var(--bg-card);
+    transition: border-color 0.25s, color 0.25s;
+  }
+  .trust-pill svg { color: var(--steel-lt); flex-shrink: 0; }
+  .trust-pill:hover { border-color: var(--steel-lt); color: var(--text); }
+
+  /* ── VISUAL ── */
+  .fps-visual {
+    display: flex; flex-direction: column;
+    align-items: center; gap: 28px;
+    position: relative;
+  }
+
+  /* Badge */
+  .fps-badge-float {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 6px 16px; border: 1px solid var(--border);
+    background: var(--bg-card);
+    font-size: 0.62rem; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--muted); font-weight: 500;
+    animation: fadeDown 0.8s 0.3s both;
+  }
+  .badge-pip {
+    width: 6px; height: 6px; background: var(--steel-lt);
+    border-radius: 50%; box-shadow: 0 0 8px var(--steel);
+  }
+
+  /* Image wrap */
+  .fps-img-wrap {
+    position: relative; width: 100%; max-width: 420px;
+  }
+  .fps-img {
+    width: 100%; height: 500px;
+    object-fit: cover; object-position: center top;
+    display: block;
+    animation: floatDevice 6s ease-in-out infinite;
+    position: relative; z-index: 1;
+  }
+  @media (max-width: 960px) { .fps-img { height: 360px; } }
+
+  @keyframes floatDevice {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-10px); }
+  }
+
+  /* Glows */
+  .fps-glow {
+    position: absolute; pointer-events: none;
+    border-radius: 50%; filter: blur(30px);
+    animation: glowPulse 6s ease-in-out infinite;
+  }
+  .fps-glow-main {
+    bottom: -20px; left: 10%; right: 10%; height: 60px;
+    background: radial-gradient(ellipse, rgba(74,98,120,0.22) 0%, transparent 70%);
+  }
+  .fps-glow-secondary {
+    top: 20%; left: -10%; width: 80px; height: 200px;
+    background: radial-gradient(ellipse, rgba(107,124,85,0.1) 0%, transparent 70%);
+    animation-delay: 2s;
+  }
+  @keyframes glowPulse {
+    0%, 100% { opacity: 0.7; }
+    50%       { opacity: 1; }
+  }
+
+  /* Feature pills stacked on the right side */
+  .fps-feature-pills {
+    display: flex; flex-direction: column; gap: 8px;
+    align-self: flex-end;
+    width: 100%; max-width: 420px;
+  }
+  .fps-feat-pill {
+    display: flex; align-items: baseline;
+    justify-content: space-between;
+    padding: 10px 16px;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    transition: border-color 0.25s, background 0.25s;
+  }
+  .fps-feat-pill:hover {
+    border-color: var(--steel-lt);
+    background: color-mix(in srgb, var(--bg-card), var(--steel) 3%);
+  }
+  .fps-feat-val {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem; font-weight: 400;
+    color: var(--text); letter-spacing: -0.02em;
+  }
+  .fps-feat-lbl {
+    font-size: 0.6rem; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--muted); font-weight: 300;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── REVEAL ── */
+  [data-reveal] {
+    opacity: 0; transform: translateY(22px);
+    transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1),
+                transform 0.75s cubic-bezier(0.22,1,0.36,1);
+  }
+  [data-reveal].visible { opacity: 1; transform: translateY(0); }
+
+  .fps-info [data-reveal]:nth-child(1)  { transition-delay: 0.05s; }
+  .fps-info [data-reveal]:nth-child(2)  { transition-delay: 0.12s; }
+  .fps-info [data-reveal]:nth-child(3)  { transition-delay: 0.19s; }
+  .fps-info [data-reveal]:nth-child(4)  { transition-delay: 0.26s; }
+  .fps-info [data-reveal]:nth-child(5)  { transition-delay: 0.33s; }
+  .fps-info [data-reveal]:nth-child(6)  { transition-delay: 0.40s; }
+  .fps-info [data-reveal]:nth-child(7)  { transition-delay: 0.47s; }
+  .fps-info [data-reveal]:nth-child(8)  { transition-delay: 0.54s; }
+  .fps-info [data-reveal]:nth-child(9)  { transition-delay: 0.61s; }
+  .fps-visual[data-reveal]              { transition-delay: 0.20s; }
+</style>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
+
+<script>
+(function () {
+  /* ── REVEAL ── */
+  const obs = new IntersectionObserver(
+    entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    }),
+    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+  );
+  document.querySelectorAll('[data-reveal]').forEach(el => obs.observe(el));
+
+  /* ── COLOR CHIPS ── */
+  const chips = document.querySelectorAll('.fps-chip');
+  const colorLabel = document.getElementById('fpsColorLabel');
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      chips.forEach(c => { c.classList.remove('active'); c.setAttribute('aria-pressed','false'); });
+      chip.classList.add('active');
+      chip.setAttribute('aria-pressed','true');
+      if (colorLabel) {
+        colorLabel.style.opacity = '0';
+        setTimeout(() => {
+          colorLabel.textContent = (chip as HTMLElement).dataset.color ?? '';
+          colorLabel.style.opacity = '1';
+        }, 150);
+      }
+    });
+  });
+
+  /* ── STORAGE ── */
+  document.querySelectorAll('.fps-stor-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.fps-stor-btn').forEach(b => {
+        b.classList.remove('active'); b.setAttribute('aria-pressed','false');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-pressed','true');
+    });
+  });
+})();
+</script>

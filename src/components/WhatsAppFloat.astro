@@ -1,0 +1,92 @@
+---
+interface Props {
+  phone?: string;
+  message?: string;
+}
+const { phone = '', message = 'Hola! Quiero más información.' } = Astro.props as Props;
+const href = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+---
+
+<div class="wa-fab">
+  <a href={href} class="wa-button" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    <svg class="wa-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M12 3a8.9 8.9 0 0 0-7.9 12.9L3 21l5.3-1a8.9 8.9 0 1 0 3.7-17Zm0 1.8a7.1 7.1 0 0 1 6 10.7c-.3.5-.9 1.2-1.8 1.2-.3 0-.6-.1-.8-.2-1.2-.4-2.4-.9-3.5-1.6-1.1-.7-2.1-1.6-2.9-2.6-.3-.4-.6-.8-.8-1.2-.2-.4-.2-.8 0-1.2.2-.5.4-.8.6-1.2.2-.4.5-.6.9-.6.2 0 .3 0 .5.1.2.1.4.2.5.4.2.3.4.6.5.9.1.2.1.4 0 .6-.1.2-.3.5-.4.6-.1.1-.1.2 0 .4.3.5.8 1.1 1.3 1.5.6.5 1.2.8 1.9 1.1.1.1.3.1.4 0 .2-.1.4-.3.6-.5.2-.1.4-.1.6 0 .4.2.9.5 1.3.7.2.1.4.2.5.4.1.2.1.5 0 .8-.1.4-.4.8-.8 1.1A7.1 7.1 0 0 1 12 4.8Z" fill="currentColor"/>
+    </svg>
+  </a>
+</div>
+
+<style>
+  :root {
+    --black:    #0a0a0a;
+    --white:    #f4f3ef;
+    --steel:    #4a6278;
+    --steel-lt: #7a98ae;
+    --olive:    #6b7c55;
+    --olive-lt: #8fa070;
+  }
+
+  .wa-fab {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 60;
+    animation: waFloat 6s ease-in-out infinite;
+  }
+  @media (min-width: 900px) {
+    .wa-fab { right: 26px; bottom: 26px; }
+  }
+
+  .wa-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    color: var(--white);
+    text-decoration: none;
+    border: 1px solid rgba(10,10,10,0.1);
+    background: linear-gradient(180deg, color-mix(in srgb, #25D366 86%, var(--olive) 14%), color-mix(in srgb, #128C7E 70%, var(--steel) 30%));
+    box-shadow:
+      0 10px 24px rgba(18, 140, 126, 0.32),
+      inset 0 1px 0 rgba(255,255,255,0.18);
+    transition: transform .2s ease, box-shadow .25s ease, filter .25s ease, opacity .25s ease;
+    will-change: transform, filter;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .wa-button:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 10px 28px rgba(18, 140, 126, 0.45),
+      inset 0 1px 0 rgba(255,255,255,0.25);
+    filter: saturate(1.05);
+  }
+  .wa-button:active { transform: translateY(0); }
+
+  .wa-icon { display: block; }
+
+  :root.dark .wa-button {
+    border-color: rgba(244,243,239,0.1);
+    box-shadow:
+      0 8px 24px rgba(37, 211, 102, 0.22),
+      inset 0 1px 0 rgba(255,255,255,0.06);
+  }
+
+  @media (max-width: 520px) {
+    .wa-button { width: 52px; height: 52px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .wa-button { transition: none; }
+    .wa-fab { animation: none; }
+  }
+
+  @keyframes waFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+  }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
