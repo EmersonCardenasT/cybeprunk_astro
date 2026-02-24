@@ -1,0 +1,348 @@
+---
+// BrandsCarousel.astro — Carrusel infinito de marcas · Minimal · Steel / Olive
+---
+
+<section id="marcas" class="brands-section">
+
+  <div class="brands-bg" aria-hidden="true">
+    <div class="brands-grain"></div>
+    <div class="brands-line brands-line-top"></div>
+    <div class="brands-line brands-line-bottom"></div>
+  </div>
+
+  <div class="brands-inner">
+
+    <!-- Header -->
+    <div class="brands-header" data-reveal>
+      <p class="brands-eyebrow">
+        <span class="eyebrow-pip"></span>
+        Marcas oficiales
+      </p>
+      <p class="brands-sub">Trabajamos con las mejores marcas del mercado</p>
+    </div>
+
+    <!-- Carousel wrapper (clip) -->
+    <div class="brands-track-wrap" aria-label="Marcas disponibles">
+
+      <!-- Fade edges -->
+      <div class="brands-fade brands-fade-left"  aria-hidden="true"></div>
+      <div class="brands-fade brands-fade-right" aria-hidden="true"></div>
+
+      <!-- Track: duplicated for seamless loop -->
+      <div class="brands-track" id="brandsTrack">
+
+        <!-- Set A -->
+        <div class="brands-set" aria-hidden="false">
+
+          <div class="brand-item">
+            <!-- Apple -->
+            <svg class="brand-logo" viewBox="0 0 80 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M23.5 5.2c.9-1.1 1.5-2.6 1.3-4.2-1.3.1-2.9.9-3.8 2-.8 1-1.6 2.5-1.3 4 1.4.1 2.9-.7 3.8-1.8zm1.3 2.3c-2.1-.1-3.9 1.2-4.9 1.2-1 0-2.5-1.1-4.2-1.1-2.2 0-4.2 1.3-5.3 3.2-2.3 3.9-.6 9.7 1.6 12.9 1.1 1.6 2.4 3.3 4.1 3.3 1.6-.1 2.2-1 4.2-1 2 0 2.5 1 4.2 1 1.8 0 2.9-1.6 4-3.2.7-1 1.2-2.1 1.6-3.2-4.3-1.6-5-7.4-.3-9.5-.9-1.6-2.6-3.6-5-3.6z" fill="currentColor"/>
+              <text x="33" y="19" font-family="'DM Sans','Helvetica Neue',sans-serif" font-size="13" font-weight="600" letter-spacing="1" fill="currentColor">Apple</text>
+            </svg>
+          </div>
+
+          <div class="brand-item">
+            <!-- Samsung wordmark -->
+            <svg class="brand-logo brand-logo-wide" viewBox="0 0 120 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <text x="0" y="20" font-family="'DM Sans','Helvetica Neue',sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="currentColor">SAMSUNG</text>
+            </svg>
+          </div>
+
+          <div class="brand-item">
+            <!-- Xiaomi -->
+            <svg class="brand-logo brand-logo-wide" viewBox="0 0 100 28" fill="none">
+              <text x="0" y="20" font-family="'DM Sans','Helvetica Neue',sans-serif" font-size="15" font-weight="600" letter-spacing="2.5" fill="currentColor">XIAOMI</text>
+            </svg>
+          </div>
+
+          <div class="brand-item">
+            <!-- Motorola M logo + wordmark -->
+            <svg class="brand-logo brand-logo-wide" viewBox="0 0 130 28" fill="none">
+              <circle cx="14" cy="14" r="12" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M7 19V10l4.5 6 2.5-3.5 2.5 3.5L21 10v9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <text x="32" y="20" font-family="'DM Sans','Helvetica Neue',sans-serif" font-size="14" font-weight="600" letter-spacing="2" fill="currentColor">MOTOROLA</text>
+            </svg>
+          </div>
+
+          <div class="brand-item">
+            <!-- Redmi -->
+            <svg class="brand-logo brand-logo-wide" viewBox="0 0 90 28" fill="none">
+              <text x="0" y="20" font-family="'DM Sans','Helvetica Neue',sans-serif" font-size="15" font-weight="600" letter-spacing="2" fill="currentColor">REDMI</text>
+            </svg>
+          </div>
+
+          <div class="brand-item">
+            <!-- OnePlus -->
+            <svg class="brand-logo brand-logo-wide" viewBox="0 0 115 28" fill="none">
+              <text x="0" y="20" font-family="'DM Sans','Helvetica Neue',sans-serif" font-size="15" font-weight="500" letter-spacing="2" fill="currentColor">OnePlus</text>
+            </svg>
+          </div>
+
+          <div class="brand-item">
+            <!-- Huawei -->
+            <svg class="brand-logo brand-logo-wide" viewBox="0 0 110 28" fill="none">
+              <!-- Petal icon -->
+              <ellipse cx="9" cy="14" rx="4.5" ry="8" stroke="currentColor" stroke-width="1.3" transform="rotate(-45 9 14)"/>
+              <ellipse cx="9" cy="14" rx="4.5" ry="8" stroke="currentColor" stroke-width="1.3" transform="rotate(45 9 14)"/>
+              <text x="24" y="20" font-family="'DM Sans','Helvetica Neue',sans-serif" font-size="14" font-weight="600" letter-spacing="2" fill="currentColor">HUAWEI</text>
+            </svg>
+          </div>
+
+          <div class="brand-item">
+            <!-- Oppo -->
+            <svg class="brand-logo brand-logo-wide" viewBox="0 0 80 28" fill="none">
+              <text x="0" y="20" font-family="'DM Sans','Helvetica Neue',sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="currentColor">OPPO</text>
+            </svg>
+          </div>
+
+          <div class="brand-item">
+            <!-- Realme -->
+            <svg class="brand-logo brand-logo-wide" viewBox="0 0 100 28" fill="none">
+              <text x="0" y="20" font-family="'DM Sans','Helvetica Neue',sans-serif" font-size="15" font-weight="600" letter-spacing="2" fill="currentColor">REALME</text>
+            </svg>
+          </div>
+
+          <div class="brand-item">
+            <!-- Nokia -->
+            <svg class="brand-logo brand-logo-wide" viewBox="0 0 85 28" fill="none">
+              <text x="0" y="20" font-family="'DM Sans','Helvetica Neue',sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="currentColor">NOKIA</text>
+            </svg>
+          </div>
+
+          <div class="brand-item">
+            <!-- Google Pixel -->
+            <svg class="brand-logo brand-logo-wide" viewBox="0 0 100 28" fill="none">
+              <!-- G circle -->
+              <circle cx="11" cy="14" r="9" stroke="currentColor" stroke-width="1.4"/>
+              <path d="M11 14h6a6 6 0 1 1-2.3-4.7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+              <text x="26" y="20" font-family="'DM Sans','Helvetica Neue',sans-serif" font-size="13" font-weight="500" letter-spacing="1" fill="currentColor">Pixel</text>
+            </svg>
+          </div>
+
+          <div class="brand-item">
+            <!-- Sony Xperia -->
+            <svg class="brand-logo brand-logo-wide" viewBox="0 0 80 28" fill="none">
+              <text x="0" y="20" font-family="'DM Sans','Helvetica Neue',sans-serif" font-size="15" font-weight="600" letter-spacing="2.5" fill="currentColor">SONY</text>
+            </svg>
+          </div>
+
+        </div><!-- /set A -->
+
+        <!-- Set B (exact duplicate for infinite loop) -->
+        <div class="brands-set" aria-hidden="true">
+          <div class="brand-item">
+            <svg class="brand-logo" viewBox="0 0 80 28" fill="none"><path d="M23.5 5.2c.9-1.1 1.5-2.6 1.3-4.2-1.3.1-2.9.9-3.8 2-.8 1-1.6 2.5-1.3 4 1.4.1 2.9-.7 3.8-1.8zm1.3 2.3c-2.1-.1-3.9 1.2-4.9 1.2-1 0-2.5-1.1-4.2-1.1-2.2 0-4.2 1.3-5.3 3.2-2.3 3.9-.6 9.7 1.6 12.9 1.1 1.6 2.4 3.3 4.1 3.3 1.6-.1 2.2-1 4.2-1 2 0 2.5 1 4.2 1 1.8 0 2.9-1.6 4-3.2.7-1 1.2-2.1 1.6-3.2-4.3-1.6-5-7.4-.3-9.5-.9-1.6-2.6-3.6-5-3.6z" fill="currentColor"/><text x="33" y="19" font-family="'DM Sans','Helvetica Neue',sans-serif" font-size="13" font-weight="600" letter-spacing="1" fill="currentColor">Apple</text></svg>
+          </div>
+          <div class="brand-item"><svg class="brand-logo brand-logo-wide" viewBox="0 0 120 28" fill="none"><text x="0" y="20" font-family="'DM Sans','Helvetica Neue',sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="currentColor">SAMSUNG</text></svg></div>
+          <div class="brand-item"><svg class="brand-logo brand-logo-wide" viewBox="0 0 100 28" fill="none"><text x="0" y="20" font-family="'DM Sans','Helvetica Neue',sans-serif" font-size="15" font-weight="600" letter-spacing="2.5" fill="currentColor">XIAOMI</text></svg></div>
+          <div class="brand-item"><svg class="brand-logo brand-logo-wide" viewBox="0 0 130 28" fill="none"><circle cx="14" cy="14" r="12" stroke="currentColor" stroke-width="1.5"/><path d="M7 19V10l4.5 6 2.5-3.5 2.5 3.5L21 10v9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><text x="32" y="20" font-family="'DM Sans','Helvetica Neue',sans-serif" font-size="14" font-weight="600" letter-spacing="2" fill="currentColor">MOTOROLA</text></svg></div>
+          <div class="brand-item"><svg class="brand-logo brand-logo-wide" viewBox="0 0 90 28" fill="none"><text x="0" y="20" font-family="'DM Sans','Helvetica Neue',sans-serif" font-size="15" font-weight="600" letter-spacing="2" fill="currentColor">REDMI</text></svg></div>
+          <div class="brand-item"><svg class="brand-logo brand-logo-wide" viewBox="0 0 115 28" fill="none"><text x="0" y="20" font-family="'DM Sans','Helvetica Neue',sans-serif" font-size="15" font-weight="500" letter-spacing="2" fill="currentColor">OnePlus</text></svg></div>
+          <div class="brand-item"><svg class="brand-logo brand-logo-wide" viewBox="0 0 110 28" fill="none"><ellipse cx="9" cy="14" rx="4.5" ry="8" stroke="currentColor" stroke-width="1.3" transform="rotate(-45 9 14)"/><ellipse cx="9" cy="14" rx="4.5" ry="8" stroke="currentColor" stroke-width="1.3" transform="rotate(45 9 14)"/><text x="24" y="20" font-family="'DM Sans','Helvetica Neue',sans-serif" font-size="14" font-weight="600" letter-spacing="2" fill="currentColor">HUAWEI</text></svg></div>
+          <div class="brand-item"><svg class="brand-logo brand-logo-wide" viewBox="0 0 80 28" fill="none"><text x="0" y="20" font-family="'DM Sans','Helvetica Neue',sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="currentColor">OPPO</text></svg></div>
+          <div class="brand-item"><svg class="brand-logo brand-logo-wide" viewBox="0 0 100 28" fill="none"><text x="0" y="20" font-family="'DM Sans','Helvetica Neue',sans-serif" font-size="15" font-weight="600" letter-spacing="2" fill="currentColor">REALME</text></svg></div>
+          <div class="brand-item"><svg class="brand-logo brand-logo-wide" viewBox="0 0 85 28" fill="none"><text x="0" y="20" font-family="'DM Sans','Helvetica Neue',sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="currentColor">NOKIA</text></svg></div>
+          <div class="brand-item"><svg class="brand-logo brand-logo-wide" viewBox="0 0 100 28" fill="none"><circle cx="11" cy="14" r="9" stroke="currentColor" stroke-width="1.4"/><path d="M11 14h6a6 6 0 1 1-2.3-4.7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><text x="26" y="20" font-family="'DM Sans','Helvetica Neue',sans-serif" font-size="13" font-weight="500" letter-spacing="1" fill="currentColor">Pixel</text></svg></div>
+          <div class="brand-item"><svg class="brand-logo brand-logo-wide" viewBox="0 0 80 28" fill="none"><text x="0" y="20" font-family="'DM Sans','Helvetica Neue',sans-serif" font-size="15" font-weight="600" letter-spacing="2.5" fill="currentColor">SONY</text></svg></div>
+        </div><!-- /set B -->
+
+      </div><!-- /brands-track -->
+    </div><!-- /brands-track-wrap -->
+
+  </div><!-- /brands-inner -->
+</section>
+
+<style>
+  /* ── PALETTE ── */
+  :root {
+    --steel:    #4a6278;
+    --steel-lt: #7a98ae;
+    --olive:    #6b7c55;
+    --olive-lt: #8fa070;
+    --white:    #f4f3ef;
+    --black:    #0a0a0a;
+  }
+
+  /* Light */
+  .brands-section {
+    --bg:      #f4f3ef;
+    --bg-card: #ffffff;
+    --text:    #0a0a0a;
+    --muted:   rgba(10,10,10,0.35);
+    --border:  rgba(10,10,10,0.08);
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.4s, color 0.4s;
+  }
+  /* Dark */
+  :root.dark .brands-section {
+    --bg:      #0c0c0c;
+    --bg-card: #111111;
+    --text:    #f4f3ef;
+    --muted:   rgba(244,243,239,0.35);
+    --border:  rgba(244,243,239,0.07);
+  }
+
+  /* ── SECTION ── */
+  .brands-section {
+    position: relative;
+    padding: 80px 0;
+    font-family: 'DM Sans', 'Helvetica Neue', sans-serif;
+    overflow: hidden;
+  }
+
+  /* ── BG ── */
+  .brands-bg { position: absolute; inset: 0; pointer-events: none; }
+  .brands-grain {
+    position: absolute; inset: 0; opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+    background-size: 256px;
+  }
+  .brands-line { position: absolute; left: 0; right: 0; height: 1px; background: var(--border); }
+  .brands-line-top    { top: 0; }
+  .brands-line-bottom { bottom: 0; }
+
+  /* ── INNER ── */
+  .brands-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 44px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+  }
+  @media (max-width: 640px) { .brands-inner { padding: 0 20px; gap: 28px; } }
+
+  /* ── HEADER ── */
+  .brands-header {
+    display: flex; align-items: center;
+    justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  }
+  .brands-eyebrow {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.65rem; letter-spacing: 0.26em;
+    text-transform: uppercase; color: var(--steel-lt); margin: 0;
+  }
+  .eyebrow-pip {
+    width: 7px; height: 7px; background: var(--olive-lt);
+    border-radius: 50%; box-shadow: 0 0 8px var(--olive); flex-shrink: 0;
+  }
+  .brands-sub {
+    font-size: 0.72rem; color: var(--muted);
+    letter-spacing: 0.06em; margin: 0; font-weight: 300;
+  }
+
+  /* ── TRACK WRAPPER (clip + fades) ── */
+  .brands-track-wrap {
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 28px 0;
+  }
+
+  /* Edge fade masks */
+  .brands-fade {
+    position: absolute; top: 0; bottom: 0; width: 140px;
+    z-index: 2; pointer-events: none;
+  }
+  .brands-fade-left  {
+    left: 0;
+    background: linear-gradient(to right, var(--bg) 0%, transparent 100%);
+  }
+  .brands-fade-right {
+    right: 0;
+    background: linear-gradient(to left, var(--bg) 0%, transparent 100%);
+  }
+
+  /* ── TRACK ── */
+  .brands-track {
+    display: flex;
+    width: max-content;
+    animation: infiniteScroll 30s linear infinite;
+    will-change: transform;
+  }
+  .brands-track:hover { animation-play-state: paused; }
+
+  @keyframes infiniteScroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* exactly half = one set width */
+  }
+
+  /* ── SET ── */
+  .brands-set {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex-shrink: 0;
+  }
+
+  /* ── BRAND ITEM ── */
+  .brand-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 48px;
+    position: relative;
+    cursor: default;
+    transition: opacity 0.25s;
+  }
+  /* Vertical separator between items */
+  .brand-item::after {
+    content: '';
+    position: absolute;
+    right: 0; top: 20%; bottom: 20%;
+    width: 1px;
+    background: var(--border);
+  }
+  .brand-item:last-child::after { display: none; }
+
+  .brand-item:hover { opacity: 0.7; }
+
+  /* ── LOGOS ── */
+  .brand-logo {
+    height: 20px;
+    width: auto;
+    color: var(--muted);
+    transition: color 0.3s;
+    display: block;
+  }
+  .brand-logo-wide { height: 20px; }
+
+  .brand-item:hover .brand-logo { color: var(--text); }
+
+  /* ── REVEAL ── */
+  [data-reveal] {
+    opacity: 0; transform: translateY(18px);
+    transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1),
+                transform 0.7s cubic-bezier(0.22,1,0.36,1);
+  }
+  [data-reveal].visible { opacity: 1; transform: translateY(0); }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .brands-track { animation: none; }
+    .brands-set:last-child { display: none; }
+  }
+</style>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
+
+<script>
+(function () {
+  /* ── REVEAL ── */
+  const obs = new IntersectionObserver(
+    entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    }),
+    { threshold: 0.1 }
+  );
+  document.querySelectorAll('[data-reveal]').forEach(el => obs.observe(el));
+})();
+</script>

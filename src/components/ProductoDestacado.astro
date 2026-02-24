@@ -1,0 +1,641 @@
+---
+// FeaturedProduct.astro — Producto Destacado · iPhone 17 Pro Max
+---
+
+<section id="producto-destacado" class="fp-section">
+
+  <!-- BG elements -->
+  <div class="fp-bg" aria-hidden="true">
+    <div class="fp-grain"></div>
+    <div class="fp-line fp-line-top"></div>
+    <div class="fp-line fp-line-bottom"></div>
+    <!-- Large faint number -->
+    <span class="fp-ghost-num" aria-hidden="true">17</span>
+  </div>
+
+  <div class="fp-inner">
+
+    <!-- ── LEFT: IMAGE PANEL ── -->
+    <div class="fp-visual" data-reveal>
+
+      <!-- Badge flotante -->
+      <div class="fp-badge-float">
+        <span class="badge-dot"></span>
+        Nuevo · 2025
+      </div>
+
+      <!-- Phone image -->
+      <div class="fp-image-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=900&q=85&auto=format&fit=crop"
+          alt="iPhone 17 Pro Max en titanio negro"
+          class="fp-phone-img"
+          width="900"
+          loading="eager"
+          decoding="async"
+        />
+        <!-- Glow -->
+        <div class="fp-glow" aria-hidden="true"></div>
+      </div>
+
+      <!-- Color chips -->
+      <div class="fp-colors" role="group" aria-label="Colores disponibles">
+        <button class="color-chip active" data-color="Titanio Negro"
+          style="--c:#1c1c1e" aria-pressed="true" aria-label="Titanio Negro"></button>
+        <button class="color-chip" data-color="Titanio Blanco"
+          style="--c:#e8e5de" aria-pressed="false" aria-label="Titanio Blanco"></button>
+        <button class="color-chip" data-color="Titanio Desert"
+          style="--c:#b5956a" aria-pressed="false" aria-label="Titanio Desert"></button>
+        <button class="color-chip" data-color="Titanio Natural"
+          style="--c:#8c8c8c" aria-pressed="false" aria-label="Titanio Natural"></button>
+        <span class="color-label" id="colorLabel">Titanio Negro</span>
+      </div>
+
+    </div>
+
+    <!-- ── RIGHT: INFO PANEL ── -->
+    <div class="fp-info">
+
+      <!-- Eyebrow -->
+      <p class="fp-eyebrow" data-reveal>
+        <span class="eyebrow-pip"></span>
+        Producto Destacado
+      </p>
+
+      <!-- Name -->
+      <div class="fp-name-block" data-reveal>
+        <h2 class="fp-brand">Apple</h2>
+        <h1 class="fp-model">iPhone 17<br/><span class="model-sub">Pro Max</span></h1>
+      </div>
+
+      <!-- Price -->
+      <div class="fp-price-block" data-reveal>
+        <span class="fp-price-old">$1.599</span>
+        <span class="fp-price">$1.399</span>
+        <span class="fp-badge-save">Ahorrás $200</span>
+      </div>
+
+      <!-- Divider -->
+      <div class="fp-divider" data-reveal></div>
+
+      <!-- Specs grid -->
+      <div class="fp-specs" data-reveal>
+        <div class="spec-row">
+          <span class="spec-key">Chip</span>
+          <span class="spec-val">A19 Pro Bionic</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">Pantalla</span>
+          <span class="spec-val">6.9" Super Retina XDR · 120Hz</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">Cámara</span>
+          <span class="spec-val">48 MP + 48 MP + 12 MP · ProRAW</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">Batería</span>
+          <span class="spec-val">4.900 mAh · Carga 45W</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">Storage</span>
+          <span class="spec-val">256 GB / 512 GB / 1 TB</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">Material</span>
+          <span class="spec-val">Titanio grado 5 + Ceramic Shield</span>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="fp-divider" data-reveal></div>
+
+      <!-- Storage selector -->
+      <div class="fp-storage-select" data-reveal>
+        <span class="storage-label">Almacenamiento</span>
+        <div class="storage-options" role="group" aria-label="Almacenamiento">
+          <button class="storage-btn active" data-gb="256" aria-pressed="true">256 GB</button>
+          <button class="storage-btn" data-gb="512" aria-pressed="false">512 GB</button>
+          <button class="storage-btn" data-gb="1024" aria-pressed="false">1 TB</button>
+        </div>
+      </div>
+
+      <!-- CTAs -->
+      <div class="fp-ctas" data-reveal>
+        <a href="#contacto" class="cta-buy">
+          Comprar ahora
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#contacto" class="cta-ask">Consultar stock</a>
+      </div>
+
+      <!-- Trust pills -->
+      <div class="fp-trust" data-reveal>
+        <div class="trust-pill">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M6 1l1.5 3 3.5.5-2.5 2.4.6 3.6L6 9 3 10.5l.6-3.6L1 4.5 4.5 4z" stroke="currentColor" stroke-width="1" stroke-linejoin="round"/>
+          </svg>
+          Garantía 12 meses
+        </div>
+        <div class="trust-pill">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M6 1L1 3.5v5C1 10.9 3.2 12 6 12s5-1.1 5-3.5v-5z" stroke="currentColor" stroke-width="1" stroke-linejoin="round"/>
+          </svg>
+          Producto original
+        </div>
+        <div class="trust-pill">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1"/>
+            <path d="M6 3v3.5l2 2" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+          </svg>
+          Entrega 24 h
+        </div>
+      </div>
+
+    </div>
+    <!-- /fp-info -->
+
+  </div>
+</section>
+
+<style>
+  /* ── PALETTE ── */
+  :root {
+    --black:    #0a0a0a;
+    --white:    #f4f3ef;
+    --steel:    #4a6278;
+    --steel-lt: #7a98ae;
+    --olive:    #6b7c55;
+    --olive-lt: #8fa070;
+  }
+
+  /* Light */
+  .fp-section {
+    --bg:       #f4f3ef;
+    --bg-card:  #ffffff;
+    --text:     #0a0a0a;
+    --muted:    rgba(10,10,10,0.42);
+    --border:   rgba(10,10,10,0.08);
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.4s, color 0.4s;
+  }
+  /* Dark */
+  :root.dark .fp-section {
+    --bg:       #0c0c0c;
+    --bg-card:  #111111;
+    --text:     #f4f3ef;
+    --muted:    rgba(244,243,239,0.38);
+    --border:   rgba(244,243,239,0.07);
+  }
+
+  /* ── SECTION ── */
+  .fp-section {
+    position: relative;
+    padding: 120px 0 100px;
+    font-family: 'DM Sans', 'Helvetica Neue', sans-serif;
+    overflow: hidden;
+  }
+
+  /* ── BG ── */
+  .fp-bg { position: absolute; inset: 0; pointer-events: none; }
+  .fp-grain {
+    position: absolute; inset: 0; opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+    background-size: 256px;
+  }
+  .fp-line { position: absolute; left: 0; right: 0; height: 1px; background: var(--border); }
+  .fp-line-top    { top: 0; }
+  .fp-line-bottom { bottom: 0; }
+
+  /* Ghost number watermark */
+  .fp-ghost-num {
+    position: absolute;
+    right: -2%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(16rem, 30vw, 28rem);
+    font-weight: 400;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--border);
+    line-height: 1;
+    user-select: none;
+    pointer-events: none;
+    opacity: 0.6;
+  }
+
+  /* ── INNER ── */
+  .fp-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 44px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  @media (max-width: 900px)  { .fp-inner { grid-template-columns: 1fr; gap: 48px; } }
+  @media (max-width: 640px)  { .fp-inner { padding: 0 20px; } }
+
+  /* ── VISUAL PANEL ── */
+  .fp-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    position: relative;
+  }
+
+  /* Floating badge */
+  .fp-badge-float {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+    animation: fadeDown 0.8s 0.2s both;
+  }
+  .badge-dot {
+    width: 6px; height: 6px;
+    background: var(--olive-lt);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--olive);
+  }
+
+  /* Phone image */
+  .fp-image-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+  }
+  .fp-phone-img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    animation: floatUp 6s ease-in-out infinite;
+    position: relative;
+    z-index: 1;
+  }
+  @media (max-width: 900px) { .fp-phone-img { height: 360px; } }
+
+  @keyframes floatUp {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-10px); }
+  }
+
+  /* Glow beneath phone */
+  .fp-glow {
+    position: absolute;
+    bottom: -20px; left: 50%;
+    transform: translateX(-50%);
+    width: 70%; height: 60px;
+    background: radial-gradient(ellipse, rgba(74,98,120,0.2) 0%, transparent 70%);
+    filter: blur(16px);
+    pointer-events: none;
+    animation: glowPulse 6s ease-in-out infinite;
+  }
+  @keyframes glowPulse {
+    0%, 100% { opacity: 0.7; transform: translateX(-50%) scaleX(1); }
+    50%       { opacity: 1;   transform: translateX(-50%) scaleX(1.1); }
+  }
+
+  /* Color chips */
+  .fp-colors {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .color-chip {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--c);
+    border: 2px solid transparent;
+    outline: 1px solid rgba(10,10,10,0.12);
+    cursor: pointer;
+    transition: transform 0.2s, outline-color 0.2s, border-color 0.2s;
+  }
+  :root.dark .color-chip { outline-color: rgba(244,243,239,0.15); }
+  .color-chip.active {
+    border-color: var(--steel-lt);
+    outline-color: var(--steel-lt);
+    transform: scale(1.18);
+  }
+  .color-chip:hover:not(.active) { transform: scale(1.1); }
+  .color-label {
+    font-size: 0.62rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-left: 4px;
+    transition: opacity 0.3s;
+  }
+
+  /* ── INFO PANEL ── */
+  .fp-info {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  /* Eyebrow */
+  .fp-eyebrow {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.65rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--steel-lt);
+    margin: 0;
+  }
+  .eyebrow-pip {
+    width: 7px; height: 7px;
+    background: var(--olive-lt);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--olive);
+    flex-shrink: 0;
+  }
+
+  /* Name */
+  .fp-name-block { display: flex; flex-direction: column; gap: 2px; }
+  .fp-brand {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0;
+  }
+  .fp-model {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    font-weight: 400;
+    line-height: 0.92;
+    letter-spacing: -0.04em;
+    color: var(--text);
+    margin: 0;
+  }
+  .model-sub {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(10,10,10,0.38);
+    transition: -webkit-text-stroke 0.4s;
+  }
+  :root.dark .model-sub { -webkit-text-stroke: 1px rgba(244,243,239,0.3); }
+
+  /* Price */
+  .fp-price-block {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .fp-price-old {
+    font-size: 1rem;
+    text-decoration: line-through;
+    color: var(--muted);
+    opacity: 0.55;
+  }
+  .fp-price {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: var(--text);
+    letter-spacing: -0.04em;
+    line-height: 1;
+  }
+  .fp-badge-save {
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--olive-lt);
+    background: rgba(107,124,85,0.1);
+    border: 1px solid rgba(107,124,85,0.25);
+    padding: 4px 10px;
+    align-self: center;
+  }
+
+  /* Divider */
+  .fp-divider {
+    width: 100%; height: 1px;
+    background: var(--border);
+  }
+
+  /* Specs */
+  .fp-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .spec-row {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .spec-row:first-child { padding-top: 0; }
+  .spec-row:last-child  { border-bottom: none; padding-bottom: 0; }
+  .spec-key {
+    font-size: 0.62rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    flex-shrink: 0;
+    width: 80px;
+  }
+  .spec-val {
+    font-size: 0.82rem;
+    color: var(--text);
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  /* Storage selector */
+  .fp-storage-select {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .storage-label {
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .storage-options {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .storage-btn {
+    padding: 8px 20px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    transition: border-color 0.25s, color 0.25s, background 0.25s, box-shadow 0.25s;
+  }
+  .storage-btn.active {
+    border-color: var(--steel);
+    color: var(--text);
+    background: rgba(74,98,120,0.06);
+    box-shadow: 0 0 14px rgba(74,98,120,0.12);
+  }
+  .storage-btn:hover:not(.active) {
+    border-color: var(--steel-lt);
+    color: var(--text);
+  }
+
+  /* CTAs */
+  .fp-ctas {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .cta-buy {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    background: var(--text);
+    color: var(--bg);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.25s, box-shadow 0.25s, gap 0.25s;
+  }
+  .cta-buy:hover {
+    background: var(--steel);
+    color: var(--white);
+    box-shadow: 0 6px 28px rgba(74,98,120,0.35);
+    gap: 16px;
+  }
+  .cta-ask {
+    display: inline-flex;
+    align-items: center;
+    padding: 14px 28px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: border-color 0.25s, color 0.25s;
+  }
+  .cta-ask:hover {
+    border-color: var(--olive);
+    color: var(--olive-lt);
+  }
+
+  /* Trust pills */
+  .fp-trust {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .trust-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border: 1px solid var(--border);
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    background: var(--bg-card);
+    transition: border-color 0.25s, color 0.25s;
+  }
+  .trust-pill svg { color: var(--steel-lt); flex-shrink: 0; }
+  .trust-pill:hover { border-color: var(--steel-lt); color: var(--text); }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1), transform 0.75s cubic-bezier(0.22,1,0.36,1);
+  }
+  [data-reveal].visible { opacity: 1; transform: translateY(0); }
+
+  /* stagger info children */
+  .fp-info [data-reveal]:nth-child(1) { transition-delay: 0.05s; }
+  .fp-info [data-reveal]:nth-child(2) { transition-delay: 0.12s; }
+  .fp-info [data-reveal]:nth-child(3) { transition-delay: 0.19s; }
+  .fp-info [data-reveal]:nth-child(4) { transition-delay: 0.26s; }
+  .fp-info [data-reveal]:nth-child(5) { transition-delay: 0.33s; }
+  .fp-info [data-reveal]:nth-child(6) { transition-delay: 0.40s; }
+  .fp-info [data-reveal]:nth-child(7) { transition-delay: 0.47s; }
+  .fp-info [data-reveal]:nth-child(8) { transition-delay: 0.54s; }
+  .fp-info [data-reveal]:nth-child(9) { transition-delay: 0.61s; }
+</style>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
+
+<script>
+(function () {
+  /* ── REVEAL ON SCROLL ── */
+  const reveals = document.querySelectorAll('[data-reveal]');
+  const obs = new IntersectionObserver(
+    entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }),
+    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+  );
+  reveals.forEach(el => obs.observe(el));
+
+  /* ── COLOR CHIPS ── */
+  const chips = document.querySelectorAll('.color-chip');
+  const colorLabel = document.getElementById('colorLabel');
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      chips.forEach(c => { c.classList.remove('active'); c.setAttribute('aria-pressed', 'false'); });
+      chip.classList.add('active');
+      chip.setAttribute('aria-pressed', 'true');
+      if (colorLabel) {
+        colorLabel.style.opacity = '0';
+        setTimeout(() => {
+          colorLabel.textContent = chip.dataset.color ?? '';
+          colorLabel.style.opacity = '1';
+        }, 150);
+      }
+    });
+  });
+
+  /* ── STORAGE BUTTONS ── */
+  const storageBtns = document.querySelectorAll('.storage-btn');
+  storageBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      storageBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
+      btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
+    });
+  });
+})();
+</script>

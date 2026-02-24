@@ -1,0 +1,520 @@
+---
+// Benefits.astro — Por qué elegirnos · Minimal · Steel / Olive
+---
+
+<section id="nosotros" class="benefits-section">
+
+  <!-- Background texture -->
+  <div class="benefits-bg" aria-hidden="true">
+    <div class="bg-grain"></div>
+    <div class="bg-line bg-line-h1"></div>
+    <div class="bg-line bg-line-h2"></div>
+    <div class="bg-line bg-line-v"></div>
+  </div>
+
+  <div class="benefits-inner">
+
+    <!-- ── HEADER ── -->
+    <div class="benefits-header" data-reveal>
+      <p class="section-eyebrow">
+        <span class="eyebrow-pip"></span>
+        Por qué elegirnos
+      </p>
+      <h2 class="section-title">
+        Calidad que<br/>
+        <span class="title-outline">se nota.</span>
+      </h2>
+      <p class="section-sub">
+        Cada reparación y cada venta llevan el sello de un equipo comprometido con tu experiencia.
+      </p>
+    </div>
+
+    <!-- ── BENEFITS GRID ── -->
+    <div class="benefits-grid">
+
+      <!-- 01 · Garantía -->
+      <article class="benefit-card" data-reveal data-delay="0">
+        <div class="card-index">01</div>
+        <div class="card-icon" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <!-- Shield -->
+            <path d="M16 3L4 8v9c0 6.6 5.1 12.8 12 14.4C23.9 29.8 29 23.6 29 17V8L16 3z"
+                  stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+            <!-- Check -->
+            <path d="M11 16.5l3.5 3.5 6.5-7"
+                  stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Garantía real</h3>
+          <p class="card-desc">
+            Cada reparación cuenta con garantía de 90 días por defectos de mano de obra y repuestos. Sin letra chica.
+          </p>
+        </div>
+        <div class="card-accent" aria-hidden="true"></div>
+        <div class="card-hover-line" aria-hidden="true"></div>
+      </article>
+
+      <!-- 02 · Rapidez -->
+      <article class="benefit-card" data-reveal data-delay="1">
+        <div class="card-index">02</div>
+        <div class="card-icon" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <!-- Clock -->
+            <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M16 9v7.5l4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Lightning bolt -->
+            <path d="M26 6l-4 5h3l-4 5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Entrega en 24 h</h3>
+          <p class="card-desc">
+            La mayoría de reparaciones se completan el mismo día. Tu tiempo importa tanto como tu dispositivo.
+          </p>
+        </div>
+        <div class="card-accent" aria-hidden="true"></div>
+        <div class="card-hover-line" aria-hidden="true"></div>
+      </article>
+
+      <!-- 03 · Seguridad de datos -->
+      <article class="benefit-card" data-reveal data-delay="2">
+        <div class="card-index">03</div>
+        <div class="card-icon" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <!-- Lock body -->
+            <rect x="7" y="15" width="18" height="13" rx="3" stroke="currentColor" stroke-width="1.4"/>
+            <!-- Lock shackle -->
+            <path d="M11 15v-4a5 5 0 0 1 10 0v4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            <!-- Keyhole -->
+            <circle cx="16" cy="21" r="2" fill="currentColor" opacity="0.6"/>
+            <rect x="15" y="21" width="2" height="4" rx="1" fill="currentColor" opacity="0.6"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Privacidad total</h3>
+          <p class="card-desc">
+            Tus datos son tuyos. Nunca accedemos a tu información personal. Operamos con total confidencialidad.
+          </p>
+        </div>
+        <div class="card-accent" aria-hidden="true"></div>
+        <div class="card-hover-line" aria-hidden="true"></div>
+      </article>
+
+      <!-- 04 · Repuestos originales -->
+      <article class="benefit-card" data-reveal data-delay="3">
+        <div class="card-index">04</div>
+        <div class="card-icon" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <!-- Star / badge -->
+            <path d="M16 3l3.1 6.3 6.9 1-5 4.9 1.2 6.9L16 19l-6.2 3.1 1.2-6.9-5-4.9 6.9-1z"
+                  stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+            <!-- Center dot -->
+            <circle cx="16" cy="15" r="2.5" fill="currentColor" opacity="0.55"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Repuestos originales</h3>
+          <p class="card-desc">
+            Solo usamos piezas certificadas y de primera línea. El rendimiento de tu equipo queda igual que el primer día.
+          </p>
+        </div>
+        <div class="card-accent" aria-hidden="true"></div>
+        <div class="card-hover-line" aria-hidden="true"></div>
+      </article>
+
+    </div><!-- /benefits-grid -->
+
+    <!-- ── BOTTOM STRIP ── -->
+    <div class="bottom-strip" data-reveal>
+      <div class="strip-stat">
+        <span class="strip-val">+5.000</span>
+        <span class="strip-lbl">dispositivos reparados</span>
+      </div>
+      <div class="strip-divider"></div>
+      <div class="strip-stat">
+        <span class="strip-val">98%</span>
+        <span class="strip-lbl">clientes satisfechos</span>
+      </div>
+      <div class="strip-divider"></div>
+      <div class="strip-cta-wrap">
+        <a href="#contacto" class="strip-cta">
+          Hablá con nosotros
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+  </div><!-- /benefits-inner -->
+</section>
+
+<style>
+  /* ── PALETTE (shared with Hero / Navbar) ── */
+  :root {
+    --black:    #0a0a0a;
+    --white:    #f4f3ef;
+    --steel:    #4a6278;
+    --steel-lt: #7a98ae;
+    --olive:    #6b7c55;
+    --olive-lt: #8fa070;
+  }
+
+  /* Light mode */
+  .benefits-section {
+    --bg:        #f4f3ef;
+    --bg-card:   #ffffff;
+    --text:      #0a0a0a;
+    --muted:     rgba(10,10,10,0.42);
+    --border:    rgba(10,10,10,0.08);
+    --border-hv: rgba(74,98,120,0.35);
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.4s, color 0.4s;
+  }
+  /* Dark mode */
+  :root.dark .benefits-section {
+    --bg:        #0c0c0c;
+    --bg-card:   #111111;
+    --text:      #f4f3ef;
+    --muted:     rgba(244,243,239,0.38);
+    --border:    rgba(244,243,239,0.07);
+    --border-hv: rgba(122,152,174,0.4);
+  }
+
+  /* ── SECTION ── */
+  .benefits-section {
+    position: relative;
+    padding: 120px 0 100px;
+    font-family: 'DM Sans', 'Helvetica Neue', sans-serif;
+    overflow: hidden;
+  }
+
+  /* ── BACKGROUND ── */
+  .benefits-bg { position: absolute; inset: 0; pointer-events: none; }
+
+  .bg-grain {
+    position: absolute; inset: 0;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+    background-size: 256px;
+  }
+
+  /* Subtle structural lines */
+  .bg-line {
+    position: absolute;
+    background: var(--border);
+  }
+  .bg-line-h1 { top: 0;   left: 0; right: 0; height: 1px; }
+  .bg-line-h2 { bottom: 0; left: 0; right: 0; height: 1px; }
+  .bg-line-v  { top: 0; bottom: 0; left: 50%; width: 1px; opacity: 0.5; }
+
+  /* ── INNER ── */
+  .benefits-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 44px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+  @media (max-width: 640px) { .benefits-inner { padding: 0 20px; gap: 60px; } }
+
+  /* ── HEADER ── */
+  .benefits-header {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  @media (max-width: 900px) {
+    .benefits-header { grid-template-columns: 1fr; gap: 20px; max-width: 520px; }
+  }
+
+  .section-eyebrow {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.65rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--steel-lt);
+    margin: 0;
+    padding-top: 6px;
+  }
+  .eyebrow-pip {
+    width: 7px; height: 7px;
+    background: var(--olive-lt);
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 0 8px var(--olive);
+  }
+
+  .section-title {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    margin: 0;
+  }
+  .title-outline {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(10,10,10,0.4);
+    transition: -webkit-text-stroke 0.4s;
+  }
+  :root.dark .title-outline {
+    -webkit-text-stroke: 1px rgba(244,243,239,0.3);
+  }
+
+  .section-sub {
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.8;
+    margin: 0;
+    font-weight: 300;
+    max-width: 320px;
+    padding-top: 4px;
+  }
+  @media (max-width: 900px) { .section-sub { max-width: 100%; } }
+
+  /* ── BENEFITS GRID ── */
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border: 1px solid var(--border);
+  }
+  @media (max-width: 900px) {
+    .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 500px) {
+    .benefits-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ── CARD ── */
+  .benefit-card {
+    position: relative;
+    padding: 40px 32px 44px;
+    border-right: 1px solid var(--border);
+    background: var(--bg-card);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    overflow: hidden;
+    transition: background 0.35s;
+    cursor: default;
+  }
+  .benefit-card:last-child { border-right: none; }
+
+  /* Mobile: add bottom borders for 2-col layout */
+  @media (max-width: 900px) {
+    .benefit-card:nth-child(2) { border-right: none; }
+    .benefit-card:nth-child(1),
+    .benefit-card:nth-child(2) { border-bottom: 1px solid var(--border); }
+    .benefit-card:nth-child(3),
+    .benefit-card:nth-child(4) { border-bottom: none; }
+    .benefit-card:nth-child(3) { border-right: 1px solid var(--border); }
+  }
+  @media (max-width: 500px) {
+    .benefit-card { border-right: none !important; border-bottom: 1px solid var(--border) !important; }
+    .benefit-card:last-child { border-bottom: none !important; }
+  }
+
+  /* Hover: very subtle tint */
+  .benefit-card:hover {
+    background: color-mix(in srgb, var(--bg-card), var(--steel) 3%);
+  }
+
+  /* Corner index number */
+  .card-index {
+    position: absolute;
+    top: 20px; right: 24px;
+    font-size: 0.58rem;
+    letter-spacing: 0.22em;
+    color: var(--muted);
+    opacity: 0.5;
+    font-variant-numeric: tabular-nums;
+    transition: color 0.3s, opacity 0.3s;
+  }
+  .benefit-card:hover .card-index {
+    color: var(--steel-lt);
+    opacity: 1;
+  }
+
+  /* Icon */
+  .card-icon {
+    width: 52px; height: 52px;
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid var(--border);
+    color: var(--steel);
+    transition: border-color 0.35s, color 0.35s, box-shadow 0.35s, transform 0.35s;
+    flex-shrink: 0;
+  }
+  .benefit-card:hover .card-icon {
+    border-color: var(--steel);
+    color: var(--steel-lt);
+    box-shadow: 0 0 20px rgba(74,98,120,0.15), inset 0 0 12px rgba(74,98,120,0.04);
+    transform: translateY(-3px);
+  }
+
+  /* Body */
+  .card-body { display: flex; flex-direction: column; gap: 10px; }
+
+  .card-title {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--text);
+    letter-spacing: -0.02em;
+    margin: 0;
+    line-height: 1.2;
+    transition: color 0.3s;
+  }
+
+  .card-desc {
+    font-size: 0.82rem;
+    color: var(--muted);
+    line-height: 1.75;
+    margin: 0;
+    font-weight: 300;
+  }
+
+  /* Bottom accent bar (olive tint) */
+  .card-accent {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(to right, var(--olive), var(--steel));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.45s cubic-bezier(0.4,0,0.2,1);
+  }
+  .benefit-card:hover .card-accent { transform: scaleX(1); }
+
+  /* Left edge line on hover */
+  .card-hover-line {
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 2px;
+    background: var(--steel-lt);
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.3s;
+  }
+  .benefit-card:hover .card-hover-line {
+    opacity: 0.6;
+    transform: scaleY(1);
+  }
+
+  /* ── BOTTOM STRIP ── */
+  .bottom-strip {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 32px 40px;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    flex-wrap: wrap;
+  }
+  @media (max-width: 640px) { .bottom-strip { padding: 24px 20px; gap: 24px; } }
+
+  .strip-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+  .strip-val {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.9rem;
+    font-weight: 400;
+    color: var(--text);
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+  .strip-lbl {
+    font-size: 0.62rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .strip-divider {
+    width: 1px; height: 40px;
+    background: var(--border);
+    flex-shrink: 0;
+  }
+
+  .strip-cta-wrap { margin-left: auto; }
+  @media (max-width: 640px) { .strip-cta-wrap { margin-left: 0; width: 100%; } }
+
+  .strip-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--text);
+    border: 1px solid var(--border);
+    transition: border-color 0.25s, color 0.25s, background 0.25s, box-shadow 0.25s, gap 0.25s;
+    background: transparent;
+  }
+  .strip-cta:hover {
+    border-color: var(--steel);
+    color: var(--white);
+    background: var(--steel);
+    box-shadow: 0 4px 24px rgba(74,98,120,0.3);
+    gap: 12px;
+  }
+
+  /* ── REVEAL ON SCROLL ── */
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+      opacity 0.75s cubic-bezier(0.22,1,0.36,1),
+      transform 0.75s cubic-bezier(0.22,1,0.36,1);
+  }
+  [data-reveal].visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Stagger cards via delay */
+  .benefit-card[data-delay="0"] { transition-delay: 0s; }
+  .benefit-card[data-delay="1"] { transition-delay: 0.1s; }
+  .benefit-card[data-delay="2"] { transition-delay: 0.2s; }
+  .benefit-card[data-delay="3"] { transition-delay: 0.3s; }
+</style>
+
+<!-- Fonts (same as Hero / Navbar) -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
+
+<script>
+(function () {
+  const reveals = document.querySelectorAll('[data-reveal]');
+  if (!reveals.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15, rootMargin: '0px 0px -60px 0px' }
+  );
+
+  reveals.forEach(el => observer.observe(el));
+})();
+</script>

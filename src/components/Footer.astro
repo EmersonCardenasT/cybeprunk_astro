@@ -1,0 +1,259 @@
+---
+const year = new Date().getFullYear();
+---
+
+<section id="footer" class="footer-section">
+  <div class="footer-inner">
+    <div class="footer-head">
+      <a href="#inicio" class="logo" aria-label="Inicio">
+        <div class="logo-mark" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <rect x="4" y="4" width="20" height="20" rx="2" stroke="currentColor" stroke-width="1.2" transform="rotate(45 14 14)" opacity="0.35"/>
+            <rect x="9" y="9" width="10" height="10" rx="1" fill="currentColor" opacity="0.9" transform="rotate(45 14 14)"/>
+          </svg>
+        </div>
+        <span class="logo-name">CYBERPUNK</span>
+      </a>
+      <p class="tagline">Tecnología, servicio y estilo</p>
+    </div>
+
+    <div class="footer-grid">
+      <div class="col">
+        <p class="col-title">Explorar</p>
+        <ul class="col-list" role="list">
+          <li><a class="col-link" href="#inicio">Inicio</a></li>
+          <li><a class="col-link" href="#categorias">Categorías</a></li>
+          <li><a class="col-link" href="#productos">Productos</a></li>
+          <li><a class="col-link" href="#galeria">Galería</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <p class="col-title">Compañía</p>
+        <ul class="col-list" role="list">
+          <li><a class="col-link" href="#nosotros">Nosotros</a></li>
+          <li><a class="col-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <p class="col-title">Legal</p>
+        <ul class="col-list" role="list">
+          <li><a class="col-link" href="#">Términos</a></li>
+          <li><a class="col-link" href="#">Privacidad</a></li>
+        </ul>
+      </div>
+      <div class="col col-cta">
+        <p class="col-title">Novedades</p>
+        <p class="col-text">Ofertas y lanzamientos. Sin spam.</p>
+        <form class="cta-form" action="#" method="post">
+          <input class="input" type="email" required placeholder="Tu correo"/>
+          <button class="btn" type="submit">Suscribirme</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="copy">© {year} CYBERPUNK. Todos los derechos reservados.</p>
+      <div class="social">
+        <a href="#" aria-label="Instagram" class="social-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.4"/>
+            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.4"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+          </svg>
+        </a>
+        <a href="#" aria-label="Facebook" class="social-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M14.5 8H16V5.5h-1.5A3.5 3.5 0 0 0 11 9v2H9v2.5h2V21h2.5v-5.5H16L16.5 13H13.5V9c0-.55.45-1 1-1h0z" fill="currentColor"/>
+          </svg>
+        </a>
+        <a href="#" aria-label="X" class="social-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M17.5 5h-2.2l-3 4-3-4H7.1l4.2 5.6L6.5 19h2.2l3.4-4.5 3.4 4.5h2.2l-4.8-6.4L17.5 5z" fill="currentColor"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  :root {
+    --black:    #0a0a0a;
+    --white:    #f4f3ef;
+    --steel:    #4a6278;
+    --steel-lt: #7a98ae;
+    --olive:    #6b7c55;
+    --olive-lt: #8fa070;
+  }
+
+  .footer-section {
+    --bg:     #f7f6f3;
+    --text:   #0a0a0a;
+    --muted:  rgba(10,10,10,0.45);
+    --border: rgba(10,10,10,0.08);
+    background: var(--bg);
+    color: var(--text);
+    border-top: 1px solid var(--border);
+    font-family: 'DM Sans', 'Helvetica Neue', sans-serif;
+  }
+  :root.dark .footer-section {
+    --bg:     #0c0c0c;
+    --text:   #f4f3ef;
+    --muted:  rgba(244,243,239,0.38);
+    --border: rgba(244,243,239,0.08);
+  }
+
+  .footer-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 56px 44px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+  @media (max-width: 640px) { .footer-inner { padding: 44px 20px 28px; } }
+
+  .footer-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--text);
+  }
+  .logo-mark { color: var(--steel); transition: color .3s, transform .3s; }
+  .logo:hover .logo-mark { color: var(--olive); transform: rotate(45deg); }
+  .logo-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
+  .tagline {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  @media (max-width: 560px) { .footer-head { flex-direction: column; align-items: flex-start; } }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    padding: 24px 0 8px;
+    border-top: 1px solid var(--border);
+  }
+  @media (max-width: 900px) { .footer-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 680px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 420px) { .footer-grid { grid-template-columns: 1fr; } }
+
+  .col-title {
+    margin: 0 0 12px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--steel-lt);
+  }
+  .col-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .col-link {
+    display: inline-block;
+    font-size: 0.88rem;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color .25s, transform .25s;
+  }
+  .col-link:hover { color: var(--text); transform: translateX(2px); }
+
+  .col-cta { align-self: stretch; }
+  .col-text {
+    margin: 0 0 12px;
+    color: var(--muted);
+    font-size: 0.88rem;
+  }
+  .cta-form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+  }
+  @media (max-width: 420px) { .cta-form { grid-template-columns: 1fr; } }
+  .input {
+    height: 40px;
+    padding: 0 12px;
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+    outline: none;
+    transition: border-color .3s, box-shadow .3s;
+  }
+  .input:focus {
+    border-color: var(--steel);
+    box-shadow: 0 0 0 3px rgba(122,152,174,0.2);
+  }
+  .btn {
+    height: 40px;
+    padding: 0 16px;
+    border: 1px solid var(--border);
+    background: var(--white);
+    color: var(--black);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background .25s, color .25s, box-shadow .25s, border-color .25s;
+  }
+  .btn:hover {
+    background: var(--steel-lt);
+    color: var(--white);
+    border-color: var(--steel);
+    box-shadow: 0 4px 28px rgba(74,98,120,0.25);
+  }
+  :root.dark .btn { background: #1a1a1a; color: var(--white); }
+  :root.dark .btn:hover { background: var(--steel); }
+
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  @media (max-width: 560px) { .footer-bottom { flex-direction: column; align-items: flex-start; } }
+  .copy {
+    margin: 0;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .social { display: inline-flex; align-items: center; gap: 8px; }
+  .social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px; height: 36px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    text-decoration: none;
+    transition: color .25s, border-color .25s, transform .25s, box-shadow .25s, background .25s;
+  }
+  .social-btn:hover {
+    color: var(--steel-lt);
+    border-color: var(--steel);
+    background: rgba(74,98,120,0.06);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(74,98,120,0.18);
+  }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
+
