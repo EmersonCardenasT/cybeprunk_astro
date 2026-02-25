@@ -1,0 +1,543 @@
+---
+// Testimonials.astro — Testimonios · Una línea · Minimal · Steel / Olive
+---
+
+<section id="testimonios" class="tm-section">
+
+  <div class="tm-bg" aria-hidden="true">
+    <div class="tm-grain"></div>
+    <div class="tm-line tm-line-top"></div>
+    <div class="tm-line tm-line-bottom"></div>
+  </div>
+
+  <div class="tm-inner">
+
+    <!-- ══ HEADER ══ -->
+    <div class="tm-header" data-reveal>
+      <p class="tm-eyebrow">
+        <span class="eyebrow-pip"></span>
+        Testimonios
+      </p>
+      <div class="tm-header-row">
+        <h2 class="tm-title">
+          Lo que dicen<br/>
+          <span class="title-outline">nuestros clientes.</span>
+        </h2>
+        <div class="tm-meta">
+          <div class="tm-rating">
+            <div class="tm-stars">
+              <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/></svg>
+              <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/></svg>
+              <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/></svg>
+              <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/></svg>
+              <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/></svg>
+            </div>
+            <span class="tm-rating-num">4.9</span>
+            <span class="tm-rating-base">/ 5</span>
+          </div>
+          <span class="tm-count">Basado en +380 reseñas verificadas</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ CARDS ROW ══ -->
+    <div class="tm-track-wrap" data-reveal>
+
+      <!-- Fade edges -->
+      <div class="tm-fade tm-fade-left"  aria-hidden="true"></div>
+      <div class="tm-fade tm-fade-right" aria-hidden="true"></div>
+
+      <!-- Navigation arrows -->
+      <button class="tm-arrow tm-arrow-prev" id="tmPrev" aria-label="Anterior">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <button class="tm-arrow tm-arrow-next" id="tmNext" aria-label="Siguiente">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
+      <!-- Scrollable track -->
+      <div class="tm-track" id="tmTrack" role="list">
+
+        <!-- 01 -->
+        <article class="tm-card" role="listitem">
+          <div class="tm-card-top">
+            <div class="tm-card-stars">
+              <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/></svg>
+              <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/></svg>
+              <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/></svg>
+              <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/></svg>
+              <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/></svg>
+            </div>
+            <span class="tm-card-badge">iPhone · Pantalla</span>
+          </div>
+          <blockquote class="tm-card-text">
+            "Me cambiaron la pantalla del iPhone en 2 horas. Salí con el equipo como nuevo y con garantía escrita. No voy a otro lado más."
+          </blockquote>
+          <div class="tm-card-author">
+            <div class="tm-avatar" style="--hue:200"></div>
+            <div class="tm-author-info">
+              <span class="tm-author-name">Laura M.</span>
+              <span class="tm-author-detail">iPhone 14 · Cambio de pantalla</span>
+            </div>
+            <svg class="tm-quote-mark" width="28" height="22" viewBox="0 0 28 22" fill="none">
+              <path d="M0 22V13.2C0 5.867 4 1.467 12 0l1.6 2.667C9 3.733 6.8 6 6.4 9.6H12V22H0zm16 0V13.2C16 5.867 20 1.467 28 0l1.6 2.667C25.4 3.733 23.2 6 22.8 9.6H28V22H16z" fill="currentColor" opacity="0.06"/>
+            </svg>
+          </div>
+        </article>
+
+        <!-- 02 -->
+        <article class="tm-card" role="listitem">
+          <div class="tm-card-top">
+            <div class="tm-card-stars">
+              <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/></svg>
+              <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/></svg>
+              <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/></svg>
+              <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/></svg>
+              <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/></svg>
+            </div>
+            <span class="tm-card-badge">Samsung · Open Box</span>
+          </div>
+          <blockquote class="tm-card-text">
+            "Compré un Samsung S24 Ultra Open Box en perfecto estado, con todos los accesorios incluidos. El precio fue imbatible. 100% recomendado."
+          </blockquote>
+          <div class="tm-card-author">
+            <div class="tm-avatar" style="--hue:155"></div>
+            <div class="tm-author-info">
+              <span class="tm-author-name">Rodrigo F.</span>
+              <span class="tm-author-detail">Galaxy S24 Ultra · Open Box</span>
+            </div>
+            <svg class="tm-quote-mark" width="28" height="22" viewBox="0 0 28 22" fill="none">
+              <path d="M0 22V13.2C0 5.867 4 1.467 12 0l1.6 2.667C9 3.733 6.8 6 6.4 9.6H12V22H0zm16 0V13.2C16 5.867 20 1.467 28 0l1.6 2.667C25.4 3.733 23.2 6 22.8 9.6H28V22H16z" fill="currentColor" opacity="0.06"/>
+            </svg>
+          </div>
+        </article>
+
+        <!-- 03 -->
+        <article class="tm-card" role="listitem">
+          <div class="tm-card-top">
+            <div class="tm-card-stars">
+              <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/></svg>
+              <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/></svg>
+              <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/></svg>
+              <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/></svg>
+              <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/></svg>
+            </div>
+            <span class="tm-card-badge">Xiaomi · Compra</span>
+          </div>
+          <blockquote class="tm-card-text">
+            "Me asesoraron sin ninguna presión cuando dudaba entre dos modelos. Terminé eligiendo el que más me convenía a mí, no el más caro."
+          </blockquote>
+          <div class="tm-card-author">
+            <div class="tm-avatar" style="--hue:30"></div>
+            <div class="tm-author-info">
+              <span class="tm-author-name">Valentina C.</span>
+              <span class="tm-author-detail">Xiaomi 13T · Compra nueva</span>
+            </div>
+            <svg class="tm-quote-mark" width="28" height="22" viewBox="0 0 28 22" fill="none">
+              <path d="M0 22V13.2C0 5.867 4 1.467 12 0l1.6 2.667C9 3.733 6.8 6 6.4 9.6H12V22H0zm16 0V13.2C16 5.867 20 1.467 28 0l1.6 2.667C25.4 3.733 23.2 6 22.8 9.6H28V22H16z" fill="currentColor" opacity="0.06"/>
+            </svg>
+          </div>
+        </article>
+
+        <!-- 04 -->
+        <article class="tm-card" role="listitem">
+          <div class="tm-card-top">
+            <div class="tm-card-stars">
+              <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/></svg>
+              <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/></svg>
+              <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/></svg>
+              <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/></svg>
+              <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/></svg>
+            </div>
+            <span class="tm-card-badge">Motorola · Batería</span>
+          </div>
+          <blockquote class="tm-card-text">
+            "Le cambié la batería a mi Motorola Edge y quedó como nuevo. Me dieron el presupuesto por escrito antes de empezar. Todo transparente y rápido."
+          </blockquote>
+          <div class="tm-card-author">
+            <div class="tm-avatar" style="--hue:280"></div>
+            <div class="tm-author-info">
+              <span class="tm-author-name">Matías R.</span>
+              <span class="tm-author-detail">Motorola Edge 40 · Cambio de batería</span>
+            </div>
+            <svg class="tm-quote-mark" width="28" height="22" viewBox="0 0 28 22" fill="none">
+              <path d="M0 22V13.2C0 5.867 4 1.467 12 0l1.6 2.667C9 3.733 6.8 6 6.4 9.6H12V22H0zm16 0V13.2C16 5.867 20 1.467 28 0l1.6 2.667C25.4 3.733 23.2 6 22.8 9.6H28V22H16z" fill="currentColor" opacity="0.06"/>
+            </svg>
+          </div>
+        </article>
+
+        <!-- 05 -->
+        <article class="tm-card" role="listitem">
+          <div class="tm-card-top">
+            <div class="tm-card-stars">
+              <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/></svg>
+              <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/></svg>
+              <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/></svg>
+              <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/></svg>
+              <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/></svg>
+            </div>
+            <span class="tm-card-badge">Apple · iPhone Nuevo</span>
+          </div>
+          <blockquote class="tm-card-text">
+            "Compré mi iPhone 16 Pro ahí y el proceso fue rapidísimo. Me explicaron todo, me dieron la garantía oficial y el envío llegó al día siguiente."
+          </blockquote>
+          <div class="tm-card-author">
+            <div class="tm-avatar" style="--hue:350"></div>
+            <div class="tm-author-info">
+              <span class="tm-author-name">Sofía D.</span>
+              <span class="tm-author-detail">iPhone 16 Pro · Compra nueva</span>
+            </div>
+            <svg class="tm-quote-mark" width="28" height="22" viewBox="0 0 28 22" fill="none">
+              <path d="M0 22V13.2C0 5.867 4 1.467 12 0l1.6 2.667C9 3.733 6.8 6 6.4 9.6H12V22H0zm16 0V13.2C16 5.867 20 1.467 28 0l1.6 2.667C25.4 3.733 23.2 6 22.8 9.6H28V22H16z" fill="currentColor" opacity="0.06"/>
+            </svg>
+          </div>
+        </article>
+
+      </div><!-- /tm-track -->
+    </div><!-- /tm-track-wrap -->
+
+    <!-- ══ BOTTOM: dots + CTA ══ -->
+    <!-- <div class="tm-bottom" data-reveal>
+      <div class="tm-dots" id="tmDots" role="tablist" aria-label="Navegar testimonios"></div>
+      <a href="https://g.page/r/" target="_blank" rel="noopener" class="tm-all-link">
+        Ver todas las reseñas en Google
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+          <path d="M3 6.5h7M7 3.5l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div> -->
+
+  </div>
+</section>
+
+<style>
+  :root {
+    --steel:    #4a6278;
+    --steel-lt: #7a98ae;
+    --olive:    #6b7c55;
+    --olive-lt: #8fa070;
+    --white:    #f4f3ef;
+    --black:    #0a0a0a;
+  }
+
+  .tm-section {
+    --bg:      #f4f3ef; --bg-card: #ffffff;
+    --text:    #0a0a0a; --muted:   rgba(10,10,10,0.42);
+    --border:  rgba(10,10,10,0.08);
+    background: var(--bg); color: var(--text);
+    position: relative; padding: 100px 0 90px;
+    font-family: 'DM Sans', 'Helvetica Neue', sans-serif;
+    overflow: hidden; transition: background 0.4s, color 0.4s;
+  }
+  :root.dark .tm-section {
+    --bg: #0c0c0c; --bg-card: #111111;
+    --text: #f4f3ef; --muted: rgba(244,243,239,0.38);
+    --border: rgba(244,243,239,0.07);
+  }
+  :root.dark .title-outline { -webkit-text-stroke: 1px rgba(244,243,239,0.28) !important; }
+
+  /* BG */
+  .tm-bg { position: absolute; inset: 0; pointer-events: none; }
+  .tm-grain {
+    position: absolute; inset: 0; opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+    background-size: 256px;
+  }
+  .tm-line { position: absolute; left:0; right:0; height:1px; background:var(--border); }
+  .tm-line-top { top:0; } .tm-line-bottom { bottom:0; }
+
+  /* Inner */
+  .tm-inner {
+    max-width: 1280px; margin: 0 auto; padding: 0 44px;
+    display: flex; flex-direction: column; gap: 44px;
+    position: relative; z-index: 1;
+  }
+  @media (max-width: 640px) { .tm-inner { padding: 0 20px; gap: 32px; } }
+
+  /* ── HEADER ── */
+  .tm-header { display: flex; flex-direction: column; gap: 16px; }
+  .tm-eyebrow {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.65rem; letter-spacing: 0.26em;
+    text-transform: uppercase; color: var(--steel-lt); margin: 0;
+  }
+  .eyebrow-pip {
+    width: 7px; height: 7px; background: var(--olive-lt);
+    border-radius: 50%; box-shadow: 0 0 8px var(--olive); flex-shrink: 0;
+  }
+  .tm-header-row {
+    display: flex; align-items: flex-end;
+    justify-content: space-between; gap: 32px; flex-wrap: wrap;
+  }
+  .tm-title {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+    font-weight: 400; line-height: 0.93;
+    letter-spacing: -0.035em; color: var(--text); margin: 0;
+  }
+  .title-outline { color: transparent; -webkit-text-stroke: 1px rgba(10,10,10,0.35); }
+
+  /* Rating block */
+  .tm-meta { display: flex; flex-direction: column; gap: 6px; align-items: flex-end; }
+  @media (max-width: 700px) { .tm-meta { align-items: flex-start; } }
+
+  .tm-rating { display: flex; align-items: center; gap: 10px; }
+  .tm-stars {
+    display: flex; gap: 3px; color: var(--olive-lt);
+  }
+  .tm-stars svg { width: 14px; height: 14px; }
+
+  .tm-rating-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.6rem; font-weight: 400;
+    color: var(--text); letter-spacing: -0.03em; line-height: 1;
+  }
+  .tm-rating-base {
+    font-size: 0.75rem; color: var(--muted); font-weight: 300;
+  }
+  .tm-count {
+    font-size: 0.62rem; color: var(--muted);
+    letter-spacing: 0.08em; font-weight: 300;
+  }
+
+  /* ── TRACK WRAP ── */
+  .tm-track-wrap {
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* Fade edges */
+  .tm-fade {
+    position: absolute; top: 0; bottom: 0; width: 100px;
+    z-index: 3; pointer-events: none;
+  }
+  .tm-fade-left  { left:  0; background: linear-gradient(to right, var(--bg), transparent); }
+  .tm-fade-right { right: 0; background: linear-gradient(to left,  var(--bg), transparent); }
+  @media (max-width: 640px) { .tm-fade { width: 40px; } }
+
+  /* Arrows */
+  .tm-arrow {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    z-index: 4; width: 36px; height: 36px;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--bg-card); border: 1px solid var(--border);
+    color: var(--muted); cursor: pointer;
+    transition: border-color 0.25s, color 0.25s, background 0.25s, transform 0.25s;
+  }
+  .tm-arrow:hover {
+    border-color: var(--steel); color: var(--steel-lt);
+    background: rgba(74,98,120,0.06);
+  }
+  .tm-arrow-prev { left: 8px; }
+  .tm-arrow-next { right: 8px; }
+  .tm-arrow:hover.tm-arrow-prev { transform: translateY(-50%) translateX(-2px); }
+  .tm-arrow:hover.tm-arrow-next { transform: translateY(-50%) translateX(2px); }
+
+  /* ── SCROLLABLE TRACK ── */
+  .tm-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-snap-type: x mandatory;
+    gap: 1px;
+    background: var(--border);
+    padding: 0 48px; /* room for arrows */
+  }
+  .tm-track::-webkit-scrollbar { display: none; }
+
+  /* ── CARD ── */
+  .tm-card {
+    flex: 0 0 340px;
+    background: var(--bg-card);
+    padding: 28px 28px 24px;
+    display: flex; flex-direction: column; gap: 16px;
+    scroll-snap-align: start;
+    position: relative; overflow: hidden;
+    transition: background 0.25s;
+  }
+  @media (max-width: 500px) { .tm-card { flex: 0 0 280px; padding: 22px 20px 20px; } }
+
+  .tm-card::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(to right, var(--olive), var(--steel));
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.45s cubic-bezier(0.4,0,0.2,1);
+  }
+  .tm-card:hover { background: color-mix(in srgb, var(--bg-card), var(--steel) 3%); }
+  :root.dark .tm-card:hover { background: rgba(74,98,120,0.06); }
+  .tm-card:hover::after { transform: scaleX(1); }
+
+  .tm-card-top {
+    display: flex; align-items: center;
+    justify-content: space-between; gap: 8px;
+  }
+  .tm-card-stars {
+    display: flex; gap: 2px; color: var(--olive-lt);
+  }
+  .tm-card-stars svg { width: 11px; height: 11px; }
+
+  .tm-card-badge {
+    font-size: 0.52rem; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--steel-lt);
+    background: rgba(74,98,120,0.08);
+    border: 1px solid rgba(74,98,120,0.2);
+    padding: 3px 9px; white-space: nowrap;
+  }
+
+  .tm-card-text {
+    font-size: 0.83rem; color: var(--text);
+    line-height: 1.75; margin: 0;
+    font-weight: 300; font-style: italic;
+    flex: 1;
+  }
+
+  .tm-card-author {
+    display: flex; align-items: center; gap: 12px;
+    padding-top: 14px; border-top: 1px solid var(--border);
+    position: relative;
+  }
+  .tm-avatar {
+    width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
+    background: linear-gradient(
+      135deg,
+      hsl(calc(var(--hue) + 20), 42%, 58%) 0%,
+      hsl(var(--hue), 36%, 44%) 100%
+    );
+  }
+  .tm-author-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+  .tm-author-name {
+    font-size: 0.75rem; font-weight: 600;
+    color: var(--text); letter-spacing: 0.04em;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .tm-author-detail {
+    font-size: 0.58rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--muted); font-weight: 300;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .tm-quote-mark {
+    color: var(--steel); flex-shrink: 0; align-self: flex-start;
+    margin-top: -2px;
+  }
+
+  /* ── BOTTOM ── */
+  .tm-bottom {
+    display: flex; align-items: center;
+    justify-content: space-between; gap: 20px; flex-wrap: wrap;
+  }
+
+  /* Dots */
+  .tm-dots { display: flex; gap: 8px; align-items: center; }
+  .tm-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--border); border: 1px solid var(--muted);
+    cursor: pointer; padding: 0;
+    transition: background 0.25s, width 0.3s, border-color 0.25s;
+  }
+  .tm-dot.active {
+    width: 20px; border-radius: 3px;
+    background: var(--steel); border-color: var(--steel);
+  }
+
+  /* Link */
+  .tm-all-link {
+    display: inline-flex; align-items: center; gap: 7px;
+    font-size: 0.65rem; font-weight: 500;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    text-decoration: none; color: var(--muted);
+    transition: color 0.25s, gap 0.25s;
+  }
+  .tm-all-link:hover { color: var(--steel-lt); gap: 11px; }
+
+  /* Reveal */
+  [data-reveal] {
+    opacity: 0; transform: translateY(20px);
+    transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1), transform 0.75s cubic-bezier(0.22,1,0.36,1);
+  }
+  [data-reveal].visible { opacity: 1; transform: translateY(0); }
+  .tm-track-wrap[data-reveal] { transition-delay: 0.1s; }
+  .tm-bottom[data-reveal]     { transition-delay: 0.18s; }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
+
+<script>
+(function () {
+  /* Reveal */
+  const obs = new IntersectionObserver(
+    entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    }), { threshold: 0.08, rootMargin: '0px 0px -30px 0px' }
+  );
+  document.querySelectorAll('[data-reveal]').forEach(el => obs.observe(el));
+
+  /* Track & dots */
+  const track  = document.getElementById('tmTrack') as HTMLElement | null;
+  const dotsEl = document.getElementById('tmDots');
+  const prev   = document.getElementById('tmPrev');
+  const next   = document.getElementById('tmNext');
+  if (!track || !dotsEl) return;
+
+  const cards = Array.from(track.querySelectorAll<HTMLElement>('.tm-card'));
+  const total = cards.length;
+  let current = 0;
+
+  /* Build dots */
+  const dots: HTMLButtonElement[] = [];
+  cards.forEach((_, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'tm-dot' + (i === 0 ? ' active' : '');
+    btn.setAttribute('role', 'tab');
+    btn.setAttribute('aria-label', `Testimonio ${i + 1}`);
+    btn.addEventListener('click', () => goTo(i));
+    dotsEl.appendChild(btn);
+    dots.push(btn);
+  });
+
+  function goTo(idx: number) {
+    current = idx;
+    const card = cards[idx];
+    const offsetLeft = card.offsetLeft - 48; /* subtract track padding */
+    track.scrollTo({ left: offsetLeft, behavior: 'smooth' });
+    dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+  }
+
+  /* Arrows */
+  prev?.addEventListener('click', () => goTo(Math.max(0, current - 1)));
+  next?.addEventListener('click', () => goTo(Math.min(total - 1, current + 1)));
+
+  /* Keyboard */
+  track.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft')  goTo(Math.max(0, current - 1));
+    if (e.key === 'ArrowRight') goTo(Math.min(total - 1, current + 1));
+  });
+
+  /* Sync dots on manual scroll */
+  let scrollTimer: ReturnType<typeof setTimeout>;
+  track.addEventListener('scroll', () => {
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(() => {
+      let closest = 0;
+      let minDist = Infinity;
+      cards.forEach((c, i) => {
+        const dist = Math.abs(c.offsetLeft - 48 - track.scrollLeft);
+        if (dist < minDist) { minDist = dist; closest = i; }
+      });
+      current = closest;
+      dots.forEach((d, i) => d.classList.toggle('active', i === closest));
+    }, 80);
+  });
+})();
+</script>

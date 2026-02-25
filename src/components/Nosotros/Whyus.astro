@@ -1,0 +1,603 @@
+---
+// WhyUs.astro — Por qué Elegirnos · Minimal · Steel / Olive
+---
+
+<section id="por-que-elegirnos" class="why-section">
+
+  <div class="why-bg" aria-hidden="true">
+    <div class="why-grain"></div>
+    <div class="why-line why-line-top"></div>
+    <div class="why-line why-line-bottom"></div>
+    <span class="why-watermark">¿Por qué?</span>
+  </div>
+
+  <div class="why-inner">
+
+    <!-- ══ HEADER ══ -->
+    <div class="why-header" data-reveal>
+      <p class="why-eyebrow">
+        <span class="eyebrow-pip"></span>
+        La diferencia
+      </p>
+      <div class="why-header-row">
+        <h2 class="why-title">
+          Por qué<br/>
+          <span class="title-outline">elegirnos.</span>
+        </h2>
+        <p class="why-sub">
+          Hay muchas tiendas de tecnología. Te explicamos por qué nuestros clientes vuelven y nos recomiendan.
+        </p>
+      </div>
+    </div>
+
+    <!-- ══ BODY ══ -->
+    <div class="why-body">
+
+      <!-- LEFT: imagen + stat flotante -->
+      <div class="why-visual" data-reveal>
+        <div class="why-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=900&q=85&auto=format&fit=crop&crop=center"
+            alt="Atención al cliente CellTech"
+            class="why-img"
+            loading="lazy"
+          />
+          <div class="why-img-overlay"></div>
+        </div>
+
+        <!-- Floating stat cards -->
+        <div class="why-float why-float-top">
+          <span class="why-float-num">+5.000</span>
+          <span class="why-float-lbl">Clientes atendidos</span>
+        </div>
+        <div class="why-float why-float-bottom">
+          <div class="why-float-stars" aria-label="5 estrellas">
+            {Array.from({ length: 5 }).map(() => (
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                <path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/>
+              </svg>
+            ))}
+          </div>
+          <span class="why-float-num why-float-num-sm">98%</span>
+          <span class="why-float-lbl">Satisfacción</span>
+        </div>
+      </div>
+
+      <!-- RIGHT: reasons list -->
+      <div class="why-reasons">
+
+        <div class="why-reason" data-reveal data-delay="0">
+          <div class="why-reason-left">
+            <div class="why-reason-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L3 7v5c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V7z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+                <path d="M8 12l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="why-reason-line"></div>
+          </div>
+          <div class="why-reason-content">
+            <div class="why-reason-header">
+              <h3 class="why-reason-title">Garantía real y por escrito</h3>
+              <span class="why-reason-tag">90 días</span>
+            </div>
+            <p class="why-reason-desc">
+              Todas nuestras reparaciones y productos tienen garantía oficial documentada. Sin condiciones raras, sin letra chica. Si falla, lo resolvemos.
+            </p>
+            <div class="why-reason-proof">
+              <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                <circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1"/>
+                <path d="M4 6l1.5 1.5L8 4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Más de 3.200 reparaciones garantizadas entregadas
+            </div>
+          </div>
+        </div>
+
+        <div class="why-reason" data-reveal data-delay="1">
+          <div class="why-reason-left">
+            <div class="why-reason-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.4"/>
+                <polyline points="12,6 12,12 16,14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="why-reason-line"></div>
+          </div>
+          <div class="why-reason-content">
+            <div class="why-reason-header">
+              <h3 class="why-reason-title">Entrega en 24 horas</h3>
+              <span class="why-reason-tag">Express</span>
+            </div>
+            <p class="why-reason-desc">
+              La mayoría de las reparaciones se entregan el mismo día. Las compras tienen envío express para todo CABA y GBA. Tu tiempo importa.
+            </p>
+            <div class="why-reason-proof">
+              <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                <circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1"/>
+                <path d="M4 6l1.5 1.5L8 4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Promedio de entrega: 4 horas en reparaciones estándar
+            </div>
+          </div>
+        </div>
+
+        <div class="why-reason" data-reveal data-delay="2">
+          <div class="why-reason-left">
+            <div class="why-reason-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M20 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" stroke="currentColor" stroke-width="1.4"/>
+                <path d="M16 3H8L6 7h12z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+                <path d="M12 12v4M10 14h4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="why-reason-line"></div>
+          </div>
+          <div class="why-reason-content">
+            <div class="why-reason-header">
+              <h3 class="why-reason-title">Repuestos originales certificados</h3>
+              <span class="why-reason-tag">OEM</span>
+            </div>
+            <p class="why-reason-desc">
+              No usamos piezas genéricas. Trabajamos con proveedores certificados y repuestos OEM para que tu equipo funcione como si fuera nuevo.
+            </p>
+            <div class="why-reason-proof">
+              <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                <circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1"/>
+                <path d="M4 6l1.5 1.5L8 4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Stock permanente de más de 400 referencias de repuestos
+            </div>
+          </div>
+        </div>
+
+        <div class="why-reason" data-reveal data-delay="3">
+          <div class="why-reason-left">
+            <div class="why-reason-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="why-reason-line"></div>
+          </div>
+          <div class="why-reason-content">
+            <div class="why-reason-header">
+              <h3 class="why-reason-title">Asesoramiento sin presión</h3>
+              <span class="why-reason-tag">Gratis</span>
+            </div>
+            <p class="why-reason-desc">
+              Nuestro equipo te orienta sin obligarte a comprar nada. Si no es el momento, te lo decimos igual. La confianza vale más que una venta.
+            </p>
+            <div class="why-reason-proof">
+              <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                <circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1"/>
+                <path d="M4 6l1.5 1.5L8 4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Diagnóstico gratuito en todas las consultas
+            </div>
+          </div>
+        </div>
+
+        <div class="why-reason why-reason-last" data-reveal data-delay="4">
+          <div class="why-reason-left">
+            <div class="why-reason-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.4"/>
+                <path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                <path d="M7 8l2.5 2.5L13 7l2 2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+              </svg>
+            </div>
+            <!-- no line on last item -->
+          </div>
+          <div class="why-reason-content">
+            <div class="why-reason-header">
+              <h3 class="why-reason-title">Precios transparentes y justos</h3>
+              <span class="why-reason-tag">Sin sorpresas</span>
+            </div>
+            <p class="why-reason-desc">
+              El precio que ves es el que pagás. Presupuesto previo siempre, sin cargos ocultos ni cobros por diagnóstico. Sabés exactamente qué estás pagando.
+            </p>
+            <div class="why-reason-proof">
+              <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+                <circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1"/>
+                <path d="M4 6l1.5 1.5L8 4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Presupuesto escrito antes de iniciar cualquier trabajo
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /why-reasons -->
+    </div><!-- /why-body -->
+
+    <!-- ══ TESTIMONIALS STRIP ══ -->
+    <!-- <div class="why-testimonials" data-reveal>
+      <p class="why-test-label">
+        <span class="eyebrow-pip"></span>
+        Lo que dicen nuestros clientes
+      </p>
+      <div class="why-test-grid">
+
+        <div class="why-test-card">
+          <div class="why-test-stars">
+            {Array.from({ length: 5 }).map(() => (
+              <svg width="11" height="11" viewBox="0 0 12 12" fill="currentColor">
+                <path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/>
+              </svg>
+            ))}
+          </div>
+          <p class="why-test-text">
+            "Me cambiaron la pantalla del iPhone en 2 horas. Salí con el equipo como nuevo y con garantía. No voy a otro lado más."
+          </p>
+          <div class="why-test-author">
+            <div class="why-test-avatar" style="--hue: 200"></div>
+            <div>
+              <span class="why-test-name">Laura M.</span>
+              <span class="why-test-detail">iPhone 14 · Cambio de pantalla</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-test-card">
+          <div class="why-test-stars">
+            {Array.from({ length: 5 }).map(() => (
+              <svg width="11" height="11" viewBox="0 0 12 12" fill="currentColor">
+                <path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/>
+              </svg>
+            ))}
+          </div>
+          <p class="why-test-text">
+            "Compré un Samsung S24 Ultra Open Box. Estaba en perfecto estado, con todos los accesorios. El precio fue imbatible."
+          </p>
+          <div class="why-test-author">
+            <div class="why-test-avatar" style="--hue: 155"></div>
+            <div>
+              <span class="why-test-name">Rodrigo F.</span>
+              <span class="why-test-detail">Galaxy S24 Ultra · Open Box</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-test-card">
+          <div class="why-test-stars">
+            {Array.from({ length: 5 }).map(() => (
+              <svg width="11" height="11" viewBox="0 0 12 12" fill="currentColor">
+                <path d="M6 1l1.4 2.9L11 4.4 8.5 6.8l.6 3.5L6 8.8 2.9 10.3l.6-3.5L1 4.4l3.6-.5z"/>
+              </svg>
+            ))}
+          </div>
+          <p class="why-test-text">
+            "Me asesoraron sin presión cuando dudaba entre dos modelos. Terminé eligiendo el que más me convenía, no el más caro."
+          </p>
+          <div class="why-test-author">
+            <div class="why-test-avatar" style="--hue: 30"></div>
+            <div>
+              <span class="why-test-name">Valentina C.</span>
+              <span class="why-test-detail">Xiaomi 13T · Compra nueva</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div> -->
+
+  </div>
+</section>
+
+<style>
+  :root {
+    --steel:    #4a6278;
+    --steel-lt: #7a98ae;
+    --olive:    #6b7c55;
+    --olive-lt: #8fa070;
+    --white:    #f4f3ef;
+    --black:    #0a0a0a;
+  }
+
+  .why-section {
+    --bg:      #f4f3ef; --bg-card: #ffffff;
+    --text:    #0a0a0a; --muted:   rgba(10,10,10,0.42);
+    --border:  rgba(10,10,10,0.08);
+    background: var(--bg); color: var(--text);
+    position: relative; padding: 120px 0 100px;
+    font-family: 'DM Sans', 'Helvetica Neue', sans-serif;
+    overflow: hidden; transition: background 0.4s, color 0.4s;
+  }
+  :root.dark .why-section {
+    --bg: #0c0c0c; --bg-card: #111111;
+    --text: #f4f3ef; --muted: rgba(244,243,239,0.38);
+    --border: rgba(244,243,239,0.07);
+  }
+  :root.dark .title-outline { -webkit-text-stroke: 1px rgba(244,243,239,0.28) !important; }
+
+  /* BG */
+  .why-bg { position: absolute; inset: 0; pointer-events: none; }
+  .why-grain {
+    position: absolute; inset: 0; opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+    background-size: 256px;
+  }
+  .why-line { position: absolute; left: 0; right: 0; height: 1px; background: var(--border); }
+  .why-line-top { top: 0; } .why-line-bottom { bottom: 0; }
+  .why-watermark {
+    position: absolute; left: -20px; bottom: 60px;
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(5rem, 11vw, 9rem);
+    font-weight: 400; color: transparent;
+    -webkit-text-stroke: 1px var(--border);
+    letter-spacing: -0.02em; user-select: none;
+    opacity: 0.5; white-space: nowrap; line-height: 1;
+  }
+
+  /* Inner */
+  .why-inner {
+    max-width: 1280px; margin: 0 auto; padding: 0 44px;
+    display: flex; flex-direction: column; gap: 64px;
+    position: relative; z-index: 1;
+  }
+  @media (max-width: 640px) { .why-inner { padding: 0 20px; gap: 48px; } }
+
+  /* Header */
+  .why-header { display: flex; flex-direction: column; gap: 16px; }
+  .why-eyebrow {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.65rem; letter-spacing: 0.26em;
+    text-transform: uppercase; color: var(--steel-lt); margin: 0;
+  }
+  .eyebrow-pip {
+    width: 7px; height: 7px; background: var(--olive-lt);
+    border-radius: 50%; box-shadow: 0 0 8px var(--olive); flex-shrink: 0;
+  }
+  .why-header-row {
+    display: flex; align-items: flex-end;
+    justify-content: space-between; gap: 40px; flex-wrap: wrap;
+  }
+  .why-title {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+    font-weight: 400; line-height: 0.93;
+    letter-spacing: -0.035em; color: var(--text); margin: 0;
+  }
+  .title-outline { color: transparent; -webkit-text-stroke: 1px rgba(10,10,10,0.35); }
+  .why-sub {
+    font-size: 0.88rem; color: var(--muted); line-height: 1.75;
+    margin: 0; font-weight: 300; max-width: 380px; flex-shrink: 0;
+  }
+
+  /* ══ BODY ══ */
+  .why-body {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 72px; align-items: start;
+  }
+  @media (max-width: 1000px) { .why-body { grid-template-columns: 1fr; gap: 48px; } }
+
+  /* ── VISUAL ── */
+  .why-visual { position: relative; }
+  .why-img-wrap {
+    position: relative; overflow: hidden;
+    aspect-ratio: 3/4;
+  }
+  @media (max-width: 1000px) { .why-img-wrap { aspect-ratio: 16/7; } }
+
+  .why-img {
+    width: 100%; height: 100%; object-fit: cover; object-position: center top;
+    display: block;
+    transition: transform 0.7s cubic-bezier(0.22,1,0.36,1);
+  }
+  .why-visual:hover .why-img { transform: scale(1.04); }
+  .why-img-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(10,10,10,0.6) 0%, transparent 55%);
+  }
+
+  /* Float cards */
+  .why-float {
+    position: absolute;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 14px 18px;
+    display: flex; flex-direction: column; gap: 3px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: transform 0.3s;
+  }
+  .why-float:hover { transform: translateY(-3px); }
+  .why-float-top {
+    top: 24px; right: -20px;
+  }
+  .why-float-bottom {
+    bottom: 28px; left: -20px;
+  }
+  @media (max-width: 1000px) {
+    .why-float-top  { right: 20px; top: 20px; }
+    .why-float-bottom { left: 20px; bottom: 20px; }
+  }
+
+  .why-float-stars {
+    display: flex; gap: 2px; color: var(--olive-lt);
+    margin-bottom: 2px;
+  }
+  .why-float-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.6rem; font-weight: 400;
+    color: var(--text); letter-spacing: -0.04em; line-height: 1;
+  }
+  .why-float-num-sm { font-size: 1.3rem; }
+  .why-float-lbl {
+    font-size: 0.58rem; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--muted); font-weight: 400;
+  }
+
+  /* ── REASONS LIST ── */
+  .why-reasons { display: flex; flex-direction: column; }
+
+  .why-reason {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 0 20px;
+    padding: 0 0 32px;
+    position: relative;
+  }
+  .why-reason-last { padding-bottom: 0; }
+
+  .why-reason-left {
+    display: flex; flex-direction: column; align-items: center; gap: 0;
+  }
+  .why-reason-icon {
+    width: 44px; height: 44px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid var(--border);
+    color: var(--steel);
+    background: var(--bg-card);
+    z-index: 1; position: relative;
+    transition: border-color 0.3s, color 0.3s, box-shadow 0.3s, background 0.3s;
+  }
+  .why-reason:hover .why-reason-icon {
+    border-color: var(--steel);
+    color: var(--steel-lt);
+    background: rgba(74,98,120,0.05);
+    box-shadow: 0 0 16px rgba(74,98,120,0.15);
+  }
+
+  .why-reason-line {
+    flex: 1; width: 1px;
+    background: var(--border);
+    margin-top: 0;
+    min-height: 20px;
+  }
+
+  .why-reason-content {
+    display: flex; flex-direction: column; gap: 10px;
+    padding-top: 10px;
+  }
+
+  .why-reason-header {
+    display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  }
+  .why-reason-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.15rem; font-weight: 400;
+    letter-spacing: -0.02em; color: var(--text); margin: 0;
+    line-height: 1.2;
+    transition: color 0.25s;
+  }
+  .why-reason:hover .why-reason-title { color: var(--steel-lt); }
+
+  .why-reason-tag {
+    font-size: 0.52rem; font-weight: 700;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--steel-lt);
+    background: rgba(74,98,120,0.08);
+    border: 1px solid rgba(74,98,120,0.22);
+    padding: 3px 9px; flex-shrink: 0;
+  }
+
+  .why-reason-desc {
+    font-size: 0.82rem; color: var(--muted);
+    line-height: 1.75; margin: 0; font-weight: 300;
+  }
+
+  .why-reason-proof {
+    display: flex; align-items: center; gap: 7px;
+    font-size: 0.65rem; color: var(--olive-lt);
+    letter-spacing: 0.05em; font-weight: 400;
+  }
+  .why-reason-proof svg { flex-shrink: 0; }
+
+  /* ══ TESTIMONIALS ══ */
+  .why-testimonials { display: flex; flex-direction: column; gap: 24px; }
+  .why-test-label {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.65rem; letter-spacing: 0.26em;
+    text-transform: uppercase; color: var(--steel-lt); margin: 0;
+  }
+
+  .why-test-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  @media (max-width: 860px) { .why-test-grid { grid-template-columns: 1fr; } }
+
+  .why-test-card {
+    background: var(--bg-card);
+    padding: 28px;
+    display: flex; flex-direction: column; gap: 16px;
+    transition: background 0.25s;
+    position: relative; overflow: hidden;
+  }
+  .why-test-card::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(to right, var(--olive), var(--steel));
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+  }
+  .why-test-card:hover { background: color-mix(in srgb, var(--bg-card), var(--steel) 3%); }
+  :root.dark .why-test-card:hover { background: rgba(74,98,120,0.05); }
+  .why-test-card:hover::after { transform: scaleX(1); }
+
+  .why-test-stars { display: flex; gap: 3px; color: var(--olive-lt); }
+
+  .why-test-text {
+    font-size: 0.82rem; color: var(--text);
+    line-height: 1.75; margin: 0; font-weight: 300;
+    font-style: italic;
+    flex: 1;
+  }
+
+  .why-test-author {
+    display: flex; align-items: center; gap: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+  }
+  .why-test-avatar {
+    width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0;
+    background: linear-gradient(
+      135deg,
+      hsl(calc(var(--hue) + 20), 40%, 55%) 0%,
+      hsl(var(--hue), 35%, 42%) 100%
+    );
+  }
+  .why-test-name {
+    display: block; font-size: 0.75rem; font-weight: 600;
+    color: var(--text); letter-spacing: 0.04em;
+  }
+  .why-test-detail {
+    display: block; font-size: 0.6rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--muted); font-weight: 300;
+    margin-top: 2px;
+  }
+
+  /* Reveal */
+  [data-reveal] {
+    opacity: 0; transform: translateY(22px);
+    transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1), transform 0.75s cubic-bezier(0.22,1,0.36,1);
+  }
+  [data-reveal].visible { opacity: 1; transform: translateY(0); }
+  [data-delay="0"] { transition-delay: 0.00s; }
+  [data-delay="1"] { transition-delay: 0.08s; }
+  [data-delay="2"] { transition-delay: 0.16s; }
+  [data-delay="3"] { transition-delay: 0.24s; }
+  [data-delay="4"] { transition-delay: 0.32s; }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
+
+<script>
+(function () {
+  const obs = new IntersectionObserver(
+    entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    }), { threshold: 0.07, rootMargin: '0px 0px -30px 0px' }
+  );
+  document.querySelectorAll('[data-reveal]').forEach(el => obs.observe(el));
+})();
+</script>
