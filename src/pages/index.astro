@@ -1,7 +1,5 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
 import Beneficios from '../components/Beneficios.astro';
 import ProductoDestacado from '../components/ProductoDestacado.astro';
@@ -9,7 +7,6 @@ import Categorias from '../components/Categorias.astro';
 import ProductosIphone from '../components/ProductosIphone.astro';
 import OpenBox from '../components/OpenBox.astro';
 import ProductoSamsung from '../components/ProductoSamsung.astro';
-import Footer from '../components/Footer.astro';
 import MarcasCarrusel from '../components/MarcasCarrusel.astro';
 import ProductoDestacadoSamsung from '../components/ProductoDestacadoSamsung.astro';
 import WhatsAppFloat from '../components/WhatsAppFloat.astro';
@@ -18,16 +15,13 @@ import WhatsAppFloat from '../components/WhatsAppFloat.astro';
 ---
 
 <Layout>
-	<Navbar />
   	<Hero />
-	<Beneficios />
 	<Categorias />
 	<ProductoDestacado />
 	<ProductosIphone />
 	<ProductoDestacadoSamsung />
 	<ProductoSamsung />
 	<OpenBox />
+	<Beneficios />
 	<MarcasCarrusel />
-	<Footer />
-	<WhatsAppFloat phone="5491112345678" message="Hola! Me interesa un producto." />
 </Layout>

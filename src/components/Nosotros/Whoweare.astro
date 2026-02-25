@@ -1,0 +1,366 @@
+---
+// WhoWeAre.astro — Quiénes Somos · Minimal · Steel / Olive
+---
+
+<section id="nosotros" class="wwa-section">
+
+  <div class="wwa-bg" aria-hidden="true">
+    <div class="wwa-grain"></div>
+    <div class="wwa-line wwa-line-top"></div>
+    <div class="wwa-line wwa-line-bottom"></div>
+  </div>
+
+  <div class="wwa-inner">
+
+    <!-- ══ HEADER ══ -->
+    <div class="wwa-header" data-reveal>
+      <p class="wwa-eyebrow">
+        <span class="eyebrow-pip"></span>
+        Quiénes somos
+      </p>
+      <h2 class="wwa-title">
+        Más que una<br/>
+        <span class="title-outline">tienda.</span>
+      </h2>
+    </div>
+
+    <!-- ══ MAIN BLOCK: texto + imagen ══ -->
+    <div class="wwa-main">
+
+      <!-- Left: story text -->
+      <div class="wwa-story" data-reveal>
+        <p class="wwa-lead">
+          Somos Cyberpunk, una empresa nacida en Perù con una sola obsesión: que cada persona tenga acceso a tecnología de calidad con garantía real y atención honesta.
+        </p>
+        <p class="wwa-body">
+          Empezamos en 2019 con un local pequeño y muchas ganas. Hoy somos un equipo de diez personas apasionadas por la tecnología, la reparación de precisión y el trato cercano con cada cliente.
+        </p>
+        <p class="wwa-body">
+          Trabajamos con marcas líderes como Apple, Samsung, Xiaomi y Motorola. Cada equipo que vendemos pasa por un control de calidad estricto, y cada reparación lleva nuestra firma de garantía.
+        </p>
+
+        <!-- Timeline -->
+        <div class="wwa-timeline">
+          <div class="tl-item">
+            <span class="tl-year">2019</span>
+            <div class="tl-dot"></div>
+            <span class="tl-event">Apertura del primer local en CABA</span>
+          </div>
+          <div class="tl-item">
+            <span class="tl-year">2021</span>
+            <div class="tl-dot"></div>
+            <span class="tl-event">Lanzamiento de tienda online y reparaciones express</span>
+          </div>
+          <div class="tl-item">
+            <span class="tl-year">2023</span>
+            <div class="tl-dot"></div>
+            <span class="tl-event">Incorporamos Open Box y accesorios certificados</span>
+          </div>
+          <div class="tl-item">
+            <span class="tl-year">2025</span>
+            <div class="tl-dot tl-dot-active"></div>
+            <span class="tl-event">Más de 5.000 clientes satisfechos y contando</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: image -->
+      <div class="wwa-img-block" data-reveal>
+        <div class="wwa-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=900&q=80&auto=format&fit=crop"
+            alt="Equipo Cyberpunk trabajando"
+            class="wwa-img"
+            loading="lazy"
+          />
+          <div class="wwa-img-overlay"></div>
+        </div>
+        <!-- Floating quote card -->
+        <div class="wwa-quote-card">
+          <svg class="wwa-quote-icon" width="22" height="16" viewBox="0 0 22 16" fill="none">
+            <path d="M0 16V9.6C0 4.267 3.2 1.067 9.6 0l1.2 2C7.467 2.8 5.6 4.4 5.2 7.2H9.6V16H0zm12.4 0V9.6C12.4 4.267 15.6 1.067 22 0l1.2 2c-3.333.8-5.2 2.4-5.6 5.2H22V16h-9.6z" fill="currentColor" opacity="0.35"/>
+          </svg>
+          <p class="wwa-quote-text">
+            La tecnología tiene que ser accesible para todos, con la confianza de que funciona de verdad.
+          </p>
+          <div class="wwa-quote-author">
+            <div class="wwa-quote-avatar"></div>
+            <div>
+              <span class="wwa-quote-name">Martín García</span>
+              <span class="wwa-quote-role">Fundador · Cyberpunk</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /wwa-main -->
+
+    <!-- ══ STATS STRIP ══ -->
+    <div class="wwa-stats" data-reveal>
+      <div class="wwa-stat">
+        <span class="stat-num" data-target="5000">0</span>
+        <span class="stat-suffix">+</span>
+        <span class="stat-label">Equipos vendidos</span>
+      </div>
+      <div class="wwa-stat-sep" aria-hidden="true"></div>
+      <div class="wwa-stat">
+        <span class="stat-num" data-target="98">0</span>
+        <span class="stat-suffix">%</span>
+        <span class="stat-label">Clientes satisfechos</span>
+      </div>
+      <div class="wwa-stat-sep" aria-hidden="true"></div>
+      <div class="wwa-stat">
+        <span class="stat-num" data-target="6">0</span>
+        <span class="stat-suffix">+</span>
+        <span class="stat-label">Años de experiencia</span>
+      </div>
+      <div class="wwa-stat-sep" aria-hidden="true"></div>
+      <div class="wwa-stat">
+        <span class="stat-num" data-target="10">0</span>
+        <span class="stat-suffix"></span>
+        <span class="stat-label">Personas en el equipo</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  :root {
+    --steel:    #4a6278;
+    --steel-lt: #7a98ae;
+    --olive:    #6b7c55;
+    --olive-lt: #8fa070;
+    --white:    #f4f3ef;
+    --black:    #0a0a0a;
+  }
+
+  .wwa-section {
+    --bg:      #f4f3ef;
+    --bg-card: #ffffff;
+    --text:    #0a0a0a;
+    --muted:   rgba(10,10,10,0.42);
+    --border:  rgba(10,10,10,0.08);
+    background: var(--bg);
+    color: var(--text);
+    position: relative;
+    padding: 120px 0 100px;
+    font-family: 'DM Sans', 'Helvetica Neue', sans-serif;
+    overflow: hidden;
+    transition: background 0.4s, color 0.4s;
+  }
+  :root.dark .wwa-section {
+    --bg: #0c0c0c; --bg-card: #111111;
+    --text: #f4f3ef; --muted: rgba(244,243,239,0.38);
+    --border: rgba(244,243,239,0.07);
+  }
+  :root.dark .title-outline { -webkit-text-stroke: 1px rgba(244,243,239,0.28) !important; }
+
+  .wwa-bg { position: absolute; inset: 0; pointer-events: none; }
+  .wwa-grain {
+    position: absolute; inset: 0; opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+    background-size: 256px;
+  }
+  .wwa-line { position: absolute; left: 0; right: 0; height: 1px; background: var(--border); }
+  .wwa-line-top { top: 0; } .wwa-line-bottom { bottom: 0; }
+
+  .wwa-inner {
+    max-width: 1280px; margin: 0 auto; padding: 0 44px;
+    display: flex; flex-direction: column; gap: 64px;
+    position: relative; z-index: 1;
+  }
+  @media (max-width: 640px) { .wwa-inner { padding: 0 20px; gap: 48px; } }
+
+  /* Header */
+  .wwa-header { display: flex; flex-direction: column; gap: 16px; }
+  .wwa-eyebrow {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.65rem; letter-spacing: 0.26em;
+    text-transform: uppercase; color: var(--steel-lt); margin: 0;
+  }
+  .eyebrow-pip {
+    width: 7px; height: 7px; background: var(--olive-lt);
+    border-radius: 50%; box-shadow: 0 0 8px var(--olive); flex-shrink: 0;
+  }
+  .wwa-title {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+    font-weight: 400; line-height: 0.92;
+    letter-spacing: -0.035em; color: var(--text); margin: 0;
+  }
+  .title-outline { color: transparent; -webkit-text-stroke: 1px rgba(10,10,10,0.35); }
+
+  /* Main */
+  .wwa-main {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start;
+  }
+  @media (max-width: 900px) { .wwa-main { grid-template-columns: 1fr; gap: 48px; } }
+
+  /* Story */
+  .wwa-story { display: flex; flex-direction: column; gap: 20px; }
+  .wwa-lead {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+    font-weight: 400; line-height: 1.45;
+    letter-spacing: -0.015em; color: var(--text); margin: 0;
+  }
+  .wwa-body {
+    font-size: 0.9rem; color: var(--muted);
+    line-height: 1.85; margin: 0; font-weight: 300;
+  }
+
+  /* Timeline */
+  .wwa-timeline { display: flex; flex-direction: column; gap: 0; margin-top: 8px; }
+  .tl-item {
+    display: grid; grid-template-columns: 52px 20px 1fr;
+    align-items: start; gap: 0 14px; position: relative;
+    padding-bottom: 20px;
+  }
+  .tl-item:last-child { padding-bottom: 0; }
+  /* Vertical connector */
+  .tl-item:not(:last-child)::after {
+    content: ''; position: absolute;
+    left: calc(52px + 14px + 9px); top: 10px; bottom: -10px;
+    width: 1px; background: var(--border);
+  }
+  .tl-year {
+    font-size: 0.65rem; font-weight: 600;
+    letter-spacing: 0.12em; color: var(--steel-lt);
+    text-align: right; line-height: 1; margin-top: 2px;
+  }
+  .tl-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    border: 1.5px solid var(--steel-lt); background: var(--bg);
+    margin-top: 1px; justify-self: center; flex-shrink: 0;
+    transition: background 0.3s, border-color 0.3s;
+  }
+  .tl-dot-active { background: var(--olive-lt); border-color: var(--olive-lt); box-shadow: 0 0 8px var(--olive); }
+  .tl-event {
+    font-size: 0.8rem; color: var(--muted);
+    font-weight: 300; line-height: 1.5;
+  }
+
+  /* Image block */
+  .wwa-img-block { display: flex; flex-direction: column; gap: 0; position: relative; }
+  .wwa-img-wrap { position: relative; overflow: hidden; aspect-ratio: 4/3; }
+  .wwa-img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.7s cubic-bezier(0.22,1,0.36,1);
+  }
+  .wwa-img-block:hover .wwa-img { transform: scale(1.03); }
+  .wwa-img-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(10,10,10,0.55) 0%, transparent 50%);
+  }
+
+  /* Quote card */
+  .wwa-quote-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-top: none;
+    padding: 24px 28px;
+    display: flex; flex-direction: column; gap: 14px;
+  }
+  .wwa-quote-icon { color: var(--steel); }
+  .wwa-quote-text {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1rem; font-weight: 400;
+    line-height: 1.6; color: var(--text);
+    letter-spacing: -0.01em; margin: 0;
+  }
+  .wwa-quote-author { display: flex; align-items: center; gap: 12px; }
+  .wwa-quote-avatar {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--steel) 0%, var(--olive) 100%);
+    flex-shrink: 0;
+  }
+  .wwa-quote-name {
+    display: block; font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.08em; color: var(--text);
+  }
+  .wwa-quote-role {
+    display: block; font-size: 0.6rem; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--muted); font-weight: 300;
+  }
+
+  /* Stats */
+  .wwa-stats {
+    display: grid; grid-template-columns: repeat(4, 1fr) repeat(3, 1px);
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+    align-items: center;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+  }
+  @media (max-width: 700px) {
+    .wwa-stats { grid-template-columns: 1fr 1fr; }
+    .wwa-stat-sep { display: none; }
+  }
+  .wwa-stat {
+    padding: 32px 28px; display: flex; flex-direction: column; gap: 6px;
+    align-items: center; text-align: center;
+  }
+  .stat-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400; color: var(--text);
+    letter-spacing: -0.04em; line-height: 1;
+    display: inline;
+  }
+  .stat-suffix {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    color: var(--olive-lt); line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.62rem; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--muted); font-weight: 400;
+  }
+  .wwa-stat-sep { width: 1px; background: var(--border); align-self: stretch; }
+
+  /* Reveal */
+  [data-reveal] {
+    opacity: 0; transform: translateY(22px);
+    transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1), transform 0.75s cubic-bezier(0.22,1,0.36,1);
+  }
+  [data-reveal].visible { opacity: 1; transform: translateY(0); }
+  .wwa-main [data-reveal]:nth-child(2) { transition-delay: 0.12s; }
+  .wwa-stats[data-reveal] { transition-delay: 0.06s; }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
+
+<script>
+(function () {
+  /* Reveal */
+  const obs = new IntersectionObserver(
+    entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    }), { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+  );
+  document.querySelectorAll('[data-reveal]').forEach(el => obs.observe(el));
+
+  /* Counter animation */
+  const counters = document.querySelectorAll('.stat-num');
+  const counterObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target as HTMLElement;
+      const target = parseInt(el.dataset.target || '0', 10);
+      const duration = 1800;
+      const start = performance.now();
+      const tick = (now: number) => {
+        const p = Math.min((now - start) / duration, 1);
+        const ease = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(ease * target).toLocaleString('es-AR');
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+      counterObs.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(c => counterObs.observe(c));
+})();
+</script>

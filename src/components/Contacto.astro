@@ -1,0 +1,1255 @@
+---
+// Contact.astro — Contacto · Minimal · Steel / Olive
+---
+
+<section id="contacto" class="ct-section">
+  <div class="ct-bg" aria-hidden="true">
+    <div class="ct-grain"></div>
+    <div class="ct-line ct-line-top"></div>
+    <div class="ct-line ct-line-bottom"></div>
+  </div>
+
+  <div class="ct-inner">
+    <!-- ══ HEADER ══ -->
+    <div class="ct-header" data-reveal>
+      <p class="ct-eyebrow">
+        <span class="eyebrow-pip"></span>
+        Contacto
+      </p>
+      <div class="ct-header-row">
+        <h2 class="ct-title">
+          Hablemos<br />
+          <span class="title-outline">sin vueltas.</span>
+        </h2>
+        <p class="ct-sub">
+          Respondemos en menos de 2 horas. Escribinos, llamanos o visitanos —
+          estamos para ayudarte.
+        </p>
+      </div>
+    </div>
+
+    <!-- ══ BODY: Form + Info ══ -->
+    <div class="ct-body">
+      <!-- ── LEFT: FORM ── -->
+      <div class="ct-form-col" data-reveal>
+        <form class="ct-form" id="ctForm" novalidate>
+          <!-- Row 1: nombre + apellido -->
+          <div class="ct-row">
+            <div class="ct-field">
+              <label for="ct-nombre" class="ct-label">Nombre</label>
+              <input
+                id="ct-nombre"
+                name="nombre"
+                type="text"
+                placeholder="Tu nombre"
+                class="ct-input"
+                autocomplete="given-name"
+                required
+              />
+              <span class="ct-field-line" aria-hidden="true"></span>
+            </div>
+            <div class="ct-field">
+              <label for="ct-apellido" class="ct-label">Apellido</label>
+              <input
+                id="ct-apellido"
+                name="apellido"
+                type="text"
+                placeholder="Tu apellido"
+                class="ct-input"
+                autocomplete="family-name"
+                required
+              />
+              <span class="ct-field-line" aria-hidden="true"></span>
+            </div>
+          </div>
+
+          <!-- Row 2: email + teléfono -->
+          <div class="ct-row">
+            <div class="ct-field">
+              <label for="ct-email" class="ct-label">Email</label>
+              <input
+                id="ct-email"
+                name="email"
+                type="email"
+                placeholder="tu@email.com"
+                class="ct-input"
+                autocomplete="email"
+                required
+              />
+              <span class="ct-field-line" aria-hidden="true"></span>
+            </div>
+            <div class="ct-field">
+              <label for="ct-telefono" class="ct-label"
+                >Teléfono <span class="ct-optional">(opcional)</span></label
+              >
+              <input
+                id="ct-telefono"
+                name="telefono"
+                type="tel"
+                placeholder="+54 11 0000-0000"
+                class="ct-input"
+                autocomplete="tel"
+              />
+              <span class="ct-field-line" aria-hidden="true"></span>
+            </div>
+          </div>
+
+          <!-- Motivo -->
+          <div class="ct-field">
+            <label class="ct-label">Motivo de consulta</label>
+            <div
+              class="ct-motivo-group"
+              role="group"
+              aria-label="Motivo de consulta"
+            >
+              <label class="ct-motivo-opt">
+                <input
+                  type="radio"
+                  name="motivo"
+                  value="compra"
+                  class="ct-radio"
+                  checked
+                />
+                <span class="ct-motivo-label">
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                    <rect
+                      x="2"
+                      y="4"
+                      width="12"
+                      height="10"
+                      rx="2"
+                      stroke="currentColor"
+                      stroke-width="1.3"></rect>
+                    <path
+                      d="M5 7V5a3 3 0 0 1 6 0v2"
+                      stroke="currentColor"
+                      stroke-width="1.3"
+                      stroke-linecap="round"></path>
+                  </svg>
+                  Compra
+                </span>
+              </label>
+              <label class="ct-motivo-opt">
+                <input
+                  type="radio"
+                  name="motivo"
+                  value="reparacion"
+                  class="ct-radio"
+                />
+                <span class="ct-motivo-label">
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M13 3l-2 2-1.5-1.5 2-2A3 3 0 0 0 7 5.5L3.5 9A3 3 0 0 0 8 13.5L11.5 10A3 3 0 0 0 13 3z"
+                      stroke="currentColor"
+                      stroke-width="1.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                  Reparación
+                </span>
+              </label>
+              <label class="ct-motivo-opt">
+                <input
+                  type="radio"
+                  name="motivo"
+                  value="openbox"
+                  class="ct-radio"
+                />
+                <span class="ct-motivo-label">
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M8 2l6 3v6l-6 3-6-3V5z"
+                      stroke="currentColor"
+                      stroke-width="1.3"
+                      stroke-linejoin="round"></path>
+                    <path
+                      d="M8 2v8M2 5l6 3 6-3"
+                      stroke="currentColor"
+                      stroke-width="1.3"
+                      stroke-linecap="round"></path>
+                  </svg>
+                  Open Box
+                </span>
+              </label>
+              <label class="ct-motivo-opt">
+                <input
+                  type="radio"
+                  name="motivo"
+                  value="otro"
+                  class="ct-radio"
+                />
+                <span class="ct-motivo-label">
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                    <circle
+                      cx="8"
+                      cy="8"
+                      r="6"
+                      stroke="currentColor"
+                      stroke-width="1.3"></circle>
+                    <path
+                      d="M8 7v5M8 5v.5"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"></path>
+                  </svg>
+                  Otro
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Mensaje -->
+          <div class="ct-field">
+            <label for="ct-mensaje" class="ct-label">Mensaje</label>
+            <textarea
+              id="ct-mensaje"
+              name="mensaje"
+              placeholder="Contanos en qué podemos ayudarte..."
+              class="ct-textarea ct-input"
+              rows="5"
+              required></textarea>
+            <span class="ct-field-line" aria-hidden="true"></span>
+            <span class="ct-char-count" id="ctCharCount">0 / 500</span>
+          </div>
+
+          <!-- Privacy -->
+          <label class="ct-privacy-check">
+            <input
+              type="checkbox"
+              name="privacy"
+              class="ct-checkbox"
+              required
+            />
+            <span class="ct-check-box" aria-hidden="true"></span>
+            <span class="ct-privacy-text">
+              Acepto la <a href="#" class="ct-link">Política de privacidad</a> y el
+              uso de mis datos para responder mi consulta.
+            </span>
+          </label>
+
+          <!-- Submit -->
+          <button type="submit" class="ct-submit" id="ctSubmit">
+            <span class="ct-submit-text">Enviar mensaje</span>
+            <span class="ct-submit-icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                  d="M3 8h10M9 4l4 4-4 4"
+                  stroke="currentColor"
+                  stroke-width="1.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </span>
+            <span class="ct-submit-loader" aria-hidden="true"></span>
+          </button>
+
+          <!-- Success / Error messages -->
+          <div
+            class="ct-feedback"
+            id="ctFeedback"
+            role="status"
+            aria-live="polite"
+          >
+          </div>
+        </form>
+      </div>
+
+      <!-- ── RIGHT: INFO ── -->
+      <div class="ct-info-col">
+        <!-- Info cards -->
+        <div class="ct-info-cards" data-reveal>
+          <div class="ct-info-card">
+            <div class="ct-info-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                ></path>
+              </svg>
+            </div>
+            <div class="ct-info-content">
+              <span class="ct-info-label">Teléfono</span>
+              <a href="tel:+541112345678" class="ct-info-value"
+                >+54 11 1234-5678</a
+              >
+              <span class="ct-info-note">Lun – Sáb · 9 a 20 h</span>
+            </div>
+          </div>
+
+          <div class="ct-info-card">
+            <div class="ct-info-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                ></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="ct-info-content">
+              <span class="ct-info-label">Email</span>
+              <a href="mailto:hola@celltech.com" class="ct-info-value"
+                >hola@celltech.com</a
+              >
+              <span class="ct-info-note">Respuesta en menos de 2 h</span>
+            </div>
+          </div>
+
+          <div class="ct-info-card">
+            <div class="ct-info-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div class="ct-info-content">
+              <span class="ct-info-label">Dirección</span>
+              <span class="ct-info-value">Av. Corrientes 1234</span>
+              <span class="ct-info-note">CABA, Argentina</span>
+            </div>
+          </div>
+
+          <div class="ct-info-card">
+            <div class="ct-info-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12,6 12,12 16,14"></polyline>
+              </svg>
+            </div>
+            <div class="ct-info-content">
+              <span class="ct-info-label">Horarios</span>
+              <span class="ct-info-value">Lun – Vie · 9:00 a 20:00</span>
+              <span class="ct-info-note">Sábados · 9:00 a 15:00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- WhatsApp CTA -->
+        <a
+          href="https://wa.me/541112345678"
+          target="_blank"
+          rel="noopener"
+          class="ct-whatsapp"
+          data-reveal
+        >
+          <div class="ct-wa-icon">
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
+              ></path>
+            </svg>
+          </div>
+          <div class="ct-wa-text">
+            <span class="ct-wa-title">Escribinos por WhatsApp</span>
+            <span class="ct-wa-sub">Respuesta inmediata · Sin turnos</span>
+          </div>
+          <svg
+            class="ct-wa-arrow"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+          >
+            <path
+              d="M3 8h10M9 4l4 4-4 4"
+              stroke="currentColor"
+              stroke-width="1.4"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </a>
+
+        <!-- Map embed placeholder -->
+        <div class="ct-map" data-reveal>
+          <div class="ct-map-header">
+            <span class="ct-map-label">
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="none">
+                <path
+                  d="M8 1a5 5 0 0 0-5 5c0 4 5 9 5 9s5-5 5-9a5 5 0 0 0-5-5z"
+                  stroke="currentColor"
+                  stroke-width="1.3"
+                  stroke-linejoin="round"></path>
+                <circle
+                  cx="8"
+                  cy="6"
+                  r="1.8"
+                  stroke="currentColor"
+                  stroke-width="1.1"></circle>
+              </svg>
+              Cómo llegarnos
+            </span>
+            <a
+              href="https://www.google.com/maps/place/CyberpunkPE/@-10.9247606,-74.8753153,21z/data=!4m6!3m5!1s0x910a2b1e4bcc270d:0xd36644c6092770f8!8m2!3d-10.9247888!4d-74.8753699!16s%2Fg%2F11tb63c0vk?entry=ttu&g_ep=EgoyMDI2MDIyMi4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener"
+              class="ct-map-link"
+            >
+              Ver en Maps →
+            </a>
+          </div>
+          <div class="ct-map-frame">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244.84440343131348!2d-74.8753153416988!3d-10.924760571953131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910a2b1e4bcc270d%3A0xd36644c6092770f8!2sCyberpunkPE!5e0!3m2!1ses!2spe!4v1771993608513!5m2!1ses!2spe"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Mapa de ubicación CellTech"></iframe>
+          </div>
+        </div>
+      </div>
+      <!-- /ct-info-col -->
+    </div>
+    <!-- /ct-body -->
+  </div>
+</section>
+
+<style>
+  /* ── PALETTE ── */
+  :root {
+    --steel: #4a6278;
+    --steel-lt: #7a98ae;
+    --olive: #6b7c55;
+    --olive-lt: #8fa070;
+    --white: #f4f3ef;
+    --black: #0a0a0a;
+  }
+
+  /* Light */
+  .ct-section {
+    --bg: #f4f3ef;
+    --bg-card: #ffffff;
+    --text: #0a0a0a;
+    --muted: rgba(10, 10, 10, 0.42);
+    --border: rgba(10, 10, 10, 0.08);
+    --input-bg: #ffffff;
+    background: var(--bg);
+    color: var(--text);
+    transition:
+      background 0.4s,
+      color 0.4s;
+  }
+  /* Dark */
+  :root.dark .ct-section {
+    --bg: #0c0c0c;
+    --bg-card: #111111;
+    --text: #f4f3ef;
+    --muted: rgba(244, 243, 239, 0.38);
+    --border: rgba(244, 243, 239, 0.07);
+    --input-bg: #161616;
+  }
+
+  /* ── SECTION ── */
+  .ct-section {
+    position: relative;
+    padding: 120px 0 100px;
+    font-family: "DM Sans", "Helvetica Neue", sans-serif;
+    overflow: hidden;
+  }
+
+  /* ── BG ── */
+  .ct-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  .ct-grain {
+    position: absolute;
+    inset: 0;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+    background-size: 256px;
+  }
+  .ct-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--border);
+  }
+  .ct-line-top {
+    top: 0;
+  }
+  .ct-line-bottom {
+    bottom: 0;
+  }
+
+  /* ── INNER ── */
+  .ct-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 44px;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+    position: relative;
+    z-index: 1;
+  }
+  @media (max-width: 640px) {
+    .ct-inner {
+      padding: 0 20px;
+      gap: 40px;
+    }
+  }
+
+  /* ── HEADER ── */
+  .ct-header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .ct-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.65rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--steel-lt);
+    margin: 0;
+  }
+  .eyebrow-pip {
+    width: 7px;
+    height: 7px;
+    background: var(--olive-lt);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--olive);
+    flex-shrink: 0;
+  }
+  .ct-header-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .ct-title {
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 400;
+    line-height: 0.93;
+    letter-spacing: -0.035em;
+    color: var(--text);
+    margin: 0;
+  }
+  .title-outline {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(10, 10, 10, 0.35);
+  }
+  :root.dark .title-outline {
+    -webkit-text-stroke: 1px rgba(244, 243, 239, 0.28);
+  }
+  .ct-sub {
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.75;
+    margin: 0;
+    font-weight: 300;
+    max-width: 380px;
+    flex-shrink: 0;
+  }
+
+  /* ══ BODY ══ */
+  .ct-body {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+  @media (max-width: 960px) {
+    .ct-body {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+  }
+
+  /* ══ FORM ══ */
+  .ct-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  /* Row */
+  .ct-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  @media (max-width: 500px) {
+    .ct-row {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Field */
+  .ct-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+  }
+
+  .ct-label {
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .ct-optional {
+    font-size: 0.55rem;
+    text-transform: none;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    opacity: 0.6;
+    font-weight: 300;
+  }
+
+  .ct-input {
+    width: 100%;
+    padding: 13px 16px;
+    background: var(--input-bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: 0.82rem;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 300;
+    outline: none;
+    transition:
+      border-color 0.25s,
+      box-shadow 0.25s;
+    -webkit-appearance: none;
+    border-radius: 0;
+    box-sizing: border-box;
+  }
+  .ct-input::placeholder {
+    color: var(--muted);
+    opacity: 0.6;
+  }
+  .ct-input:focus {
+    border-color: var(--steel);
+    box-shadow: 0 0 0 3px rgba(74, 98, 120, 0.08);
+  }
+  .ct-input.error {
+    border-color: #c0392b;
+  }
+
+  /* Bottom line effect on focus */
+  .ct-field-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(to right, var(--olive), var(--steel));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+  }
+  .ct-input:focus ~ .ct-field-line {
+    transform: scaleX(1);
+  }
+
+  /* Textarea */
+  .ct-textarea {
+    resize: vertical;
+    min-height: 120px;
+    max-height: 300px;
+    line-height: 1.65;
+  }
+  .ct-char-count {
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    opacity: 0.5;
+    align-self: flex-end;
+    margin-top: -4px;
+  }
+
+  /* Motivo radios */
+  .ct-motivo-group {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .ct-motivo-opt {
+    display: flex;
+    cursor: pointer;
+  }
+  .ct-radio {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .ct-motivo-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border: 1px solid var(--border);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    transition:
+      border-color 0.25s,
+      color 0.25s,
+      background 0.25s;
+    user-select: none;
+  }
+  .ct-motivo-label svg {
+    opacity: 0.6;
+    flex-shrink: 0;
+  }
+  .ct-radio:checked + .ct-motivo-label {
+    border-color: var(--steel);
+    color: var(--text);
+    background: rgba(74, 98, 120, 0.07);
+  }
+  .ct-motivo-label:hover {
+    border-color: var(--steel-lt);
+    color: var(--text);
+  }
+
+  /* Privacy checkbox */
+  .ct-privacy-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+  }
+  .ct-checkbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .ct-check-box {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    margin-top: 1px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+      border-color 0.25s,
+      background 0.25s;
+    position: relative;
+  }
+  .ct-check-box::after {
+    content: "";
+    width: 8px;
+    height: 5px;
+    border-left: 1.5px solid var(--white);
+    border-bottom: 1.5px solid var(--white);
+    transform: rotate(-45deg) translateY(-1px);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .ct-checkbox:checked ~ .ct-check-box {
+    background: var(--steel);
+    border-color: var(--steel);
+  }
+  .ct-checkbox:checked ~ .ct-check-box::after {
+    opacity: 1;
+  }
+  .ct-privacy-text {
+    font-size: 0.72rem;
+    color: var(--muted);
+    line-height: 1.65;
+    font-weight: 300;
+  }
+  .ct-link {
+    color: var(--steel-lt);
+    text-decoration: none;
+  }
+  .ct-link:hover {
+    text-decoration: underline;
+  }
+
+  /* Submit */
+  .ct-submit {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 36px;
+    background: var(--text);
+    color: var(--bg);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    font-family: "DM Sans", sans-serif;
+    position: relative;
+    overflow: hidden;
+    transition:
+      background 0.25s,
+      box-shadow 0.25s,
+      gap 0.25s;
+    align-self: flex-start;
+  }
+  .ct-submit:hover {
+    background: var(--steel);
+    color: var(--white);
+    box-shadow: 0 6px 28px rgba(74, 98, 120, 0.35);
+    gap: 16px;
+  }
+  .ct-submit:disabled {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  .ct-submit-loader {
+    display: none;
+    width: 14px;
+    height: 14px;
+    border: 1.5px solid rgba(244, 243, 239, 0.3);
+    border-top-color: var(--white);
+    border-radius: 50%;
+    animation: ctSpin 0.7s linear infinite;
+  }
+  .ct-submit.loading .ct-submit-text {
+    display: none;
+  }
+  .ct-submit.loading .ct-submit-icon {
+    display: none;
+  }
+  .ct-submit.loading .ct-submit-loader {
+    display: block;
+  }
+  @keyframes ctSpin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Feedback */
+  .ct-feedback {
+    display: none;
+    padding: 12px 16px;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    font-weight: 400;
+    border-left: 2px solid;
+  }
+  .ct-feedback.success {
+    display: block;
+    color: var(--olive-lt);
+    border-color: var(--olive-lt);
+    background: rgba(107, 124, 85, 0.06);
+  }
+  .ct-feedback.error-msg {
+    display: block;
+    color: #c0392b;
+    border-color: #c0392b;
+    background: rgba(192, 57, 43, 0.05);
+  }
+
+  /* ══ INFO COL ══ */
+  .ct-info-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Info cards */
+  .ct-info-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  @media (max-width: 480px) {
+    .ct-info-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .ct-info-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 20px;
+    background: var(--bg-card);
+    transition: background 0.25s;
+  }
+  .ct-info-card:hover {
+    background: color-mix(in srgb, var(--bg-card), var(--steel) 3%);
+  }
+  :root.dark .ct-info-card:hover {
+    background: rgba(74, 98, 120, 0.06);
+  }
+
+  .ct-info-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    color: var(--steel);
+    transition:
+      border-color 0.25s,
+      color 0.25s;
+  }
+  .ct-info-card:hover .ct-info-icon {
+    border-color: var(--steel);
+    color: var(--steel-lt);
+  }
+  .ct-info-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .ct-info-label {
+    font-size: 0.58rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+  }
+  .ct-info-value {
+    font-size: 0.82rem;
+    color: var(--text);
+    font-weight: 400;
+    text-decoration: none;
+    transition: color 0.2s;
+    line-height: 1.3;
+  }
+  a.ct-info-value:hover {
+    color: var(--steel-lt);
+  }
+  .ct-info-note {
+    font-size: 0.68rem;
+    color: var(--muted);
+    font-weight: 300;
+  }
+
+  /* WhatsApp CTA */
+  .ct-whatsapp {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 20px;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    text-decoration: none;
+    color: var(--text);
+    transition:
+      border-color 0.25s,
+      background 0.25s,
+      box-shadow 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+  .ct-whatsapp::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(to right, var(--olive), var(--steel));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .ct-whatsapp:hover {
+    border-color: var(--olive);
+    background: rgba(107, 124, 85, 0.04);
+    box-shadow: 0 4px 20px rgba(107, 124, 85, 0.1);
+  }
+  .ct-whatsapp:hover::before {
+    transform: scaleX(1);
+  }
+
+  .ct-wa-icon {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(107, 124, 85, 0.3);
+    background: rgba(107, 124, 85, 0.07);
+    color: var(--olive-lt);
+    transition: background 0.25s;
+  }
+  .ct-whatsapp:hover .ct-wa-icon {
+    background: rgba(107, 124, 85, 0.14);
+  }
+  .ct-wa-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    flex: 1;
+  }
+  .ct-wa-title {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--text);
+  }
+  .ct-wa-sub {
+    font-size: 0.68rem;
+    color: var(--muted);
+    font-weight: 300;
+  }
+  .ct-wa-arrow {
+    color: var(--muted);
+    flex-shrink: 0;
+    transition:
+      transform 0.25s,
+      color 0.25s;
+  }
+  .ct-whatsapp:hover .ct-wa-arrow {
+    transform: translateX(4px);
+    color: var(--olive-lt);
+  }
+
+  /* Map */
+  .ct-map {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid var(--border);
+    overflow: hidden;
+  }
+  .ct-map-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border);
+  }
+  .ct-map-label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.62rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+  }
+  .ct-map-label svg {
+    color: var(--steel-lt);
+  }
+  .ct-map-link {
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--steel-lt);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .ct-map-link:hover {
+    color: var(--text);
+  }
+  .ct-map-frame {
+    height: 200px;
+    width: 100%;
+    background: var(--bg-card);
+    overflow: hidden;
+  }
+  .ct-map-frame iframe {
+    display: block;
+  }
+
+  /* ── REVEAL ── */
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(22px);
+    transition:
+      opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  [data-reveal].visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .ct-form-col[data-reveal] {
+    transition-delay: 0.05s;
+  }
+  .ct-info-cards[data-reveal] {
+    transition-delay: 0.15s;
+  }
+  .ct-whatsapp[data-reveal] {
+    transition-delay: 0.25s;
+  }
+  .ct-map[data-reveal] {
+    transition-delay: 0.35s;
+  }
+</style>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap"
+  rel="stylesheet"
+/>
+
+<script>
+  (function () {
+    /* ── REVEAL ── */
+    const obs = new IntersectionObserver(
+      (entries) =>
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add("visible");
+            obs.unobserve(e.target);
+          }
+        }),
+      { threshold: 0.08, rootMargin: "0px 0px -40px 0px" },
+    );
+    document.querySelectorAll("[data-reveal]").forEach((el) => obs.observe(el));
+
+    /* ── CHAR COUNTER ── */
+    const textarea = document.getElementById(
+      "ct-mensaje",
+    ) as HTMLTextAreaElement | null;
+    const charCount = document.getElementById("ctCharCount");
+    const MAX_CHARS = 500;
+    textarea?.addEventListener("input", () => {
+      const len = textarea.value.length;
+      if (textarea.value.length > MAX_CHARS) {
+        textarea.value = textarea.value.slice(0, MAX_CHARS);
+      }
+      if (charCount) {
+        charCount.textContent = `${Math.min(len, MAX_CHARS)} / ${MAX_CHARS}`;
+        charCount.style.color = len >= MAX_CHARS * 0.9 ? "var(--olive-lt)" : "";
+      }
+    });
+
+    /* ── FORM SUBMIT (mock) ── */
+    const form = document.getElementById("ctForm") as HTMLFormElement | null;
+    const submit = document.getElementById(
+      "ctSubmit",
+    ) as HTMLButtonElement | null;
+    const feedback = document.getElementById("ctFeedback");
+
+    function showFeedback(type: "success" | "error-msg", msg: string) {
+      if (!feedback) return;
+      feedback.className = `ct-feedback ${type}`;
+      feedback.textContent = msg;
+      feedback.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+
+    form?.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      // Basic validation
+      const nombre = (
+        form.querySelector("#ct-nombre") as HTMLInputElement
+      ).value.trim();
+      const email = (
+        form.querySelector("#ct-email") as HTMLInputElement
+      ).value.trim();
+      const mensaje = (
+        form.querySelector("#ct-mensaje") as HTMLTextAreaElement
+      ).value.trim();
+      const privacy = (
+        form.querySelector('[name="privacy"]') as HTMLInputElement
+      ).checked;
+
+      if (!nombre || !email || !mensaje) {
+        showFeedback(
+          "error-msg",
+          "Por favor completá los campos obligatorios.",
+        );
+        return;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        showFeedback("error-msg", "El email ingresado no es válido.");
+        return;
+      }
+      if (!privacy) {
+        showFeedback(
+          "error-msg",
+          "Debés aceptar la política de privacidad para continuar.",
+        );
+        return;
+      }
+
+      // Loading state
+      submit?.classList.add("loading");
+      if (submit) submit.disabled = true;
+      if (feedback) {
+        feedback.className = "ct-feedback";
+        feedback.textContent = "";
+      }
+
+      // Simulate async send (replace with real fetch)
+      await new Promise((r) => setTimeout(r, 1800));
+
+      submit?.classList.remove("loading");
+      if (submit) submit.disabled = false;
+
+      // Success
+      showFeedback(
+        "success",
+        "¡Mensaje enviado! Te responderemos en menos de 2 horas. 👋",
+      );
+      form.reset();
+      if (charCount) charCount.textContent = `0 / ${MAX_CHARS}`;
+    });
+  })();
+</script>

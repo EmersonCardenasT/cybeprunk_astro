@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHero from "../components/pageHero.astro";
+import Missionvision from "../components/Nosotros/Missionvision.astro";
+import Whoweare from "../components/Nosotros/Whoweare.astro";
+import Values from "../components/Nosotros/Values.astro";
+import PorqueElegirnos from "../components/Nosotros/PorqueElegirnos.astro";
+---
+
+<Layout>
+  <PageHero
+    eyebrow="Quiénes somos"
+    title="Un equipo"
+    titleOutline="apasionado."
+    subtitle="Más de 5 años reparando y vendiendo tecnología..."
+    image="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1600&q=80"
+    breadcrumb="Inicio / Nosotros"
+  />
+
+  <Whoweare />
+  <Missionvision />
+  <Values />
+  <PorqueElegirnos />
+</Layout>

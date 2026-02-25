@@ -1,5 +1,14 @@
 ---
-// Navbar.astro — Minimal · Steel / Olive · matches Hero style
+const currentPath = Astro.url.pathname;
+
+const links = [
+  { href: "/", label: "Inicio" },
+  { href: "/categorias", label: "Categorías" },
+  { href: "/productos", label: "Productos" },
+  { href: "/galeria", label: "Galería" },
+  { href: "/nosotros", label: "Nosotros" },
+  { href: "/contacto", label: "Contacto" },
+];
 ---
 
 <header id="navbar" class="navbar">
@@ -10,15 +19,42 @@
   <div class="nav-top">
     <div class="nav-top-left">
       <span class="nav-top-item">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M12 21s7-5.1 7-11a7 7 0 1 0-14 0c0 5.9 7 11 7 11Z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.4"/>
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M12 21s7-5.1 7-11a7 7 0 1 0-14 0c0 5.9 7 11 7 11Z"
+            stroke="currentColor"
+            stroke-width="1.4"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <circle
+            cx="12"
+            cy="10"
+            r="2.5"
+            stroke="currentColor"
+            stroke-width="1.4"></circle>
         </svg>
         Av. Principal 123, Centro
       </span>
       <a class="nav-top-item" href="tel:+5491112345678" aria-label="Llamar">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M22 16.92v2a2 2 0 0 1-2.18 2 19.7 19.7 0 0 1-8.63-3.07A19.3 19.3 0 0 1 4.15 12 19.7 19.7 0 0 1 1.08 3.72 2 2 0 0 1 3.06 1.5h2a2 2 0 0 1 2 1.72c.12.9.33 1.78.63 2.63a2 2 0 0 1-.45 2.11L6.1 9.82a16 16 0 0 0 8.08 8.08l1.86-1.14a2 2 0 0 1 2.11-.45c.85.3 1.73.51 2.63.63A2 2 0 0 1 22 16.92Z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M22 16.92v2a2 2 0 0 1-2.18 2 19.7 19.7 0 0 1-8.63-3.07A19.3 19.3 0 0 1 4.15 12 19.7 19.7 0 0 1 1.08 3.72 2 2 0 0 1 3.06 1.5h2a2 2 0 0 1 2 1.72c.12.9.33 1.78.63 2.63a2 2 0 0 1-.45 2.11L6.1 9.82a16 16 0 0 0 8.08 8.08l1.86-1.14a2 2 0 0 1 2.11-.45c.85.3 1.73.51 2.63.63A2 2 0 0 1 22 16.92Z"
+            stroke="currentColor"
+            stroke-width="1.4"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
         </svg>
         +54 9 11 1234-5678
       </a>
@@ -26,39 +62,67 @@
     <div class="nav-top-right" aria-label="Redes sociales">
       <a href="#" class="nav-social" aria-label="Instagram">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-          <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.3"/>
-          <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.3"/>
-          <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+          <rect
+            x="3"
+            y="3"
+            width="18"
+            height="18"
+            rx="5"
+            stroke="currentColor"
+            stroke-width="1.3"></rect>
+          <circle
+            cx="12"
+            cy="12"
+            r="4.2"
+            stroke="currentColor"
+            stroke-width="1.3"></circle>
+          <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"></circle>
         </svg>
       </a>
       <a href="#" class="nav-social" aria-label="Facebook">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-          <path d="M14.5 8H16V5.5h-1.5A3.5 3.5 0 0 0 11 9v2H9v2.5h2V21h2.5v-5.5H16L16.5 13H13.5V9c0-.55.45-1 1-1h0z" fill="currentColor"/>
+          <path
+            d="M14.5 8H16V5.5h-1.5A3.5 3.5 0 0 0 11 9v2H9v2.5h2V21h2.5v-5.5H16L16.5 13H13.5V9c0-.55.45-1 1-1h0z"
+            fill="currentColor"></path>
         </svg>
       </a>
       <a href="#" class="nav-social" aria-label="X">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-          <path d="M17.5 5h-2.2l-3 4-3-4H7.1l4.2 5.6L6.5 19h2.2l3.4-4.5 3.4 4.5h2.2l-4.8-6.4L17.5 5z" fill="currentColor"/>
+          <path
+            d="M17.5 5h-2.2l-3 4-3-4H7.1l4.2 5.6L6.5 19h2.2l3.4-4.5 3.4 4.5h2.2l-4.8-6.4L17.5 5z"
+            fill="currentColor"></path>
         </svg>
       </a>
     </div>
   </div>
 
   <nav class="navbar-inner">
-
     <!-- ── LOGO ── -->
     <a href="#inicio" class="logo" aria-label="Inicio">
       <!-- Monogram mark -->
       <div class="logo-mark" aria-hidden="true">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
           <!-- Outer square rotated -->
-          <rect x="4" y="4" width="20" height="20" rx="2"
-                stroke="currentColor" stroke-width="1.2"
-                transform="rotate(45 14 14)" opacity="0.35"/>
+          <rect
+            x="4"
+            y="4"
+            width="20"
+            height="20"
+            rx="2"
+            stroke="currentColor"
+            stroke-width="1.2"
+            transform="rotate(45 14 14)"
+            opacity="0.35"></rect>
           <!-- Inner solid diamond -->
-          <rect x="9" y="9" width="10" height="10" rx="1"
-                fill="currentColor" opacity="0.9"
-                transform="rotate(45 14 14)"/>
+          <rect
+            x="9"
+            y="9"
+            width="10"
+            height="10"
+            rx="1"
+            fill="currentColor"
+            opacity="0.9"
+            transform="rotate(45 14 14)"></rect>
         </svg>
       </div>
       <span class="logo-name">CYBERPUNK</span>
@@ -66,23 +130,22 @@
 
     <!-- ── DESKTOP LINKS ── -->
     <ul class="nav-links" role="list">
-      {[
-        { href: '#inicio',     label: 'Inicio' },
-        { href: '#categorias', label: 'Categorías' },
-        { href: '#productos',  label: 'Productos' },
-        { href: '#galeria',    label: 'Galería' },
-        { href: '#nosotros',   label: 'Nosotros' },
-        { href: '#contacto',   label: 'Contacto' },
-      ].map(({ href, label }) => (
-        <li>
-          <a href={href} class="nav-link">{label}</a>
-        </li>
-      ))}
+      {
+        links.map(({ href, label }) => (
+          <li>
+            <a
+              href={href}
+              class={`nav-link ${currentPath === href ? "active" : ""}`}
+            >
+              {label}
+            </a>
+          </li>
+        ))
+      }
     </ul>
 
     <!-- ── RIGHT CLUSTER ── -->
     <div class="nav-right">
-
       <!-- CTA pill -->
       <a href="#contacto" class="nav-cta" aria-label="Pedir turno">
         Pedir turno
@@ -91,25 +154,46 @@
       <!-- Theme toggle -->
       <button id="theme-toggle" class="theme-btn" aria-label="Cambiar tema">
         <!-- Sun -->
-        <svg id="icon-sun" class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
-          <circle cx="12" cy="12" r="4.5"/>
-          <line x1="12" y1="2"   x2="12" y2="4.5"/>
-          <line x1="12" y1="19.5" x2="12" y2="22"/>
-          <line x1="2"  y1="12"  x2="4.5" y2="12"/>
-          <line x1="19.5" y1="12" x2="22" y2="12"/>
-          <line x1="4.93" y1="4.93" x2="6.76" y2="6.76"/>
-          <line x1="17.24" y1="17.24" x2="19.07" y2="19.07"/>
-          <line x1="4.93" y1="19.07" x2="6.76" y2="17.24"/>
-          <line x1="17.24" y1="6.76"  x2="19.07" y2="4.93"/>
+        <svg
+          id="icon-sun"
+          class="theme-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        >
+          <circle cx="12" cy="12" r="4.5"></circle>
+          <line x1="12" y1="2" x2="12" y2="4.5"></line>
+          <line x1="12" y1="19.5" x2="12" y2="22"></line>
+          <line x1="2" y1="12" x2="4.5" y2="12"></line>
+          <line x1="19.5" y1="12" x2="22" y2="12"></line>
+          <line x1="4.93" y1="4.93" x2="6.76" y2="6.76"></line>
+          <line x1="17.24" y1="17.24" x2="19.07" y2="19.07"></line>
+          <line x1="4.93" y1="19.07" x2="6.76" y2="17.24"></line>
+          <line x1="17.24" y1="6.76" x2="19.07" y2="4.93"></line>
         </svg>
         <!-- Moon -->
-        <svg id="icon-moon" class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        <svg
+          id="icon-moon"
+          class="theme-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        >
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         </svg>
       </button>
 
       <!-- Hamburger -->
-      <button id="mobile-toggle" class="hamburger" aria-label="Menú" aria-expanded="false">
+      <button
+        id="mobile-toggle"
+        class="hamburger"
+        aria-label="Menú"
+        aria-expanded="false"
+      >
         <span class="ham-line"></span>
         <span class="ham-line ham-mid"></span>
         <span class="ham-line"></span>
@@ -119,22 +203,21 @@
 
   <!-- ── MOBILE MENU ── -->
   <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
-    <ul class="mobile-links" role="list">
-      {[
-        { href: '#inicio',     label: 'Inicio',      num: '01' },
-        { href: '#categorias', label: 'Categorías',  num: '02' },
-        { href: '#productos',  label: 'Productos',   num: '03' },
-        { href: '#galeria',    label: 'Galería',     num: '04' },
-        { href: '#nosotros',   label: 'Nosotros',    num: '05' },
-        { href: '#contacto',   label: 'Contacto',    num: '06' },
-      ].map(({ href, label, num }) => (
-        <li class="mobile-item">
-          <a href={href} class="mobile-link">
-            <span class="mobile-num">{num}</span>
-            <span class="mobile-label">{label}</span>
-          </a>
-        </li>
-      ))}
+    <ul class="nav-links" role="list">
+      {
+        links.map(({ href, label }) => {
+          const isActive =
+            href === "/" ? currentPath === "/" : currentPath.startsWith(href);
+
+          return (
+            <li>
+              <a href={href} class={`nav-link ${isActive ? "active" : ""}`}>
+                {label}
+              </a>
+            </li>
+          );
+        })
+      }
     </ul>
 
     <!-- Mobile bottom row -->
@@ -153,50 +236,56 @@
 <style>
   /* ── PALETTE (mirrors Hero) ── */
   :root {
-    --black:     #0a0a0a;
-    --white:     #f4f3ef;
-    --steel:     #4a6278;
-    --steel-lt:  #7a98ae;
-    --olive:     #6b7c55;
-    --olive-lt:  #8fa070;
+    --black: #0a0a0a;
+    --white: #f4f3ef;
+    --steel: #4a6278;
+    --steel-lt: #7a98ae;
+    --olive: #6b7c55;
+    --olive-lt: #8fa070;
 
     /* Light mode nav */
-    --nav-bg:      rgba(244,243,239,0.88);
-    --nav-border:  rgba(10,10,10,0.08);
-    --nav-text:    #0a0a0a;
-    --nav-muted:   rgba(10,10,10,0.45);
-    --nav-shadow:  0 1px 0 rgba(10,10,10,0.06);
+    --nav-bg: rgba(244, 243, 239, 0.88);
+    --nav-border: rgba(10, 10, 10, 0.08);
+    --nav-text: #0a0a0a;
+    --nav-muted: rgba(10, 10, 10, 0.45);
+    --nav-shadow: 0 1px 0 rgba(10, 10, 10, 0.06);
   }
 
   :root.dark {
-    --nav-bg:      rgba(8,8,8,0.85);
-    --nav-border:  rgba(244,243,239,0.07);
-    --nav-text:    #f4f3ef;
-    --nav-muted:   rgba(244,243,239,0.38);
-    --nav-shadow:  0 1px 0 rgba(244,243,239,0.05);
+    --nav-bg: rgba(8, 8, 8, 0.85);
+    --nav-border: rgba(244, 243, 239, 0.07);
+    --nav-text: #f4f3ef;
+    --nav-muted: rgba(244, 243, 239, 0.38);
+    --nav-shadow: 0 1px 0 rgba(244, 243, 239, 0.05);
   }
 
   /* ── HEADER ── */
   .navbar {
     position: fixed;
-    top: 0; left: 0; right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 50;
-    font-family: 'DM Sans', 'Helvetica Neue', sans-serif;
+    font-family: "DM Sans", "Helvetica Neue", sans-serif;
     transition: box-shadow 0.4s;
   }
   .navbar.scrolled {
-    box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.18);
   }
 
   /* Backdrop blur layer */
   .navbar-backdrop {
-    position: absolute; inset: 0;
+    position: absolute;
+    inset: 0;
     background: var(--nav-bg);
     backdrop-filter: blur(18px) saturate(160%);
     -webkit-backdrop-filter: blur(18px) saturate(160%);
     border-bottom: 1px solid var(--nav-border);
     box-shadow: var(--nav-shadow);
-    transition: background 0.4s, border-color 0.4s, box-shadow 0.4s;
+    transition:
+      background 0.4s,
+      border-color 0.4s,
+      box-shadow 0.4s;
   }
 
   /* ── TOP META BAR ── */
@@ -215,26 +304,50 @@
     text-transform: uppercase;
     color: var(--nav-muted);
   }
-  @media (max-width: 640px) { .nav-top { display: none; } }
-  .nav-top-left, .nav-top-right { display: inline-flex; align-items: center; gap: 14px; }
+  @media (max-width: 640px) {
+    .nav-top {
+      display: none;
+    }
+  }
+  .nav-top-left,
+  .nav-top-right {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+  }
   .nav-top-item {
-    display: inline-flex; align-items: center; gap: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     color: var(--nav-muted);
   }
-  .nav-top a { color: var(--nav-muted); text-decoration: none; transition: color 0.2s; }
-  .nav-top a:hover { color: var(--nav-text); }
+  .nav-top a {
+    color: var(--nav-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-top a:hover {
+    color: var(--nav-text);
+  }
   .nav-social {
-    display: inline-flex; align-items: center; justify-content: center;
-    width: 28px; height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
     border: 1px solid var(--nav-border);
     border-radius: 4px;
     color: var(--nav-muted);
-    transition: border-color 0.25s, color 0.25s, background 0.25s, transform 0.25s;
+    transition:
+      border-color 0.25s,
+      color 0.25s,
+      background 0.25s,
+      transform 0.25s;
   }
   .nav-social:hover {
     border-color: var(--steel);
     color: var(--steel-lt);
-    background: rgba(74,98,120,0.06);
+    background: rgba(74, 98, 120, 0.06);
     transform: translateY(-1px);
   }
 
@@ -250,7 +363,11 @@
     justify-content: space-between;
     gap: 32px;
   }
-  @media (max-width: 640px) { .navbar-inner { padding: 0 20px; } }
+  @media (max-width: 640px) {
+    .navbar-inner {
+      padding: 0 20px;
+    }
+  }
 
   /* ── LOGO ── */
   .logo {
@@ -264,7 +381,9 @@
   }
   .logo-mark {
     color: var(--steel);
-    transition: color 0.3s, transform 0.4s;
+    transition:
+      color 0.3s,
+      transform 0.4s;
   }
   .logo:hover .logo-mark {
     color: var(--olive);
@@ -283,12 +402,15 @@
   .nav-links {
     display: none;
     list-style: none;
-    margin: 0; padding: 0;
+    margin: 0;
+    padding: 0;
     gap: 2px;
     align-items: center;
   }
   @media (min-width: 900px) {
-    .nav-links { display: flex; }
+    .nav-links {
+      display: flex;
+    }
   }
 
   .nav-link {
@@ -305,14 +427,18 @@
   }
   /* Underline from steel -->  olive on hover */
   .nav-link::after {
-    content: '';
+    content: "";
     position: absolute;
-    bottom: 0; left: 14px; right: 14px;
+    bottom: 0;
+    left: 14px;
+    right: 14px;
     height: 1px;
     background: var(--olive-lt);
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), background 0.3s;
+    transition:
+      transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+      background 0.3s;
   }
   .nav-link:hover {
     color: var(--nav-text);
@@ -347,51 +473,82 @@
     text-decoration: none;
     color: var(--nav-text);
     border: 1px solid var(--nav-border);
-    transition: border-color 0.25s, color 0.25s, background 0.25s, box-shadow 0.25s;
+    transition:
+      border-color 0.25s,
+      color 0.25s,
+      background 0.25s,
+      box-shadow 0.25s;
     background: transparent;
   }
-  @media (min-width: 900px) { .nav-cta { display: inline-flex; align-items: center; } }
+  @media (min-width: 900px) {
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+    }
+  }
   .nav-cta:hover {
     border-color: var(--steel);
     color: var(--white);
     background: var(--steel);
-    box-shadow: 0 4px 20px rgba(74,98,120,0.3);
+    box-shadow: 0 4px 20px rgba(74, 98, 120, 0.3);
   }
 
   /* ── THEME TOGGLE ── */
   .theme-btn {
     position: relative;
-    width: 38px; height: 38px;
-    display: flex; align-items: center; justify-content: center;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: transparent;
     border: 1px solid var(--nav-border);
     color: var(--nav-muted);
     cursor: pointer;
-    transition: border-color 0.25s, color 0.25s, box-shadow 0.25s;
+    transition:
+      border-color 0.25s,
+      color 0.25s,
+      box-shadow 0.25s;
   }
   .theme-btn:hover {
     border-color: var(--steel);
     color: var(--steel-lt);
-    box-shadow: 0 0 12px rgba(74,98,120,0.2);
+    box-shadow: 0 0 12px rgba(74, 98, 120, 0.2);
   }
   .theme-icon {
-    width: 16px; height: 16px;
+    width: 16px;
+    height: 16px;
     position: absolute;
-    transition: opacity 0.3s, transform 0.3s;
+    transition:
+      opacity 0.3s,
+      transform 0.3s;
   }
   /* Light mode: show moon, hide sun */
-  :root:not(.dark) #icon-moon { opacity: 1; transform: scale(1) rotate(0deg); }
-  :root:not(.dark) #icon-sun  { opacity: 0; transform: scale(0.6) rotate(90deg); }
+  :root:not(.dark) #icon-moon {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+  :root:not(.dark) #icon-sun {
+    opacity: 0;
+    transform: scale(0.6) rotate(90deg);
+  }
   /* Dark mode: show sun, hide moon */
-  :root.dark #icon-sun  { opacity: 1; transform: scale(1) rotate(0deg); }
-  :root.dark #icon-moon { opacity: 0; transform: scale(0.6) rotate(-90deg); }
+  :root.dark #icon-sun {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+  :root.dark #icon-moon {
+    opacity: 0;
+    transform: scale(0.6) rotate(-90deg);
+  }
 
   /* ── HAMBURGER ── */
   .hamburger {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    width: 38px; height: 38px;
+    width: 38px;
+    height: 38px;
     align-items: center;
     justify-content: center;
     background: transparent;
@@ -399,39 +556,61 @@
     cursor: pointer;
     transition: border-color 0.25s;
   }
-  @media (min-width: 900px) { .hamburger { display: none; } }
-  .hamburger:hover { border-color: var(--steel); }
+  @media (min-width: 900px) {
+    .hamburger {
+      display: none;
+    }
+  }
+  .hamburger:hover {
+    border-color: var(--steel);
+  }
 
   .ham-line {
     display: block;
-    width: 18px; height: 1.5px;
+    width: 18px;
+    height: 1.5px;
     background: var(--nav-muted);
     border-radius: 1px;
     transition: all 0.3s;
   }
-  .ham-mid { width: 12px; margin-left: auto; }
+  .ham-mid {
+    width: 12px;
+    margin-left: auto;
+  }
 
   /* Open state */
-  .hamburger.open .ham-line:nth-child(1) { transform: translateY(6.5px) rotate(45deg); width: 18px; }
-  .hamburger.open .ham-mid              { opacity: 0; transform: scaleX(0); }
-  .hamburger.open .ham-line:nth-child(3){ transform: translateY(-6.5px) rotate(-45deg); width: 18px; }
+  .hamburger.open .ham-line:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+    width: 18px;
+  }
+  .hamburger.open .ham-mid {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  .hamburger.open .ham-line:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+    width: 18px;
+  }
 
   /* ── MOBILE MENU ── */
   .mobile-menu {
     position: relative;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1);
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     background: var(--nav-bg);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     border-top: 1px solid var(--nav-border);
   }
-  .mobile-menu.open { max-height: 520px; }
+  .mobile-menu.open {
+    max-height: 520px;
+  }
 
   .mobile-links {
     list-style: none;
-    margin: 0; padding: 12px 0 0;
+    margin: 0;
+    padding: 12px 0 0;
   }
   .mobile-item {
     border-bottom: 1px solid var(--nav-border);
@@ -442,10 +621,12 @@
     gap: 20px;
     padding: 16px 24px;
     text-decoration: none;
-    transition: background 0.2s, padding-left 0.2s;
+    transition:
+      background 0.2s,
+      padding-left 0.2s;
   }
   .mobile-link:hover {
-    background: rgba(74,98,120,0.06);
+    background: rgba(74, 98, 120, 0.06);
     padding-left: 32px;
   }
   .mobile-num {
@@ -464,7 +645,9 @@
     color: var(--nav-text);
     transition: color 0.2s;
   }
-  .mobile-link:hover .mobile-label { color: var(--steel-lt); }
+  .mobile-link:hover .mobile-label {
+    color: var(--steel-lt);
+  }
 
   /* Mobile footer */
   .mobile-footer {
@@ -488,12 +671,16 @@
     color: var(--olive-lt);
     transition: color 0.2s;
   }
-  .mobile-cta:hover { color: var(--olive); }
+  .mobile-cta:hover {
+    color: var(--olive);
+  }
 
   /* ── SCROLL INDICATOR ── */
   .scroll-indicator {
     position: absolute;
-    bottom: 0; left: 0; right: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     height: 2px;
     background: transparent;
   }
@@ -501,84 +688,94 @@
     height: 100%;
     width: 0;
     background: var(--steel-lt);
-    box-shadow: 0 0 6px rgba(122,152,174,0.5);
+    box-shadow: 0 0 6px rgba(122, 152, 174, 0.5);
     transition: width 0.1s linear;
   }
 </style>
 
 <!-- Fonts (same as Hero) -->
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap"
+  rel="stylesheet"
+/>
 
 <script>
-(function () {
-  const root    = document.documentElement;
-  const navbar  = document.getElementById('navbar');
-  const fill    = document.getElementById('scrollIndicator');
-  const themeBtn= document.getElementById('theme-toggle');
-  const mobBtn  = document.getElementById('mobile-toggle');
-  const mobMenu = document.getElementById('mobile-menu');
-  const navLinks= document.querySelectorAll('.nav-link');
+  (function () {
+    const root = document.documentElement;
+    const navbar = document.getElementById("navbar");
+    const fill = document.getElementById("scrollIndicator");
+    const themeBtn = document.getElementById("theme-toggle");
+    const mobBtn = document.getElementById("mobile-toggle");
+    const mobMenu = document.getElementById("mobile-menu");
+    const navLinks = document.querySelectorAll(".nav-link");
 
-  /* ── THEME ── */
-  const stored = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  if (stored === 'dark' || (!stored && prefersDark)) root.classList.add('dark');
+    /* ── THEME ── */
+    const stored = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)",
+    ).matches;
+    if (stored === "dark" || (!stored && prefersDark))
+      root.classList.add("dark");
 
-  themeBtn?.addEventListener('click', () => {
-    root.classList.toggle('dark');
-    localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
-  });
-
-  /* ── MOBILE MENU ── */
-  let menuOpen = false;
-  mobBtn?.addEventListener('click', () => {
-    menuOpen = !menuOpen;
-    mobBtn.classList.toggle('open', menuOpen);
-    mobMenu?.classList.toggle('open', menuOpen);
-    mobBtn.setAttribute('aria-expanded', String(menuOpen));
-    mobMenu?.setAttribute('aria-hidden', String(!menuOpen));
-  });
-
-  // Close on link click
-  mobMenu?.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      menuOpen = false;
-      mobBtn?.classList.remove('open');
-      mobMenu.classList.remove('open');
+    themeBtn?.addEventListener("click", () => {
+      root.classList.toggle("dark");
+      localStorage.setItem(
+        "theme",
+        root.classList.contains("dark") ? "dark" : "light",
+      );
     });
-  });
 
-  /* ── SCROLL: navbar shadow + progress bar + active links ── */
-  const sections = Array.from(document.querySelectorAll('section[id]'));
+    /* ── MOBILE MENU ── */
+    let menuOpen = false;
+    mobBtn?.addEventListener("click", () => {
+      menuOpen = !menuOpen;
+      mobBtn.classList.toggle("open", menuOpen);
+      mobMenu?.classList.toggle("open", menuOpen);
+      mobBtn.setAttribute("aria-expanded", String(menuOpen));
+      mobMenu?.setAttribute("aria-hidden", String(!menuOpen));
+    });
 
-  function onScroll() {
-    const scrolled = window.scrollY;
-    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    // Close on link click
+    mobMenu?.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", () => {
+        menuOpen = false;
+        mobBtn?.classList.remove("open");
+        mobMenu.classList.remove("open");
+      });
+    });
 
-    // Scrolled class
-    navbar?.classList.toggle('scrolled', scrolled > 20);
+    /* ── SCROLL: navbar shadow + progress bar + active links ── */
+    const sections = Array.from(document.querySelectorAll("section[id]"));
 
-    // Progress fill
-    if (fill && maxScroll > 0) {
-      fill.style.width = ((scrolled / maxScroll) * 100) + '%';
+    function onScroll() {
+      const scrolled = window.scrollY;
+      const maxScroll =
+        document.documentElement.scrollHeight - window.innerHeight;
+
+      // Scrolled class
+      navbar?.classList.toggle("scrolled", scrolled > 20);
+
+      // Progress fill
+      if (fill && maxScroll > 0) {
+        fill.style.width = (scrolled / maxScroll) * 100 + "%";
+      }
+
+      // Active nav link
+      let current = "";
+      sections.forEach((sec) => {
+        if (scrolled >= (sec as HTMLElement).offsetTop - 90) {
+          current = sec.id;
+        }
+      });
+      navLinks.forEach((link) => {
+        const href = link.getAttribute("href")?.slice(1);
+        link.classList.toggle("active", href === current);
+      });
     }
 
-    // Active nav link
-    let current = '';
-    sections.forEach(sec => {
-      if (scrolled >= (sec as HTMLElement).offsetTop - 90) {
-        current = sec.id;
-      }
-    });
-    navLinks.forEach(link => {
-      const href = link.getAttribute('href')?.slice(1);
-      link.classList.toggle('active', href === current);
-    });
-  }
-
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll(); // init
-})();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll(); // init
+  })();
 </script>

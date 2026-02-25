@@ -1,0 +1,306 @@
+---
+// PorqueElegirnos.astro — Componente de confianza y valor · Estilo Cyberpunk Minimal
+---
+
+<section id="porque-elegirnos" class="why-section">
+  <!-- Fondo con textura y líneas de diseño -->
+  <div class="why-bg" aria-hidden="true">
+    <div class="bg-grain"></div>
+    <div class="bg-line-v"></div>
+    <div class="bg-line-h"></div>
+  </div>
+
+  <div class="why-inner">
+    <!-- Encabezado -->
+    <div class="why-header" data-reveal>
+      <p class="section-eyebrow">
+        <span class="eyebrow-pip"></span>
+        Nuestra Diferencia
+      </p>
+      <h2 class="section-title">
+        ¿Por qué elegir<br/>
+        <span class="title-outline">CyberPunk?</span>
+      </h2>
+      <p class="section-sub">
+        Combinamos tecnología de vanguardia con un servicio personalizado para ofrecerte la mejor experiencia en el mercado.
+      </p>
+    </div>
+
+    <!-- Grid de Pilares -->
+    <div class="why-grid">
+      <!-- Pilar 01: Experiencia -->
+      <div class="why-card" data-reveal data-delay="0">
+        <div class="card-num">01</div>
+        <div class="card-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <h3 class="card-title">Expertos Certificados</h3>
+        <p class="card-text">Nuestro equipo técnico cuenta con certificaciones internacionales y años de experiencia en micro-soldadura y reparaciones complejas.</p>
+        <div class="card-border"></div>
+      </div>
+
+      <!-- Pilar 02: Repuestos -->
+      <div class="why-card" data-reveal data-delay="1">
+        <div class="card-num">02</div>
+        <div class="card-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+            <line x1="12" y1="22.08" x2="12" y2="12"/>
+          </svg>
+        </div>
+        <h3 class="card-title">Calidad Premium</h3>
+        <p class="card-text">Solo utilizamos repuestos originales o de grado OEM, asegurando que tu dispositivo mantenga su rendimiento y durabilidad original.</p>
+        <div class="card-border"></div>
+      </div>
+
+      <!-- Pilar 03: Transparencia -->
+      <div class="why-card" data-reveal data-delay="2">
+        <div class="card-num">03</div>
+        <div class="card-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+        </div>
+        <h3 class="card-title">Proceso Transparente</h3>
+        <p class="card-text">Seguimiento en tiempo real de tu reparación y diagnósticos honestos. Sin costos ocultos ni sorpresas de último momento.</p>
+        <div class="card-border"></div>
+      </div>
+    </div>
+
+    <!-- Bottom CTA / Stat -->
+    <div class="why-footer" data-reveal>
+      <div class="trust-badge">
+        <span class="badge-dot"></span>
+        <span class="badge-text">Confiado por más de 10,000 clientes satisfechos</span>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+<style>
+  .why-section {
+    /* Light mode default */
+    --bg: #f4f3ef;
+    --bg-card: rgba(10, 10, 10, 0.02);
+    --bg-card-hover: rgba(10, 10, 10, 0.04);
+    --text: #0a0a0a;
+    --muted: rgba(10, 10, 10, 0.6);
+    --border: rgba(10, 10, 10, 0.1);
+    --title-stroke: rgba(10, 10, 10, 0.4);
+
+    position: relative;
+    padding: 100px 0;
+    background-color: var(--bg);
+    color: var(--text);
+    overflow: hidden;
+    transition: background 0.4s, color 0.4s;
+  }
+
+  /* Dark mode override */
+  :root.dark .why-section {
+    --bg: #0a0a0a;
+    --bg-card: rgba(255, 255, 255, 0.02);
+    --bg-card-hover: rgba(255, 255, 255, 0.04);
+    --text: #f4f3ef;
+    --muted: rgba(244, 243, 239, 0.6);
+    --border: rgba(244, 243, 239, 0.1);
+    --title-stroke: rgba(244, 243, 239, 0.3);
+  }
+
+  .why-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .bg-grain {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+    opacity: 0.03;
+    filter: brightness(0.5);
+  }
+
+  .bg-line-v {
+    position: absolute;
+    left: 10%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, var(--border), transparent);
+    opacity: 0.5;
+  }
+
+  .bg-line-h {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--border), transparent);
+    opacity: 0.3;
+  }
+
+  .why-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .why-header {
+    margin-bottom: 60px;
+  }
+
+  .section-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'DM Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 12px;
+    color: var(--steel-lt);
+    margin-bottom: 16px;
+  }
+
+  .eyebrow-pip {
+    width: 6px;
+    height: 6px;
+    background: var(--olive);
+    border-radius: 1px;
+    transform: rotate(45deg);
+  }
+
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.1;
+    color: var(--text);
+    margin-bottom: 20px;
+  }
+
+  .title-outline {
+    display: block;
+    -webkit-text-stroke: 1px var(--title-stroke);
+    color: transparent;
+  }
+
+  .section-sub {
+    max-width: 500px;
+    font-size: 16px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+  }
+
+  .why-card {
+    position: relative;
+    padding: 40px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .why-card:hover {
+    background: var(--bg-card-hover);
+    transform: translateY(-5px);
+    border-color: var(--steel);
+  }
+
+  .card-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 14px;
+    color: var(--olive);
+    opacity: 0.8;
+  }
+
+  .card-icon {
+    color: var(--steel-lt);
+    margin: 8px 0;
+  }
+
+  .card-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  .card-text {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .card-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--olive);
+    transition: width 0.4s ease;
+  }
+
+  .why-card:hover .card-border {
+    width: 100%;
+  }
+
+  .why-footer {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .trust-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    background: rgba(74, 98, 120, 0.05);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+  }
+
+  .badge-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--olive);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--olive);
+    animation: pulse 2s infinite;
+  }
+
+  .badge-text {
+    font-size: 13px;
+    color: var(--steel-lt);
+    letter-spacing: 0.02em;
+  }
+
+  @keyframes pulse {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.2); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+
+  @media (max-width: 768px) {
+    .why-section { padding: 60px 0; }
+    .why-grid { grid-template-columns: 1fr; }
+  }
+</style>

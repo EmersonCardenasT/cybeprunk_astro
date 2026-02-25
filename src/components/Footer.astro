@@ -1,259 +1,505 @@
 ---
-const year = new Date().getFullYear();
+// Footer.astro — Footer completo · Minimal · Steel / Olive
 ---
 
-<section id="footer" class="footer-section">
-  <div class="footer-inner">
-    <div class="footer-head">
-      <a href="#inicio" class="logo" aria-label="Inicio">
-        <div class="logo-mark" aria-hidden="true">
-          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-            <rect x="4" y="4" width="20" height="20" rx="2" stroke="currentColor" stroke-width="1.2" transform="rotate(45 14 14)" opacity="0.35"/>
-            <rect x="9" y="9" width="10" height="10" rx="1" fill="currentColor" opacity="0.9" transform="rotate(45 14 14)"/>
-          </svg>
-        </div>
-        <span class="logo-name">CYBERPUNK</span>
-      </a>
-      <p class="tagline">Tecnología, servicio y estilo</p>
-    </div>
+<footer class="footer">
 
-    <div class="footer-grid">
-      <div class="col">
-        <p class="col-title">Explorar</p>
-        <ul class="col-list" role="list">
-          <li><a class="col-link" href="#inicio">Inicio</a></li>
-          <li><a class="col-link" href="#categorias">Categorías</a></li>
-          <li><a class="col-link" href="#productos">Productos</a></li>
-          <li><a class="col-link" href="#galeria">Galería</a></li>
-        </ul>
-      </div>
-      <div class="col">
-        <p class="col-title">Compañía</p>
-        <ul class="col-list" role="list">
-          <li><a class="col-link" href="#nosotros">Nosotros</a></li>
-          <li><a class="col-link" href="#contacto">Contacto</a></li>
-        </ul>
-      </div>
-      <div class="col">
-        <p class="col-title">Legal</p>
-        <ul class="col-list" role="list">
-          <li><a class="col-link" href="#">Términos</a></li>
-          <li><a class="col-link" href="#">Privacidad</a></li>
-        </ul>
-      </div>
-      <div class="col col-cta">
-        <p class="col-title">Novedades</p>
-        <p class="col-text">Ofertas y lanzamientos. Sin spam.</p>
-        <form class="cta-form" action="#" method="post">
-          <input class="input" type="email" required placeholder="Tu correo"/>
-          <button class="btn" type="submit">Suscribirme</button>
-        </form>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p class="copy">© {year} CYBERPUNK. Todos los derechos reservados.</p>
-      <div class="social">
-        <a href="#" aria-label="Instagram" class="social-btn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-            <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.4"/>
-            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.4"/>
-            <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
-          </svg>
-        </a>
-        <a href="#" aria-label="Facebook" class="social-btn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-            <path d="M14.5 8H16V5.5h-1.5A3.5 3.5 0 0 0 11 9v2H9v2.5h2V21h2.5v-5.5H16L16.5 13H13.5V9c0-.55.45-1 1-1h0z" fill="currentColor"/>
-          </svg>
-        </a>
-        <a href="#" aria-label="X" class="social-btn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-            <path d="M17.5 5h-2.2l-3 4-3-4H7.1l4.2 5.6L6.5 19h2.2l3.4-4.5 3.4 4.5h2.2l-4.8-6.4L17.5 5z" fill="currentColor"/>
-          </svg>
-        </a>
-      </div>
-    </div>
+  <div class="footer-bg" aria-hidden="true">
+    <div class="footer-grain"></div>
+    <div class="footer-line footer-line-top"></div>
   </div>
-</section>
+
+  <div class="footer-inner">
+
+    <!-- ══ TOP: Brand + Nav columns ══ -->
+    <div class="footer-top">
+
+      <!-- Brand column -->
+      <div class="footer-brand-col">
+        <!-- Logo -->
+        <a href="#inicio" class="footer-logo" aria-label="CellTech inicio">
+          <div class="footer-logo-mark" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <rect x="4" y="4" width="20" height="20" rx="2"
+                    stroke="currentColor" stroke-width="1.2"
+                    transform="rotate(45 14 14)" opacity="0.35"/>
+              <rect x="9" y="9" width="10" height="10" rx="1"
+                    fill="currentColor" opacity="0.9"
+                    transform="rotate(45 14 14)"/>
+            </svg>
+          </div>
+          <span class="footer-logo-name">CellTech</span>
+        </a>
+
+        <p class="footer-tagline">
+          Venta y reparación de celulares.<br/>
+          Tecnología que funciona, garantía que se cumple.
+        </p>
+
+        <!-- Social links -->
+        <div class="footer-socials" aria-label="Redes sociales">
+
+          <!-- Instagram -->
+          <a href="#" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5"/>
+              <circle cx="12" cy="12" r="5"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+
+          <!-- Facebook -->
+          <a href="#" class="social-btn" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+          </a>
+
+          <!-- WhatsApp -->
+          <a href="#" class="social-btn" aria-label="WhatsApp" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+            </svg>
+          </a>
+
+          <!-- TikTok -->
+          <a href="#" class="social-btn" aria-label="TikTok" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
+            </svg>
+          </a>
+
+        </div>
+
+        <!-- Contact quick -->
+        <div class="footer-contact-quick">
+          <a href="tel:+541112345678" class="contact-quick-item">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            +54 11 1234-5678
+          </a>
+          <a href="mailto:hola@celltech.com" class="contact-quick-item">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            hola@celltech.com
+          </a>
+          <div class="contact-quick-item contact-no-link">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            Av. Corrientes 1234, CABA
+          </div>
+        </div>
+      </div>
+
+      <!-- Nav columns -->
+      <div class="footer-nav-cols">
+
+        <!-- Productos -->
+        <div class="footer-nav-col">
+          <h3 class="footer-nav-title">Productos</h3>
+          <ul class="footer-nav-list">
+            <li><a href="#productos" class="footer-nav-link">iPhone</a></li>
+            <li><a href="#productos" class="footer-nav-link">Samsung Galaxy</a></li>
+            <li><a href="#productos" class="footer-nav-link">Xiaomi</a></li>
+            <li><a href="#productos" class="footer-nav-link">Motorola</a></li>
+            <li><a href="#productos" class="footer-nav-link">Smartwatches</a></li>
+            <li><a href="#productos" class="footer-nav-link">Audífonos</a></li>
+            <li><a href="#productos" class="footer-nav-link">Covers & Accesorios</a></li>
+          </ul>
+        </div>
+
+        <!-- Servicios -->
+        <div class="footer-nav-col">
+          <h3 class="footer-nav-title">Servicios</h3>
+          <ul class="footer-nav-list">
+            <li><a href="#contacto" class="footer-nav-link">Reparación de pantallas</a></li>
+            <li><a href="#contacto" class="footer-nav-link">Cambio de batería</a></li>
+            <li><a href="#contacto" class="footer-nav-link">Reparación de conectores</a></li>
+            <li><a href="#contacto" class="footer-nav-link">Reparación de cámaras</a></li>
+            <li><a href="#open-box"  class="footer-nav-link">Open Box</a></li>
+            <li><a href="#contacto" class="footer-nav-link">Diagnóstico gratuito</a></li>
+          </ul>
+        </div>
+
+        <!-- Empresa -->
+        <div class="footer-nav-col">
+          <h3 class="footer-nav-title">Empresa</h3>
+          <ul class="footer-nav-list">
+            <li><a href="#nosotros" class="footer-nav-link">Nosotros</a></li>
+            <li><a href="#nosotros" class="footer-nav-link">Garantía y política</a></li>
+            <li><a href="#contacto" class="footer-nav-link">Contacto</a></li>
+            <li><a href="#"         class="footer-nav-link">Términos de uso</a></li>
+            <li><a href="#"         class="footer-nav-link">Privacidad</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ══ MIDDLE: Newsletter strip ══ -->
+    <div class="footer-newsletter">
+      <div class="newsletter-text">
+        <p class="newsletter-title">Enterate de nuestras ofertas</p>
+        <p class="newsletter-sub">Sin spam. Solo lo que te importa.</p>
+      </div>
+      <form class="newsletter-form" onsubmit="return false;">
+        <input
+          type="email"
+          placeholder="tu@email.com"
+          class="newsletter-input"
+          aria-label="Email para newsletter"
+          autocomplete="email"
+        />
+        <button type="submit" class="newsletter-btn">
+          Suscribirme
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+
+    <!-- ══ BOTTOM: Legal bar ══ -->
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">
+        <p class="footer-copy">
+          © <span id="footerYear"></span> CellTech. Todos los derechos reservados.
+        </p>
+        <div class="footer-bottom-badges">
+          <span class="footer-badge">
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
+              <path d="M6 1L1 3.5v5C1 10.9 3.2 12 6 12s5-1.1 5-3.5v-5z" stroke="currentColor" stroke-width="1" stroke-linejoin="round"/>
+            </svg>
+            Compra segura
+          </span>
+          <span class="footer-badge">
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
+              <path d="M6 1l1.5 3 3.5.5-2.5 2.4.6 3.6L6 9 3 10.5l.6-3.6L1 4.5 4.5 4z" stroke="currentColor" stroke-width="1" stroke-linejoin="round"/>
+            </svg>
+            Garantía oficial
+          </span>
+        </div>
+      </div>
+
+      <div class="footer-bottom-right">
+        <a href="#" class="footer-legal-link">Términos</a>
+        <span class="footer-dot" aria-hidden="true"></span>
+        <a href="#" class="footer-legal-link">Privacidad</a>
+        <span class="footer-dot" aria-hidden="true"></span>
+        <a href="#" class="footer-legal-link">Cookies</a>
+        <!-- Back to top -->
+        <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M7 11V3M3 7l4-4 4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+  </div><!-- /footer-inner -->
+</footer>
 
 <style>
+  /* ── PALETTE ── */
   :root {
-    --black:    #0a0a0a;
-    --white:    #f4f3ef;
     --steel:    #4a6278;
     --steel-lt: #7a98ae;
     --olive:    #6b7c55;
     --olive-lt: #8fa070;
+    --white:    #f4f3ef;
+    --black:    #0a0a0a;
   }
 
-  .footer-section {
-    --bg:     #f7f6f3;
-    --text:   #0a0a0a;
-    --muted:  rgba(10,10,10,0.45);
-    --border: rgba(10,10,10,0.08);
+  /* Light */
+  .footer {
+    --bg:      #0a0a0a;     /* footer siempre oscuro para contraste */
+    --bg-card: #141414;
+    --text:    #f4f3ef;
+    --muted:   rgba(244,243,239,0.38);
+    --border:  rgba(244,243,239,0.07);
     background: var(--bg);
     color: var(--text);
-    border-top: 1px solid var(--border);
     font-family: 'DM Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    overflow: hidden;
   }
-  :root.dark .footer-section {
-    --bg:     #0c0c0c;
-    --text:   #f4f3ef;
-    --muted:  rgba(244,243,239,0.38);
-    --border: rgba(244,243,239,0.08);
-  }
+  /* Dark mode keeps the same dark footer */
+  :root.dark .footer { --bg: #080808; --bg-card: #101010; }
 
+  /* ── BG ── */
+  .footer-bg { position: absolute; inset: 0; pointer-events: none; }
+  .footer-grain {
+    position: absolute; inset: 0; opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+    background-size: 256px;
+  }
+  .footer-line { position: absolute; left: 0; right: 0; height: 1px; }
+  .footer-line-top { top: 0; background: var(--border); }
+
+  /* ── INNER ── */
   .footer-inner {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 56px 44px 36px;
+    padding: 80px 44px 0;
     display: flex;
     flex-direction: column;
-    gap: 36px;
+    gap: 0;
+    position: relative;
+    z-index: 1;
   }
-  @media (max-width: 640px) { .footer-inner { padding: 44px 20px 28px; } }
+  @media (max-width: 640px) { .footer-inner { padding: 60px 20px 0; } }
 
-  .footer-head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-  }
-  .logo {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    color: var(--text);
-  }
-  .logo-mark { color: var(--steel); transition: color .3s, transform .3s; }
-  .logo:hover .logo-mark { color: var(--olive); transform: rotate(45deg); }
-  .logo-name {
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-  }
-  .tagline {
-    margin: 0;
-    font-size: 0.85rem;
-    color: var(--muted);
-  }
-  @media (max-width: 560px) { .footer-head { flex-direction: column; align-items: flex-start; } }
-
-  .footer-grid {
+  /* ══ TOP ══ */
+  .footer-top {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 24px;
-    padding: 24px 0 8px;
-    border-top: 1px solid var(--border);
+    grid-template-columns: 320px 1fr;
+    gap: 80px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid var(--border);
   }
-  @media (max-width: 900px) { .footer-grid { grid-template-columns: repeat(3, 1fr); } }
-  @media (max-width: 680px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 420px) { .footer-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 960px) { .footer-top { grid-template-columns: 1fr; gap: 48px; } }
 
-  .col-title {
-    margin: 0 0 12px;
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--steel-lt);
+  /* ── BRAND COL ── */
+  .footer-brand-col {
+    display: flex; flex-direction: column; gap: 28px;
   }
-  .col-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
-  .col-link {
-    display: inline-block;
-    font-size: 0.88rem;
-    color: var(--muted);
-    text-decoration: none;
-    transition: color .25s, transform .25s;
-  }
-  .col-link:hover { color: var(--text); transform: translateX(2px); }
 
-  .col-cta { align-self: stretch; }
-  .col-text {
-    margin: 0 0 12px;
-    color: var(--muted);
-    font-size: 0.88rem;
+  /* Logo */
+  .footer-logo {
+    display: inline-flex; align-items: center; gap: 10px;
+    text-decoration: none; color: var(--text);
+    transition: opacity 0.25s; width: fit-content;
   }
-  .cta-form {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 8px;
+  .footer-logo:hover { opacity: 0.75; }
+  .footer-logo-mark { color: var(--steel-lt); }
+  .footer-logo-name {
+    font-size: 0.8rem; font-weight: 600;
+    letter-spacing: 0.25em; text-transform: uppercase;
   }
-  @media (max-width: 420px) { .cta-form { grid-template-columns: 1fr; } }
-  .input {
-    height: 40px;
-    padding: 0 12px;
-    background: transparent;
-    color: var(--text);
-    border: 1px solid var(--border);
-    outline: none;
-    transition: border-color .3s, box-shadow .3s;
-  }
-  .input:focus {
-    border-color: var(--steel);
-    box-shadow: 0 0 0 3px rgba(122,152,174,0.2);
-  }
-  .btn {
-    height: 40px;
-    padding: 0 16px;
-    border: 1px solid var(--border);
-    background: var(--white);
-    color: var(--black);
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background .25s, color .25s, box-shadow .25s, border-color .25s;
-  }
-  .btn:hover {
-    background: var(--steel-lt);
-    color: var(--white);
-    border-color: var(--steel);
-    box-shadow: 0 4px 28px rgba(74,98,120,0.25);
-  }
-  :root.dark .btn { background: #1a1a1a; color: var(--white); }
-  :root.dark .btn:hover { background: var(--steel); }
 
-  .footer-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    padding-top: 16px;
-    border-top: 1px solid var(--border);
+  /* Tagline */
+  .footer-tagline {
+    font-size: 0.82rem; color: var(--muted);
+    line-height: 1.75; margin: 0; font-weight: 300;
   }
-  @media (max-width: 560px) { .footer-bottom { flex-direction: column; align-items: flex-start; } }
-  .copy {
-    margin: 0;
-    font-size: 0.72rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--muted);
+
+  /* Socials */
+  .footer-socials {
+    display: flex; gap: 8px; align-items: center;
   }
-  .social { display: inline-flex; align-items: center; gap: 8px; }
   .social-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
     width: 36px; height: 36px;
+    display: flex; align-items: center; justify-content: center;
     border: 1px solid var(--border);
     color: var(--muted);
     text-decoration: none;
-    transition: color .25s, border-color .25s, transform .25s, box-shadow .25s, background .25s;
+    transition: border-color 0.25s, color 0.25s, background 0.25s;
   }
   .social-btn:hover {
-    color: var(--steel-lt);
     border-color: var(--steel);
-    background: rgba(74,98,120,0.06);
+    color: var(--steel-lt);
+    background: rgba(74,98,120,0.1);
+  }
+
+  /* Contact quick */
+  .footer-contact-quick {
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .contact-quick-item {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.75rem; color: var(--muted);
+    text-decoration: none; font-weight: 300;
+    transition: color 0.25s;
+  }
+  a.contact-quick-item:hover { color: var(--text); }
+  .contact-no-link { cursor: default; }
+  .contact-quick-item svg { color: var(--steel-lt); flex-shrink: 0; }
+
+  /* ── NAV COLS ── */
+  .footer-nav-cols {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+  @media (max-width: 640px) { .footer-nav-cols { grid-template-columns: repeat(2, 1fr); gap: 32px; } }
+  @media (max-width: 380px) { .footer-nav-cols { grid-template-columns: 1fr; } }
+
+  .footer-nav-col { display: flex; flex-direction: column; gap: 16px; }
+  .footer-nav-title {
+    font-size: 0.62rem; font-weight: 600;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--text); margin: 0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .footer-nav-list {
+    list-style: none; margin: 0; padding: 0;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .footer-nav-link {
+    font-size: 0.78rem; color: var(--muted);
+    text-decoration: none; font-weight: 300;
+    transition: color 0.2s, padding-left 0.2s;
+    display: block;
+  }
+  .footer-nav-link:hover { color: var(--text); padding-left: 4px; }
+
+  /* ══ NEWSLETTER ══ */
+  .footer-newsletter {
+    display: flex; align-items: center;
+    justify-content: space-between; gap: 40px;
+    padding: 36px 0;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+  .newsletter-text { display: flex; flex-direction: column; gap: 4px; }
+  .newsletter-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.2rem; font-weight: 400;
+    color: var(--text); letter-spacing: -0.02em; margin: 0;
+  }
+  .newsletter-sub {
+    font-size: 0.72rem; color: var(--muted);
+    font-weight: 300; margin: 0;
+  }
+
+  .newsletter-form {
+    display: flex; gap: 0; flex: 1; max-width: 440px; min-width: 260px;
+  }
+  .newsletter-input {
+    flex: 1;
+    padding: 12px 18px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-right: none;
+    color: var(--text);
+    font-size: 0.78rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    outline: none;
+    transition: border-color 0.25s;
+    min-width: 0;
+  }
+  .newsletter-input::placeholder { color: var(--muted); }
+  .newsletter-input:focus { border-color: var(--steel); }
+
+  .newsletter-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 20px;
+    background: var(--steel);
+    color: var(--white);
+    border: 1px solid var(--steel);
+    font-size: 0.68rem; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    cursor: pointer; white-space: nowrap;
+    font-family: 'DM Sans', sans-serif;
+    transition: background 0.25s, box-shadow 0.25s, gap 0.25s;
+    flex-shrink: 0;
+  }
+  .newsletter-btn:hover {
+    background: var(--steel-lt);
+    box-shadow: 0 0 20px rgba(74,98,120,0.4);
+    gap: 12px;
+  }
+
+  /* ══ BOTTOM ══ */
+  .footer-bottom {
+    display: flex; align-items: center;
+    justify-content: space-between; gap: 20px;
+    padding: 24px 0 32px;
+    flex-wrap: wrap;
+  }
+
+  .footer-bottom-left {
+    display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+  }
+  .footer-copy {
+    font-size: 0.68rem; color: var(--muted);
+    font-weight: 300; margin: 0; letter-spacing: 0.04em;
+  }
+  .footer-bottom-badges {
+    display: flex; gap: 10px; align-items: center;
+  }
+  .footer-badge {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: 0.55rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--muted); border: 1px solid var(--border); padding: 3px 9px;
+  }
+  .footer-badge svg { color: var(--olive-lt); flex-shrink: 0; }
+
+  .footer-bottom-right {
+    display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  }
+  .footer-legal-link {
+    font-size: 0.65rem; color: var(--muted);
+    text-decoration: none; letter-spacing: 0.1em;
+    transition: color 0.2s;
+  }
+  .footer-legal-link:hover { color: var(--text); }
+  .footer-dot {
+    width: 2px; height: 2px; border-radius: 50%;
+    background: var(--muted); opacity: 0.4;
+  }
+
+  /* Back to top */
+  .back-to-top {
+    width: 34px; height: 34px;
+    display: flex; align-items: center; justify-content: center;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted); cursor: pointer;
+    margin-left: 8px;
+    transition: border-color 0.25s, color 0.25s, background 0.25s, transform 0.25s;
+  }
+  .back-to-top:hover {
+    border-color: var(--steel);
+    color: var(--steel-lt);
+    background: rgba(74,98,120,0.1);
     transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(74,98,120,0.18);
   }
 </style>
 
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
 
+<script>
+(function () {
+  /* ── Year ── */
+  const yearEl = document.getElementById('footerYear');
+  if (yearEl) yearEl.textContent = new Date().getFullYear().toString();
+
+  /* ── Back to top ── */
+  document.getElementById('backToTop')?.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  /* ── Newsletter mock submit ── */
+  const form = document.querySelector('.newsletter-form') as HTMLFormElement | null;
+  const input = document.querySelector('.newsletter-input') as HTMLInputElement | null;
+  const btn   = document.querySelector('.newsletter-btn') as HTMLButtonElement | null;
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!input?.value.trim()) return;
+    if (btn) {
+      const original = btn.innerHTML;
+      btn.innerHTML = '¡Listo! <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      btn.style.background = 'var(--olive)';
+      btn.style.borderColor = 'var(--olive)';
+      setTimeout(() => {
+        btn.innerHTML = original;
+        btn.style.background = '';
+        btn.style.borderColor = '';
+        if (input) input.value = '';
+      }, 3000);
+    }
+  });
+})();
+</script>

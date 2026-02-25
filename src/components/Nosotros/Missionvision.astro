@@ -1,0 +1,378 @@
+---
+// MissionVision.astro — Misión & Visión · Minimal · Steel / Olive
+---
+
+<section id="mision-vision" class="mv-section">
+
+  <div class="mv-bg" aria-hidden="true">
+    <div class="mv-grain"></div>
+    <div class="mv-line mv-line-top"></div>
+    <div class="mv-line mv-line-bottom"></div>
+    <span class="mv-watermark" aria-hidden="true">MV</span>
+  </div>
+
+  <div class="mv-inner">
+
+    <!-- ══ HEADER ══ -->
+    <div class="mv-header" data-reveal>
+      <p class="mv-eyebrow">
+        <span class="eyebrow-pip"></span>
+        Propósito
+      </p>
+      <div class="mv-header-row">
+        <h2 class="mv-title">
+          Misión &<br/>
+          <span class="title-outline">Visión.</span>
+        </h2>
+        <p class="mv-sub">
+          Lo que nos mueve cada día y el lugar al que queremos llegar como empresa y como equipo.
+        </p>
+      </div>
+    </div>
+
+    <!-- ══ TWO CARDS ══ -->
+    <div class="mv-cards">
+
+      <!-- MISIÓN -->
+      <div class="mv-card" data-reveal data-delay="0">
+        <div class="mv-card-inner">
+          <!-- Index -->
+          <span class="mv-card-num" aria-hidden="true">01</span>
+
+          <!-- Icon -->
+          <div class="mv-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <!-- Target / compass -->
+              <circle cx="16" cy="16" r="13" stroke="currentColor" stroke-width="1.3"/>
+              <circle cx="16" cy="16" r="7"  stroke="currentColor" stroke-width="1.3" opacity="0.5"/>
+              <circle cx="16" cy="16" r="2.5" fill="currentColor" opacity="0.8"/>
+              <!-- crosshair lines -->
+              <line x1="16" y1="3"  x2="16" y2="9"  stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+              <line x1="16" y1="23" x2="16" y2="29" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+              <line x1="3"  y1="16" x2="9"  y2="16" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+              <line x1="23" y1="16" x2="29" y2="16" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+            </svg>
+          </div>
+
+          <div class="mv-card-type">Misión</div>
+
+          <h3 class="mv-card-title">
+            Acercar la mejor tecnología a cada persona con honestidad, garantía y precio justo.
+          </h3>
+
+          <p class="mv-card-text">
+            Trabajamos cada día para que comprar o reparar un celular no sea una experiencia estresante. Queremos que nuestros clientes salgan satisfechos, bien informados y con la certeza de que tomaron la mejor decisión.
+          </p>
+
+          <ul class="mv-card-list">
+            <li>Venta con asesoramiento personalizado y sin presión</li>
+            <li>Reparaciones transparentes con presupuesto previo</li>
+            <li>Garantía real, por escrito y sin letra chica</li>
+          </ul>
+        </div>
+        <div class="mv-card-accent"></div>
+      </div>
+
+      <!-- VISIÓN -->
+      <div class="mv-card mv-card-dark" data-reveal data-delay="1">
+        <div class="mv-card-inner">
+          <!-- Index -->
+          <span class="mv-card-num" aria-hidden="true">02</span>
+
+          <!-- Icon -->
+          <div class="mv-icon-wrap">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <!-- Telescope / horizon star -->
+              <path d="M16 4L19 12H28L21 17.5L23.5 26L16 21L8.5 26L11 17.5L4 12H13z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+              <circle cx="16" cy="15" r="3" stroke="currentColor" stroke-width="1.1" opacity="0.45"/>
+            </svg>
+          </div>
+
+          <div class="mv-card-type">Visión</div>
+
+          <h3 class="mv-card-title">
+            Ser la referencia de confianza en tecnología móvil en Argentina.
+          </h3>
+
+          <p class="mv-card-text">
+            Soñamos con ser la empresa a la que todo el mundo llama cuando necesita un celular nuevo, una reparación urgente o simplemente un consejo honesto. Queremos crecer sin perder lo que nos hace diferentes: el trato humano.
+          </p>
+
+          <ul class="mv-card-list">
+            <li>Expandirnos a nuevas ciudades manteniendo la calidad</li>
+            <li>Convertirnos en service autorizado de las principales marcas</li>
+            <li>Innovar continuamente en servicio al cliente</li>
+          </ul>
+        </div>
+        <div class="mv-card-accent"></div>
+      </div>
+
+    </div><!-- /mv-cards -->
+
+    <!-- ══ BOTTOM IMAGE STRIP ══ -->
+    <div class="mv-strip" data-reveal>
+      <div class="mv-strip-img-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1400&q=80&auto=format&fit=crop"
+          alt="Equipo CellTech en taller"
+          class="mv-strip-img"
+          loading="lazy"
+        />
+        <div class="mv-strip-overlay"></div>
+        <div class="mv-strip-content">
+          <p class="mv-strip-quote">
+            "No somos grandes todavía, pero cada cliente que nos elige nos da la razón para seguir creciendo con valores."
+          </p>
+          <span class="mv-strip-attr">— Equipo CellTech</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  :root {
+    --steel:    #4a6278;
+    --steel-lt: #7a98ae;
+    --olive:    #6b7c55;
+    --olive-lt: #8fa070;
+    --white:    #f4f3ef;
+    --black:    #0a0a0a;
+  }
+
+  .mv-section {
+    --bg:      #f4f3ef; --bg-card: #ffffff;
+    --text:    #0a0a0a; --muted: rgba(10,10,10,0.42);
+    --border:  rgba(10,10,10,0.08);
+    background: var(--bg); color: var(--text);
+    position: relative; padding: 120px 0 100px;
+    font-family: 'DM Sans', 'Helvetica Neue', sans-serif;
+    overflow: hidden; transition: background 0.4s, color 0.4s;
+  }
+  :root.dark .mv-section {
+    --bg: #0c0c0c; --bg-card: #111111;
+    --text: #f4f3ef; --muted: rgba(244,243,239,0.38);
+    --border: rgba(244,243,239,0.07);
+  }
+  :root.dark .title-outline { -webkit-text-stroke: 1px rgba(244,243,239,0.28) !important; }
+  :root.dark .mv-card-dark  { --card-bg: #1a1a1a; }
+
+  .mv-bg { position: absolute; inset: 0; pointer-events: none; }
+  .mv-grain {
+    position: absolute; inset: 0; opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+    background-size: 256px;
+  }
+  .mv-line { position: absolute; left: 0; right: 0; height: 1px; background: var(--border); }
+  .mv-line-top { top: 0; } .mv-line-bottom { bottom: 0; }
+
+  .mv-watermark {
+    position: absolute; right: 40px; top: 50%;
+    transform: translateY(-50%);
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(10rem, 20vw, 18rem);
+    font-weight: 400; color: transparent;
+    -webkit-text-stroke: 1px var(--border);
+    letter-spacing: -0.04em; user-select: none;
+    opacity: 0.6; line-height: 1; white-space: nowrap;
+  }
+
+  .mv-inner {
+    max-width: 1280px; margin: 0 auto; padding: 0 44px;
+    display: flex; flex-direction: column; gap: 56px;
+    position: relative; z-index: 1;
+  }
+  @media (max-width: 640px) { .mv-inner { padding: 0 20px; gap: 40px; } }
+
+  /* Header */
+  .mv-header { display: flex; flex-direction: column; gap: 16px; }
+  .mv-eyebrow {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.65rem; letter-spacing: 0.26em;
+    text-transform: uppercase; color: var(--steel-lt); margin: 0;
+  }
+  .eyebrow-pip {
+    width: 7px; height: 7px; background: var(--olive-lt);
+    border-radius: 50%; box-shadow: 0 0 8px var(--olive); flex-shrink: 0;
+  }
+  .mv-header-row {
+    display: flex; align-items: flex-end;
+    justify-content: space-between; gap: 40px; flex-wrap: wrap;
+  }
+  .mv-title {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 400; line-height: 0.93;
+    letter-spacing: -0.035em; color: var(--text); margin: 0;
+  }
+  .title-outline { color: transparent; -webkit-text-stroke: 1px rgba(10,10,10,0.35); }
+  .mv-sub {
+    font-size: 0.88rem; color: var(--muted); line-height: 1.75;
+    margin: 0; font-weight: 300; max-width: 360px; flex-shrink: 0;
+  }
+
+  /* Cards */
+  .mv-cards {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1px; background: var(--border);
+    border: 1px solid var(--border);
+  }
+  @media (max-width: 780px) { .mv-cards { grid-template-columns: 1fr; } }
+
+  .mv-card {
+    position: relative; background: var(--bg-card);
+    overflow: hidden; transition: background 0.3s;
+    --card-bg: var(--bg-card);
+  }
+  .mv-card-dark {
+    background: var(--black);
+    --card-bg: var(--black);
+  }
+  :root.dark .mv-card-dark { background: #0e0e0e; }
+  .mv-card:hover { filter: brightness(1.02); }
+
+  .mv-card-inner {
+    padding: 40px 40px 48px;
+    display: flex; flex-direction: column; gap: 18px;
+    position: relative; z-index: 1;
+  }
+  @media (max-width: 500px) { .mv-card-inner { padding: 28px 24px 36px; } }
+
+  .mv-card-num {
+    font-size: 0.55rem; font-weight: 600;
+    letter-spacing: 0.22em; color: var(--steel-lt);
+    position: absolute; top: 28px; right: 32px;
+    opacity: 0.5;
+  }
+  .mv-card-dark .mv-card-num { color: rgba(244,243,239,0.3); }
+
+  .mv-icon-wrap {
+    width: 56px; height: 56px;
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid var(--border);
+    color: var(--steel);
+    background: rgba(74,98,120,0.05);
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  .mv-card-dark .mv-icon-wrap {
+    border-color: rgba(244,243,239,0.1);
+    color: var(--steel-lt);
+    background: rgba(74,98,120,0.08);
+  }
+  .mv-card:hover .mv-icon-wrap {
+    border-color: var(--steel-lt);
+    box-shadow: 0 0 16px rgba(74,98,120,0.15);
+  }
+
+  .mv-card-type {
+    font-size: 0.62rem; font-weight: 600;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--steel-lt);
+    padding: 4px 12px; border: 1px solid rgba(74,98,120,0.25);
+    width: fit-content;
+    background: rgba(74,98,120,0.06);
+  }
+  .mv-card-dark .mv-card-type {
+    color: var(--olive-lt);
+    border-color: rgba(107,124,85,0.25);
+    background: rgba(107,124,85,0.06);
+  }
+
+  .mv-card-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.2rem, 2vw, 1.55rem);
+    font-weight: 400; line-height: 1.25;
+    letter-spacing: -0.02em; color: var(--text); margin: 0;
+  }
+  .mv-card-dark .mv-card-title { color: var(--white); }
+
+  .mv-card-text {
+    font-size: 0.85rem; color: var(--muted);
+    line-height: 1.8; margin: 0; font-weight: 300;
+  }
+  .mv-card-dark .mv-card-text { color: rgba(244,243,239,0.45); }
+
+  .mv-card-list {
+    list-style: none; margin: 0; padding: 0;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .mv-card-list li {
+    font-size: 0.78rem; color: var(--muted);
+    font-weight: 300; padding-left: 18px;
+    position: relative; line-height: 1.5;
+  }
+  .mv-card-dark .mv-card-list li { color: rgba(244,243,239,0.4); }
+  .mv-card-list li::before {
+    content: '';
+    position: absolute; left: 0; top: 8px;
+    width: 6px; height: 1px; background: var(--olive-lt);
+  }
+
+  /* Bottom accent line */
+  .mv-card-accent {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(to right, var(--olive), var(--steel));
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.45s cubic-bezier(0.4,0,0.2,1);
+  }
+  .mv-card:hover .mv-card-accent { transform: scaleX(1); }
+
+  /* Bottom strip */
+  .mv-strip { overflow: hidden; }
+  .mv-strip-img-wrap { position: relative; height: 260px; }
+  @media (max-width: 640px) { .mv-strip-img-wrap { height: 200px; } }
+
+  .mv-strip-img {
+    width: 100%; height: 100%; object-fit: cover;
+    object-position: center 40%; display: block;
+    transition: transform 8s ease-out;
+  }
+  .mv-strip:hover .mv-strip-img { transform: scale(1.03); }
+
+  .mv-strip-overlay {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(90deg, rgba(6,6,6,0.75) 0%, rgba(6,6,6,0.4) 60%, rgba(6,6,6,0.1) 100%),
+      linear-gradient(180deg, rgba(6,6,6,0.1) 0%, rgba(6,6,6,0.6) 100%);
+  }
+  .mv-strip-content {
+    position: absolute; bottom: 36px; left: 44px; right: 44px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  @media (max-width: 640px) { .mv-strip-content { left: 20px; right: 20px; bottom: 24px; } }
+  .mv-strip-quote {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1rem, 2.2vw, 1.35rem);
+    color: rgba(244,243,239,0.9); font-weight: 400;
+    line-height: 1.45; margin: 0; max-width: 600px;
+    letter-spacing: -0.015em;
+  }
+  .mv-strip-attr {
+    font-size: 0.65rem; letter-spacing: 0.18em;
+    text-transform: uppercase; color: rgba(244,243,239,0.4);
+  }
+
+  /* Reveal */
+  [data-reveal] {
+    opacity: 0; transform: translateY(22px);
+    transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1), transform 0.75s cubic-bezier(0.22,1,0.36,1);
+  }
+  [data-reveal].visible { opacity: 1; transform: translateY(0); }
+  [data-delay="1"] { transition-delay: 0.1s; }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
+
+<script>
+(function () {
+  const obs = new IntersectionObserver(
+    entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    }), { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+  );
+  document.querySelectorAll('[data-reveal]').forEach(el => obs.observe(el));
+})();
+</script>

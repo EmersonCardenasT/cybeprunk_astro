@@ -1,0 +1,401 @@
+---
+// PageHero.astro — Hero interior reutilizable · Minimal · Steel / Olive
+// 
+// PROPS:
+//   title      string   — Título principal (puede incluir <br/>)
+//   titleOutline string  — Segunda línea en outline/stroke (opcional)
+//   subtitle   string   — Subtítulo descriptivo
+//   eyebrow    string   — Etiqueta pequeña arriba del título
+//   image      string   — URL de la imagen de fondo
+//   imageAlt   string   — Alt text de la imagen
+//   breadcrumb string   — Texto de miga de pan (ej: "Inicio / Nosotros")
+//   ctaLabel   string   — Texto del CTA (opcional)
+//   ctaHref    string   — Href del CTA (opcional)
+
+interface Props {
+  title:        string;
+  titleOutline?: string;
+  subtitle?:    string;
+  eyebrow?:     string;
+  image:        string;
+  imageAlt?:    string;
+  breadcrumb?:  string;
+  ctaLabel?:    string;
+  ctaHref?:     string;
+}
+
+const {
+  title,
+  titleOutline,
+  subtitle,
+  eyebrow     = 'CellTech',
+  image,
+  imageAlt    = 'Imagen de página',
+  breadcrumb,
+  ctaLabel,
+  ctaHref     = '#',
+} = Astro.props;
+---
+
+<!-- ════════════════════════════════════════════
+     USO EN CADA PÁGINA:
+
+     — Categorías
+     <PageHero
+       eyebrow="Explorar"
+       title="Categorías"
+       titleOutline="de productos."
+       subtitle="Encuentra exactamente lo que buscás entre nuestra selección de celulares, accesorios y más."
+       image="https://images.unsplash.com/photo-1491933382434-500287f9b54b?w=1600&q=80&auto=format&fit=crop"
+       breadcrumb="Inicio / Categorías"
+     />
+
+     — Productos
+     <PageHero
+       eyebrow="Catálogo"
+       title="Nuestros"
+       titleOutline="productos."
+       subtitle="Los mejores dispositivos del mercado con garantía oficial. Nuevos, reacondicionados y Open Box."
+       image="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1600&q=80&auto=format&fit=crop"
+       breadcrumb="Inicio / Productos"
+       ctaLabel="Ver ofertas"
+       ctaHref="#ofertas"
+     />
+
+     — Galería
+     <PageHero
+       eyebrow="Galería"
+       title="Nuestro"
+       titleOutline="trabajo."
+       subtitle="Cada reparación, cada equipo, cada cliente satisfecho. Así luce el resultado de nuestro compromiso."
+       image="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1600&q=80&auto=format&fit=crop"
+       breadcrumb="Inicio / Galería"
+     />
+
+     — Nosotros
+     <PageHero
+       eyebrow="Quiénes somos"
+       title="Un equipo"
+       titleOutline="apasionado."
+       subtitle="Más de 5 años reparando y vendiendo tecnología con honestidad, precisión y garantía real."
+       image="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1600&q=80&auto=format&fit=crop"
+       breadcrumb="Inicio / Nosotros"
+     />
+
+     — Contacto
+     <PageHero
+       eyebrow="Estamos para ayudarte"
+       title="Hablemos"
+       titleOutline="sin vueltas."
+       subtitle="Escribinos, llamanos o visitanos. Respondemos rápido y sin rodeos."
+       image="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1600&q=80&auto=format&fit=crop"
+       breadcrumb="Inicio / Contacto"
+       ctaLabel="Enviar mensaje"
+       ctaHref="#form-contacto"
+     />
+════════════════════════════════════════════ -->
+
+<section class="ph-section">
+
+  <!-- BG image -->
+  <div class="ph-bg" aria-hidden="true">
+    <img
+      src={image}
+      alt={imageAlt}
+      class="ph-bg-img"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+    />
+    <div class="ph-overlay"></div>
+    <div class="ph-grain"></div>
+  </div>
+
+  <!-- Structural lines -->
+  <div class="ph-lines" aria-hidden="true">
+    <div class="ph-line-bottom"></div>
+    <div class="ph-corner ph-corner-tl"></div>
+    <div class="ph-corner ph-corner-tr"></div>
+    <div class="ph-corner ph-corner-bl"></div>
+    <div class="ph-corner ph-corner-br"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="ph-inner">
+
+    <!-- Top row: breadcrumb + page index -->
+    <div class="ph-topbar">
+      {breadcrumb && (
+        <nav class="ph-breadcrumb" aria-label="Ruta de navegación">
+          {breadcrumb.split('/').map((crumb, i, arr) => (
+            <span class="ph-crumb-item">
+              <span class={i === arr.length - 1 ? 'ph-crumb ph-crumb-active' : 'ph-crumb'}>
+                {crumb.trim()}
+              </span>
+              {i < arr.length - 1 && <span class="ph-crumb-sep" aria-hidden="true">/</span>}
+            </span>
+          ))}
+        </nav>
+      )}
+      <div class="ph-scroll-hint" aria-hidden="true">
+        <span class="ph-scroll-text">Scroll</span>
+        <div class="ph-scroll-line"><div class="ph-scroll-runner"></div></div>
+      </div>
+    </div>
+
+    <!-- Main content anchored bottom-left -->
+    <div class="ph-content">
+
+      <p class="ph-eyebrow">
+        <span class="ph-pip"></span>
+        {eyebrow}
+      </p>
+
+      <h1 class="ph-title">
+        <span class="ph-title-main">{title}</span>
+        {titleOutline && <span class="ph-title-outline">{titleOutline}</span>}
+      </h1>
+
+      {subtitle && (
+        <p class="ph-subtitle">{subtitle}</p>
+      )}
+
+      {ctaLabel && (
+        <a href={ctaHref} class="ph-cta">
+          {ctaLabel}
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      )}
+
+    </div>
+
+  </div><!-- /ph-inner -->
+
+</section>
+
+<style>
+  /* ── PALETTE ── */
+  :root {
+    --steel:    #4a6278;
+    --steel-lt: #7a98ae;
+    --olive:    #6b7c55;
+    --olive-lt: #8fa070;
+    --white:    #f4f3ef;
+    --black:    #0a0a0a;
+  }
+
+  /* ── SECTION ── */
+  .ph-section {
+    position: relative;
+    width: 100%;
+    height: clamp(360px, 55vh, 600px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    font-family: 'DM Sans', 'Helvetica Neue', sans-serif;
+    color: var(--white);
+  }
+
+  /* ── BACKGROUND ── */
+  .ph-bg {
+    position: absolute; inset: 0; z-index: 0;
+  }
+  .ph-bg-img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center;
+    display: block;
+    animation: phKenBurns 10s ease-out forwards;
+  }
+  @keyframes phKenBurns {
+    from { transform: scale(1.06); }
+    to   { transform: scale(1.00); }
+  }
+
+  /* Overlay: left-heavy for text legibility */
+  .ph-overlay {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(90deg,  rgba(6,6,6,0.78) 0%, rgba(6,6,6,0.45) 60%, rgba(6,6,6,0.18) 100%),
+      linear-gradient(180deg, rgba(6,6,6,0.25) 0%, transparent 40%, rgba(6,6,6,0.65) 100%);
+  }
+
+  /* Grain */
+  .ph-grain {
+    position: absolute; inset: 0; opacity: 0.04; pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+    background-size: 256px;
+  }
+
+  /* ── STRUCTURAL LINES ── */
+  .ph-lines { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+  .ph-line-bottom {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 1px; background: rgba(244,243,239,0.1);
+  }
+
+  /* Corner brackets */
+  .ph-corner {
+    position: absolute; width: 18px; height: 18px;
+    opacity: 0.3;
+  }
+  .ph-corner-tl { top: 24px;  left: 44px;  border-top: 1px solid var(--steel-lt); border-left: 1px solid var(--steel-lt); }
+  .ph-corner-tr { top: 24px;  right: 44px; border-top: 1px solid var(--steel-lt); border-right: 1px solid var(--steel-lt); }
+  .ph-corner-bl { bottom: 24px; left: 44px;  border-bottom: 1px solid var(--steel-lt); border-left: 1px solid var(--steel-lt); }
+  .ph-corner-br { bottom: 24px; right: 44px; border-bottom: 1px solid var(--steel-lt); border-right: 1px solid var(--steel-lt); }
+  @media (max-width: 640px) {
+    .ph-corner-tl, .ph-corner-bl { left: 20px; }
+    .ph-corner-tr, .ph-corner-br { right: 20px; }
+  }
+
+  /* ── INNER ── */
+  .ph-inner {
+    position: relative; z-index: 2;
+    width: 100%; height: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  @media (max-width: 640px) { .ph-inner { padding: 0 20px; } }
+
+  /* ── TOP BAR ── */
+  .ph-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 28px;
+  }
+
+  /* Breadcrumb */
+  .ph-breadcrumb {
+    display: flex; align-items: center; gap: 0;
+    animation: phFadeUp 0.7s 0.1s both;
+  }
+  .ph-crumb-item { display: flex; align-items: center; gap: 0; }
+  .ph-crumb {
+    font-size: 0.62rem; letter-spacing: 0.18em;
+    text-transform: uppercase; color: rgba(244,243,239,0.4);
+    font-weight: 400; padding: 0 4px;
+    transition: color 0.2s;
+  }
+  .ph-crumb-active { color: rgba(244,243,239,0.75); }
+  .ph-crumb-sep {
+    font-size: 0.55rem; color: rgba(244,243,239,0.22);
+    margin: 0 2px;
+  }
+
+  /* Scroll hint */
+  .ph-scroll-hint {
+    display: flex; align-items: center; gap: 10px;
+    animation: phFadeUp 0.7s 0.3s both;
+  }
+  @media (max-width: 500px) { .ph-scroll-hint { display: none; } }
+  .ph-scroll-text {
+    font-size: 0.55rem; letter-spacing: 0.3em;
+    text-transform: uppercase; color: rgba(244,243,239,0.25);
+    writing-mode: horizontal-tb;
+  }
+  .ph-scroll-line {
+    width: 40px; height: 1px;
+    background: rgba(244,243,239,0.1);
+    overflow: hidden; position: relative;
+  }
+  .ph-scroll-runner {
+    position: absolute; inset-block: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to right, transparent, var(--steel-lt), transparent);
+    animation: phScanH 2s ease-in-out infinite;
+  }
+  @keyframes phScanH {
+    0%   { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  /* ── MAIN CONTENT ── */
+  .ph-content {
+    padding-bottom: 52px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 680px;
+  }
+
+  /* Eyebrow */
+  .ph-eyebrow {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.65rem; letter-spacing: 0.26em;
+    text-transform: uppercase; color: var(--steel-lt); margin: 0;
+    animation: phFadeUp 0.75s 0.2s both;
+  }
+  .ph-pip {
+    width: 7px; height: 7px; background: var(--olive-lt);
+    border-radius: 50%; box-shadow: 0 0 8px var(--olive); flex-shrink: 0;
+  }
+
+  /* Title */
+  .ph-title {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: clamp(3rem, 8vw, 6.5rem);
+    font-weight: 400;
+    line-height: 0.92;
+    letter-spacing: -0.035em;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    animation: phFadeUp 0.75s 0.35s both;
+  }
+  .ph-title-main  { color: var(--white); display: block; }
+  .ph-title-outline {
+    display: block;
+    color: transparent;
+    -webkit-text-stroke: 1.5px rgba(244,243,239,0.5);
+  }
+
+  /* Subtitle */
+  .ph-subtitle {
+    font-size: 0.92rem; color: rgba(244,243,239,0.5);
+    line-height: 1.75; margin: 0; font-weight: 300;
+    max-width: 480px;
+    animation: phFadeUp 0.75s 0.5s both;
+  }
+
+  /* CTA */
+  .ph-cta {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 12px 28px;
+    font-size: 0.7rem; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    text-decoration: none;
+    background: rgba(244,243,239,0.1);
+    border: 1px solid rgba(244,243,239,0.22);
+    color: var(--white);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    width: fit-content;
+    transition: background 0.25s, border-color 0.25s, gap 0.25s, box-shadow 0.25s;
+    animation: phFadeUp 0.75s 0.65s both;
+  }
+  .ph-cta:hover {
+    background: var(--steel);
+    border-color: var(--steel);
+    box-shadow: 0 4px 24px rgba(74,98,120,0.4);
+    gap: 14px;
+  }
+
+  /* ── KEYFRAMES ── */
+  @keyframes phFadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet"/>

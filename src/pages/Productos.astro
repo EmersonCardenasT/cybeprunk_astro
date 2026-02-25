@@ -1,0 +1,21 @@
+---
+import OpenBox from "../components/OpenBox.astro";
+import ProductoSamsung from "../components/ProductoSamsung.astro";
+import ProductosIphone from "../components/ProductosIphone.astro";
+import PageHero from "../components/pageHero.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <PageHero
+    eyebrow="Nuestro catálogo"
+    title="Todos los"
+    titleOutline="Productos."
+    subtitle="Encuentra equipos nuevos y reacondicionados con garantía y al mejor precio."
+    image="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1600&q=80"
+    breadcrumb="Inicio / Productos"
+  />
+  <ProductoSamsung />
+  <ProductosIphone />
+  <OpenBox />
+</Layout>
