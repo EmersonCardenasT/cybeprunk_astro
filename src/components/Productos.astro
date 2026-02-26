@@ -1,0 +1,1098 @@
+---
+// Products.astro — Sección Productos · Grilla 4col · Minimal · Steel / Olive
+---
+
+<section id="productos" class="pr-section">
+
+  <div class="pr-bg" aria-hidden="true">
+    <div class="pr-grain"></div>
+    <div class="pr-line pr-line-top"></div>
+    <div class="pr-line pr-line-bottom"></div>
+  </div>
+
+  <div class="pr-inner">
+
+    <!-- ══ HEADER ══ -->
+    <div class="pr-header" data-reveal>
+      <div class="pr-header-left">
+        <p class="pr-eyebrow">
+          <span class="eyebrow-pip"></span>
+          Catálogo
+        </p>
+        <h2 class="pr-title">
+          Todos nuestros<br/>
+          <span class="title-outline">productos.</span>
+        </h2>
+      </div>
+      <p class="pr-sub">
+        Equipos originales con garantía oficial. Nuevos, Open Box y reacondicionados con respaldo real.
+      </p>
+    </div>
+
+    <!-- ══ TOOLBAR: search + sort ══ -->
+    <div class="pr-toolbar" data-reveal>
+
+      <!-- Search -->
+      <div class="pr-search-wrap">
+        <svg class="pr-search-icon" width="15" height="15" viewBox="0 0 15 15" fill="none">
+          <circle cx="6.5" cy="6.5" r="5" stroke="currentColor" stroke-width="1.3"/>
+          <path d="M10.5 10.5L14 14" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+        </svg>
+        <input
+          type="search"
+          id="prSearch"
+          class="pr-search"
+          placeholder="Buscar por modelo, marca…"
+          aria-label="Buscar productos"
+          autocomplete="off"
+        />
+        <button class="pr-search-clear" id="prSearchClear" aria-label="Limpiar búsqueda" hidden>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M1 1l10 10M11 1L1 11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Sort -->
+      <div class="pr-sort-wrap">
+        <label for="prSort" class="pr-sort-label">Ordenar</label>
+        <select id="prSort" class="pr-sort" aria-label="Ordenar productos">
+          <option value="default">Destacados</option>
+          <option value="price-asc">Precio: menor a mayor</option>
+          <option value="price-desc">Precio: mayor a menor</option>
+          <option value="name-asc">Nombre: A → Z</option>
+        </select>
+        <svg class="pr-sort-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none">
+          <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <!-- Results count -->
+      <span class="pr-count" id="prCount" aria-live="polite">— productos</span>
+    </div>
+
+    <!-- ══ FILTER TABS ══ -->
+    <div class="pr-filters" data-reveal role="tablist" aria-label="Filtrar por categoría">
+      <button class="pr-filter active" data-filter="all"        role="tab" aria-selected="true">
+        <span class="pr-filter-dot"></span>Todos
+      </button>
+      <button class="pr-filter" data-filter="iphone"     role="tab" aria-selected="false">
+        <span class="pr-filter-dot"></span>iPhone
+      </button>
+      <button class="pr-filter" data-filter="samsung"    role="tab" aria-selected="false">
+        <span class="pr-filter-dot"></span>Samsung
+      </button>
+      <button class="pr-filter" data-filter="xiaomi"     role="tab" aria-selected="false">
+        <span class="pr-filter-dot"></span>Xiaomi
+      </button>
+      <button class="pr-filter" data-filter="motorola"   role="tab" aria-selected="false">
+        <span class="pr-filter-dot"></span>Motorola
+      </button>
+      <button class="pr-filter" data-filter="smartwatch" role="tab" aria-selected="false">
+        <span class="pr-filter-dot"></span>Smartwatch
+      </button>
+      <button class="pr-filter" data-filter="audifonos"  role="tab" aria-selected="false">
+        <span class="pr-filter-dot"></span>Audífonos
+      </button>
+      <button class="pr-filter" data-filter="covers"     role="tab" aria-selected="false">
+        <span class="pr-filter-dot"></span>Covers
+      </button>
+    </div>
+
+    <!-- ══ PRODUCT GRID ══ -->
+    <div class="pr-grid" id="prGrid">
+
+      <!-- ── iPHONE ── -->
+      <article class="pr-card" data-cat="iphone" data-name="iphone 17 pro max" data-price="1399" data-order="1">
+        <div class="pr-card-inner">
+          <div class="pr-card-top">
+            <span class="pr-label pr-label-new">Nuevo</span>
+            <button class="pr-wish" aria-label="Guardar" aria-pressed="false">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 13.5S2 9.8 2 5.5A3.5 3.5 0 0 1 8 3.2 3.5 3.5 0 0 1 14 5.5C14 9.8 8 13.5 8 13.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="pr-img-wrap">
+            <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=500&q=75&auto=format&fit=crop" alt="iPhone 17 Pro Max" class="pr-img" loading="lazy"/>
+            <div class="pr-img-fade"></div>
+          </div>
+          <div class="pr-card-body">
+            <div class="pr-card-meta">
+              <span class="pr-brand">Apple</span>
+              <span class="pr-storage">256 GB</span>
+            </div>
+            <h3 class="pr-name">iPhone 17 <span class="pr-name-out">Pro Max</span></h3>
+            <p class="pr-spec">A19 Pro · Titanio · 6.9"</p>
+          </div>
+          <div class="pr-card-footer">
+            <div class="pr-price-col">
+              <span class="pr-old">$1.599</span>
+              <span class="pr-price">$1.399</span>
+            </div>
+            <a href="#contacto" class="pr-btn">Comprar <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+        <div class="pr-accent"></div>
+      </article>
+
+      <article class="pr-card" data-cat="iphone" data-name="iphone 17 pro" data-price="1149" data-order="2">
+        <div class="pr-card-inner">
+          <div class="pr-card-top">
+            <span class="pr-label pr-label-new">Nuevo</span>
+            <button class="pr-wish" aria-label="Guardar" aria-pressed="false">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 13.5S2 9.8 2 5.5A3.5 3.5 0 0 1 8 3.2 3.5 3.5 0 0 1 14 5.5C14 9.8 8 13.5 8 13.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="pr-img-wrap">
+            <img src="https://images.unsplash.com/photo-1691205756736-e4f4e48cbbb2?w=500&q=75&auto=format&fit=crop" alt="iPhone 17 Pro" class="pr-img" loading="lazy"/>
+            <div class="pr-img-fade"></div>
+          </div>
+          <div class="pr-card-body">
+            <div class="pr-card-meta"><span class="pr-brand">Apple</span><span class="pr-storage">128 GB</span></div>
+            <h3 class="pr-name">iPhone 17 <span class="pr-name-out">Pro</span></h3>
+            <p class="pr-spec">A19 Pro · Titanio · 6.3"</p>
+          </div>
+          <div class="pr-card-footer">
+            <div class="pr-price-col"><span class="pr-old">$1.299</span><span class="pr-price">$1.149</span></div>
+            <a href="#contacto" class="pr-btn">Comprar <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+        <div class="pr-accent"></div>
+      </article>
+
+      <article class="pr-card" data-cat="iphone" data-name="iphone 17" data-price="899" data-order="3">
+        <div class="pr-card-inner">
+          <div class="pr-card-top">
+            <span class="pr-label pr-label-new">Nuevo</span>
+            <button class="pr-wish" aria-label="Guardar" aria-pressed="false">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 13.5S2 9.8 2 5.5A3.5 3.5 0 0 1 8 3.2 3.5 3.5 0 0 1 14 5.5C14 9.8 8 13.5 8 13.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="pr-img-wrap">
+            <img src="https://images.unsplash.com/photo-1512054502232-10a0a035d672?w=500&q=75&auto=format&fit=crop" alt="iPhone 17" class="pr-img" loading="lazy"/>
+            <div class="pr-img-fade"></div>
+          </div>
+          <div class="pr-card-body">
+            <div class="pr-card-meta"><span class="pr-brand">Apple</span><span class="pr-storage">128 GB</span></div>
+            <h3 class="pr-name">iPhone 17 <span class="pr-name-out" style="-webkit-text-stroke:1px rgba(10,10,10,0.2)">Std</span></h3>
+            <p class="pr-spec">A19 · Aluminio · 6.1"</p>
+          </div>
+          <div class="pr-card-footer">
+            <div class="pr-price-col"><span class="pr-old">$999</span><span class="pr-price">$899</span></div>
+            <a href="#contacto" class="pr-btn">Comprar <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+        <div class="pr-accent"></div>
+      </article>
+
+      <article class="pr-card" data-cat="iphone" data-name="iphone se 3" data-price="449" data-order="4">
+        <div class="pr-card-inner">
+          <div class="pr-card-top">
+            <span class="pr-label pr-label-offer">Oferta</span>
+            <button class="pr-wish" aria-label="Guardar" aria-pressed="false">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 13.5S2 9.8 2 5.5A3.5 3.5 0 0 1 8 3.2 3.5 3.5 0 0 1 14 5.5C14 9.8 8 13.5 8 13.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="pr-img-wrap">
+            <img src="https://images.unsplash.com/photo-1574755393849-623942496936?w=500&q=75&auto=format&fit=crop" alt="iPhone SE" class="pr-img" loading="lazy"/>
+            <div class="pr-img-fade"></div>
+          </div>
+          <div class="pr-card-body">
+            <div class="pr-card-meta"><span class="pr-brand">Apple</span><span class="pr-storage">64 GB</span></div>
+            <h3 class="pr-name">iPhone SE <span class="pr-name-out" style="-webkit-text-stroke:1px rgba(10,10,10,0.2)">3G</span></h3>
+            <p class="pr-spec">A15 · Aluminio · 4.7"</p>
+          </div>
+          <div class="pr-card-footer">
+            <div class="pr-price-col"><span class="pr-old">$599</span><span class="pr-price">$449</span></div>
+            <a href="#contacto" class="pr-btn">Comprar <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+        <div class="pr-accent"></div>
+      </article>
+
+      <!-- ── SAMSUNG ── -->
+      <article class="pr-card" data-cat="samsung" data-name="galaxy s25 ultra" data-price="1249" data-order="5">
+        <div class="pr-card-inner">
+          <div class="pr-card-top">
+            <span class="pr-label pr-label-new">Nuevo</span>
+            <button class="pr-wish" aria-label="Guardar" aria-pressed="false">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 13.5S2 9.8 2 5.5A3.5 3.5 0 0 1 8 3.2 3.5 3.5 0 0 1 14 5.5C14 9.8 8 13.5 8 13.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="pr-img-wrap">
+            <img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=500&q=75&auto=format&fit=crop" alt="Galaxy S25 Ultra" class="pr-img" loading="lazy"/>
+            <div class="pr-img-fade"></div>
+          </div>
+          <div class="pr-card-body">
+            <div class="pr-card-meta"><span class="pr-brand">Samsung</span><span class="pr-storage">256 GB</span></div>
+            <h3 class="pr-name">Galaxy S25 <span class="pr-name-out">Ultra</span></h3>
+            <p class="pr-spec">Snapdragon 8 Elite · 200MP · 6.9"</p>
+          </div>
+          <div class="pr-card-footer">
+            <div class="pr-price-col"><span class="pr-old">$1.499</span><span class="pr-price">$1.249</span></div>
+            <a href="#contacto" class="pr-btn">Comprar <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+        <div class="pr-accent"></div>
+      </article>
+
+      <article class="pr-card" data-cat="samsung" data-name="galaxy s25" data-price="899" data-order="6">
+        <div class="pr-card-inner">
+          <div class="pr-card-top">
+            <span class="pr-label pr-label-new">Nuevo</span>
+            <button class="pr-wish" aria-label="Guardar" aria-pressed="false">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 13.5S2 9.8 2 5.5A3.5 3.5 0 0 1 8 3.2 3.5 3.5 0 0 1 14 5.5C14 9.8 8 13.5 8 13.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="pr-img-wrap">
+            <img src="https://images.unsplash.com/photo-1632661674596-df8be070a5c5?w=500&q=75&auto=format&fit=crop" alt="Galaxy S25" class="pr-img" loading="lazy"/>
+            <div class="pr-img-fade"></div>
+          </div>
+          <div class="pr-card-body">
+            <div class="pr-card-meta"><span class="pr-brand">Samsung</span><span class="pr-storage">128 GB</span></div>
+            <h3 class="pr-name">Galaxy S25 <span class="pr-name-out" style="-webkit-text-stroke:1px rgba(10,10,10,0.2)">Std</span></h3>
+            <p class="pr-spec">Snapdragon 8 Elite · 50MP · 6.2"</p>
+          </div>
+          <div class="pr-card-footer">
+            <div class="pr-price-col"><span class="pr-old">$999</span><span class="pr-price">$899</span></div>
+            <a href="#contacto" class="pr-btn">Comprar <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+        <div class="pr-accent"></div>
+      </article>
+
+      <article class="pr-card" data-cat="samsung" data-name="galaxy a55" data-price="369" data-order="7">
+        <div class="pr-card-inner">
+          <div class="pr-card-top">
+            <span class="pr-label pr-label-offer">Oferta</span>
+            <button class="pr-wish" aria-label="Guardar" aria-pressed="false">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 13.5S2 9.8 2 5.5A3.5 3.5 0 0 1 8 3.2 3.5 3.5 0 0 1 14 5.5C14 9.8 8 13.5 8 13.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="pr-img-wrap">
+            <img src="https://images.unsplash.com/photo-1587840171670-8b850147754e?w=500&q=75&auto=format&fit=crop" alt="Galaxy A55" class="pr-img" loading="lazy"/>
+            <div class="pr-img-fade"></div>
+          </div>
+          <div class="pr-card-body">
+            <div class="pr-card-meta"><span class="pr-brand">Samsung</span><span class="pr-storage">128 GB</span></div>
+            <h3 class="pr-name">Galaxy A55 <span class="pr-name-out" style="-webkit-text-stroke:1px rgba(10,10,10,0.2)">5G</span></h3>
+            <p class="pr-spec">Exynos 1480 · 50MP · 6.6"</p>
+          </div>
+          <div class="pr-card-footer">
+            <div class="pr-price-col"><span class="pr-old">$449</span><span class="pr-price">$369</span></div>
+            <a href="#contacto" class="pr-btn">Comprar <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+        <div class="pr-accent"></div>
+      </article>
+
+      <!-- ── XIAOMI ── -->
+      <article class="pr-card" data-cat="xiaomi" data-name="xiaomi 14 ultra" data-price="1099" data-order="8">
+        <div class="pr-card-inner">
+          <div class="pr-card-top">
+            <span class="pr-label pr-label-new">Nuevo</span>
+            <button class="pr-wish" aria-label="Guardar" aria-pressed="false">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 13.5S2 9.8 2 5.5A3.5 3.5 0 0 1 8 3.2 3.5 3.5 0 0 1 14 5.5C14 9.8 8 13.5 8 13.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="pr-img-wrap">
+            <img src="https://images.unsplash.com/photo-1551355738-a7f40c0f2d18?w=500&q=75&auto=format&fit=crop" alt="Xiaomi 14 Ultra" class="pr-img" loading="lazy"/>
+            <div class="pr-img-fade"></div>
+          </div>
+          <div class="pr-card-body">
+            <div class="pr-card-meta"><span class="pr-brand">Xiaomi</span><span class="pr-storage">512 GB</span></div>
+            <h3 class="pr-name">Xiaomi 14 <span class="pr-name-out">Ultra</span></h3>
+            <p class="pr-spec">Snapdragon 8 Gen 3 · Leica · 6.73"</p>
+          </div>
+          <div class="pr-card-footer">
+            <div class="pr-price-col"><span class="pr-old">$1.249</span><span class="pr-price">$1.099</span></div>
+            <a href="#contacto" class="pr-btn">Comprar <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+        <div class="pr-accent"></div>
+      </article>
+
+      <article class="pr-card" data-cat="xiaomi" data-name="redmi note 13 pro" data-price="299" data-order="9">
+        <div class="pr-card-inner">
+          <div class="pr-card-top">
+            <span class="pr-label pr-label-offer">Oferta</span>
+            <button class="pr-wish" aria-label="Guardar" aria-pressed="false">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 13.5S2 9.8 2 5.5A3.5 3.5 0 0 1 8 3.2 3.5 3.5 0 0 1 14 5.5C14 9.8 8 13.5 8 13.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="pr-img-wrap">
+            <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?w=500&q=75&auto=format&fit=crop" alt="Redmi Note 13 Pro" class="pr-img" loading="lazy"/>
+            <div class="pr-img-fade"></div>
+          </div>
+          <div class="pr-card-body">
+            <div class="pr-card-meta"><span class="pr-brand">Redmi</span><span class="pr-storage">256 GB</span></div>
+            <h3 class="pr-name">Redmi Note 13 <span class="pr-name-out" style="-webkit-text-stroke:1px rgba(10,10,10,0.2)">Pro</span></h3>
+            <p class="pr-spec">Helio G99 · 200MP · 6.67"</p>
+          </div>
+          <div class="pr-card-footer">
+            <div class="pr-price-col"><span class="pr-old">$349</span><span class="pr-price">$299</span></div>
+            <a href="#contacto" class="pr-btn">Comprar <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+        <div class="pr-accent"></div>
+      </article>
+
+      <!-- ── MOTOROLA ── -->
+      <article class="pr-card" data-cat="motorola" data-name="motorola edge 50 ultra" data-price="799" data-order="10">
+        <div class="pr-card-inner">
+          <div class="pr-card-top">
+            <span class="pr-label pr-label-new">Nuevo</span>
+            <button class="pr-wish" aria-label="Guardar" aria-pressed="false">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 13.5S2 9.8 2 5.5A3.5 3.5 0 0 1 8 3.2 3.5 3.5 0 0 1 14 5.5C14 9.8 8 13.5 8 13.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="pr-img-wrap">
+            <img src="https://images.unsplash.com/photo-1598327106026-d9521da673d1?w=500&q=75&auto=format&fit=crop" alt="Motorola Edge 50 Ultra" class="pr-img" loading="lazy"/>
+            <div class="pr-img-fade"></div>
+          </div>
+          <div class="pr-card-body">
+            <div class="pr-card-meta"><span class="pr-brand">Motorola</span><span class="pr-storage">256 GB</span></div>
+            <h3 class="pr-name">Edge 50 <span class="pr-name-out">Ultra</span></h3>
+            <p class="pr-spec">Snapdragon 8s Gen 3 · 50MP · 6.7"</p>
+          </div>
+          <div class="pr-card-footer">
+            <div class="pr-price-col"><span class="pr-old">$899</span><span class="pr-price">$799</span></div>
+            <a href="#contacto" class="pr-btn">Comprar <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+        <div class="pr-accent"></div>
+      </article>
+
+      <article class="pr-card" data-cat="motorola" data-name="motorola g84" data-price="249" data-order="11">
+        <div class="pr-card-inner">
+          <div class="pr-card-top">
+            <span class="pr-label pr-label-offer">Oferta</span>
+            <button class="pr-wish" aria-label="Guardar" aria-pressed="false">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 13.5S2 9.8 2 5.5A3.5 3.5 0 0 1 8 3.2 3.5 3.5 0 0 1 14 5.5C14 9.8 8 13.5 8 13.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="pr-img-wrap">
+            <img src="https://images.unsplash.com/photo-1512054502232-10a0a035d672?w=500&q=75&auto=format&fit=crop" alt="Motorola G84" class="pr-img" loading="lazy"/>
+            <div class="pr-img-fade"></div>
+          </div>
+          <div class="pr-card-body">
+            <div class="pr-card-meta"><span class="pr-brand">Motorola</span><span class="pr-storage">256 GB</span></div>
+            <h3 class="pr-name">Moto G84 <span class="pr-name-out" style="-webkit-text-stroke:1px rgba(10,10,10,0.2)">5G</span></h3>
+            <p class="pr-spec">Snapdragon 695 · 50MP · 6.55"</p>
+          </div>
+          <div class="pr-card-footer">
+            <div class="pr-price-col"><span class="pr-old">$299</span><span class="pr-price">$249</span></div>
+            <a href="#contacto" class="pr-btn">Comprar <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+        <div class="pr-accent"></div>
+      </article>
+
+      <!-- ── SMARTWATCH ── -->
+      <article class="pr-card" data-cat="smartwatch" data-name="apple watch series 10" data-price="499" data-order="12">
+        <div class="pr-card-inner">
+          <div class="pr-card-top">
+            <span class="pr-label pr-label-new">Nuevo</span>
+            <button class="pr-wish" aria-label="Guardar" aria-pressed="false">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 13.5S2 9.8 2 5.5A3.5 3.5 0 0 1 8 3.2 3.5 3.5 0 0 1 14 5.5C14 9.8 8 13.5 8 13.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="pr-img-wrap">
+            <img src="https://images.unsplash.com/photo-1544117519-31a4b719223d?w=500&q=75&auto=format&fit=crop" alt="Apple Watch Series 10" class="pr-img" loading="lazy"/>
+            <div class="pr-img-fade"></div>
+          </div>
+          <div class="pr-card-body">
+            <div class="pr-card-meta"><span class="pr-brand">Apple</span><span class="pr-storage">45 mm</span></div>
+            <h3 class="pr-name">Watch <span class="pr-name-out">Series 10</span></h3>
+            <p class="pr-spec">S10 · GPS + Cellular · Aluminio</p>
+          </div>
+          <div class="pr-card-footer">
+            <div class="pr-price-col"><span class="pr-old">$549</span><span class="pr-price">$499</span></div>
+            <a href="#contacto" class="pr-btn">Comprar <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+        <div class="pr-accent"></div>
+      </article>
+
+      <article class="pr-card" data-cat="smartwatch" data-name="galaxy watch 7" data-price="329" data-order="13">
+        <div class="pr-card-inner">
+          <div class="pr-card-top">
+            <span class="pr-label pr-label-new">Nuevo</span>
+            <button class="pr-wish" aria-label="Guardar" aria-pressed="false">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 13.5S2 9.8 2 5.5A3.5 3.5 0 0 1 8 3.2 3.5 3.5 0 0 1 14 5.5C14 9.8 8 13.5 8 13.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="pr-img-wrap">
+            <img src="https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=500&q=75&auto=format&fit=crop" alt="Galaxy Watch 7" class="pr-img" loading="lazy"/>
+            <div class="pr-img-fade"></div>
+          </div>
+          <div class="pr-card-body">
+            <div class="pr-card-meta"><span class="pr-brand">Samsung</span><span class="pr-storage">44 mm</span></div>
+            <h3 class="pr-name">Galaxy <span class="pr-name-out">Watch 7</span></h3>
+            <p class="pr-spec">Exynos W1000 · GPS · Aluminio</p>
+          </div>
+          <div class="pr-card-footer">
+            <div class="pr-price-col"><span class="pr-old">$379</span><span class="pr-price">$329</span></div>
+            <a href="#contacto" class="pr-btn">Comprar <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+        <div class="pr-accent"></div>
+      </article>
+
+      <!-- ── AUDÍFONOS ── -->
+      <article class="pr-card" data-cat="audifonos" data-name="airpods pro 2" data-price="279" data-order="14">
+        <div class="pr-card-inner">
+          <div class="pr-card-top">
+            <span class="pr-label pr-label-new">Nuevo</span>
+            <button class="pr-wish" aria-label="Guardar" aria-pressed="false">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 13.5S2 9.8 2 5.5A3.5 3.5 0 0 1 8 3.2 3.5 3.5 0 0 1 14 5.5C14 9.8 8 13.5 8 13.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="pr-img-wrap">
+            <img src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=500&q=75&auto=format&fit=crop" alt="AirPods Pro 2" class="pr-img" loading="lazy"/>
+            <div class="pr-img-fade"></div>
+          </div>
+          <div class="pr-card-body">
+            <div class="pr-card-meta"><span class="pr-brand">Apple</span><span class="pr-storage">USB-C</span></div>
+            <h3 class="pr-name">AirPods <span class="pr-name-out">Pro 2</span></h3>
+            <p class="pr-spec">ANC · Adaptive Audio · H2</p>
+          </div>
+          <div class="pr-card-footer">
+            <div class="pr-price-col"><span class="pr-old">$329</span><span class="pr-price">$279</span></div>
+            <a href="#contacto" class="pr-btn">Comprar <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+        <div class="pr-accent"></div>
+      </article>
+
+      <article class="pr-card" data-cat="audifonos" data-name="galaxy buds 3 pro" data-price="219" data-order="15">
+        <div class="pr-card-inner">
+          <div class="pr-card-top">
+            <span class="pr-label pr-label-new">Nuevo</span>
+            <button class="pr-wish" aria-label="Guardar" aria-pressed="false">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 13.5S2 9.8 2 5.5A3.5 3.5 0 0 1 8 3.2 3.5 3.5 0 0 1 14 5.5C14 9.8 8 13.5 8 13.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="pr-img-wrap">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=75&auto=format&fit=crop" alt="Galaxy Buds 3 Pro" class="pr-img" loading="lazy"/>
+            <div class="pr-img-fade"></div>
+          </div>
+          <div class="pr-card-body">
+            <div class="pr-card-meta"><span class="pr-brand">Samsung</span><span class="pr-storage">ANC</span></div>
+            <h3 class="pr-name">Galaxy Buds <span class="pr-name-out">3 Pro</span></h3>
+            <p class="pr-spec">ANC · 360° Audio · 6h + 24h</p>
+          </div>
+          <div class="pr-card-footer">
+            <div class="pr-price-col"><span class="pr-old">$259</span><span class="pr-price">$219</span></div>
+            <a href="#contacto" class="pr-btn">Comprar <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+        <div class="pr-accent"></div>
+      </article>
+
+      <!-- ── COVERS ── -->
+      <article class="pr-card" data-cat="covers" data-name="funda iphone 17 pro magsafe" data-price="49" data-order="16">
+        <div class="pr-card-inner">
+          <div class="pr-card-top">
+            <span class="pr-label pr-label-new">Nuevo</span>
+            <button class="pr-wish" aria-label="Guardar" aria-pressed="false">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 13.5S2 9.8 2 5.5A3.5 3.5 0 0 1 8 3.2 3.5 3.5 0 0 1 14 5.5C14 9.8 8 13.5 8 13.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="pr-img-wrap">
+            <img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?w=500&q=75&auto=format&fit=crop" alt="Funda iPhone MagSafe" class="pr-img" loading="lazy"/>
+            <div class="pr-img-fade"></div>
+          </div>
+          <div class="pr-card-body">
+            <div class="pr-card-meta"><span class="pr-brand">Covers</span><span class="pr-storage">MagSafe</span></div>
+            <h3 class="pr-name">Cover <span class="pr-name-out" style="-webkit-text-stroke:1px rgba(10,10,10,0.2)">MagSafe</span></h3>
+            <p class="pr-spec">iPhone 17 Pro · Silicona certificada</p>
+          </div>
+          <div class="pr-card-footer">
+            <div class="pr-price-col"><span class="pr-old">$65</span><span class="pr-price">$49</span></div>
+            <a href="#contacto" class="pr-btn">Comprar <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+        <div class="pr-accent"></div>
+      </article>
+
+      <article class="pr-card" data-cat="covers" data-name="funda samsung galaxy s25" data-price="39" data-order="17">
+        <div class="pr-card-inner">
+          <div class="pr-card-top">
+            <span class="pr-label pr-label-new">Nuevo</span>
+            <button class="pr-wish" aria-label="Guardar" aria-pressed="false">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 13.5S2 9.8 2 5.5A3.5 3.5 0 0 1 8 3.2 3.5 3.5 0 0 1 14 5.5C14 9.8 8 13.5 8 13.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="pr-img-wrap">
+            <img src="https://images.unsplash.com/photo-1583573636842-5cee1c94a85e?w=500&q=75&auto=format&fit=crop" alt="Funda Samsung S25" class="pr-img" loading="lazy"/>
+            <div class="pr-img-fade"></div>
+          </div>
+          <div class="pr-card-body">
+            <div class="pr-card-meta"><span class="pr-brand">Covers</span><span class="pr-storage">Clear</span></div>
+            <h3 class="pr-name">Cover <span class="pr-name-out" style="-webkit-text-stroke:1px rgba(10,10,10,0.2)">Clear</span></h3>
+            <p class="pr-spec">Galaxy S25 · Anti-amarillamiento</p>
+          </div>
+          <div class="pr-card-footer">
+            <div class="pr-price-col"><span class="pr-old">$49</span><span class="pr-price">$39</span></div>
+            <a href="#contacto" class="pr-btn">Comprar <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+        <div class="pr-accent"></div>
+      </article>
+
+    </div><!-- /pr-grid -->
+
+    <!-- Empty state -->
+    <div class="pr-empty" id="prEmpty" hidden>
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+        <circle cx="18" cy="18" r="13" stroke="currentColor" stroke-width="1.3" opacity="0.3"/>
+        <path d="M28 28L36 36" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+        <path d="M14 18h8M18 14v8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" opacity="0.3"/>
+      </svg>
+      <p class="pr-empty-text">No encontramos productos que coincidan con tu búsqueda.</p>
+      <button class="pr-empty-reset" id="prEmptyReset">Limpiar filtros</button>
+    </div>
+
+    <!-- ══ VER MÁS ══ -->
+    <div class="pr-loadmore" id="prLoadMore" data-reveal>
+      <div class="pr-loadmore-info">
+        <span class="pr-showing" id="prShowing">Mostrando <strong>8</strong> de <strong>17</strong> productos</span>
+        <div class="pr-progress-wrap">
+          <div class="pr-progress-bar" id="prProgressBar" style="width: 47%"></div>
+        </div>
+      </div>
+      <button class="pr-load-btn" id="prLoadBtn">
+        <span class="pr-load-text">Ver más productos</span>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M7 3v8M3 9l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  :root {
+    --steel:    #4a6278;
+    --steel-lt: #7a98ae;
+    --olive:    #6b7c55;
+    --olive-lt: #8fa070;
+    --white:    #f4f3ef;
+    --black:    #0a0a0a;
+  }
+
+  .pr-section {
+    --bg:      #f4f3ef; --bg-card: #ffffff;
+    --text:    #0a0a0a; --muted:   rgba(10,10,10,0.42);
+    --border:  rgba(10,10,10,0.08); --input-bg: #ffffff;
+    background: var(--bg); color: var(--text);
+    position: relative; padding: 120px 0 100px;
+    font-family: 'DM Sans', 'Helvetica Neue', sans-serif;
+    overflow: hidden; transition: background 0.4s, color 0.4s;
+  }
+  :root.dark .pr-section {
+    --bg: #0c0c0c; --bg-card: #111111;
+    --text: #f4f3ef; --muted: rgba(244,243,239,0.38);
+    --border: rgba(244,243,239,0.07); --input-bg: #161616;
+  }
+  :root.dark .title-outline { -webkit-text-stroke: 1px rgba(244,243,239,0.28) !important; }
+  :root.dark .pr-name-out   { -webkit-text-stroke: 1px rgba(244,243,239,0.28) !important; }
+
+  /* BG */
+  .pr-bg { position: absolute; inset: 0; pointer-events: none; }
+  .pr-grain {
+    position: absolute; inset: 0; opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+    background-size: 256px;
+  }
+  .pr-line { position: absolute; left:0; right:0; height:1px; background:var(--border); }
+  .pr-line-top { top:0; } .pr-line-bottom { bottom:0; }
+
+  /* Inner */
+  .pr-inner {
+    max-width: 1280px; margin: 0 auto; padding: 0 44px;
+    display: flex; flex-direction: column; gap: 40px;
+    position: relative; z-index: 1;
+  }
+  @media (max-width: 640px) { .pr-inner { padding: 0 20px; gap: 28px; } }
+
+  /* Header */
+  .pr-header {
+    display: flex; align-items: flex-end;
+    justify-content: space-between; gap: 40px; flex-wrap: wrap;
+  }
+  .pr-header-left { display: flex; flex-direction: column; gap: 14px; }
+  .pr-eyebrow {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.65rem; letter-spacing: 0.26em;
+    text-transform: uppercase; color: var(--steel-lt); margin: 0;
+  }
+  .eyebrow-pip {
+    width: 7px; height: 7px; background: var(--olive-lt);
+    border-radius: 50%; box-shadow: 0 0 8px var(--olive); flex-shrink: 0;
+  }
+  .pr-title {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 400; line-height: 0.93;
+    letter-spacing: -0.035em; color: var(--text); margin: 0;
+  }
+  .title-outline { color: transparent; -webkit-text-stroke: 1px rgba(10,10,10,0.35); }
+  .pr-sub {
+    font-size: 0.88rem; color: var(--muted); line-height: 1.75;
+    margin: 0; font-weight: 300; max-width: 360px;
+  }
+
+  /* Toolbar */
+  .pr-toolbar {
+    display: flex; align-items: center;
+    gap: 12px; flex-wrap: wrap;
+    padding: 16px 20px;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+  }
+
+  /* Search */
+  .pr-search-wrap {
+    display: flex; align-items: center; gap: 10px;
+    flex: 1; min-width: 200px; position: relative;
+  }
+  .pr-search-icon { color: var(--muted); flex-shrink: 0; }
+  .pr-search {
+    flex: 1; border: none; background: transparent;
+    font-size: 0.82rem; font-family: 'DM Sans', sans-serif;
+    color: var(--text); outline: none; font-weight: 300;
+    min-width: 0;
+  }
+  .pr-search::placeholder { color: var(--muted); }
+  .pr-search-clear {
+    background: transparent; border: none;
+    color: var(--muted); cursor: pointer; padding: 4px;
+    display: flex; align-items: center; justify-content: center;
+    transition: color 0.2s;
+    flex-shrink: 0;
+  }
+  .pr-search-clear:hover { color: var(--text); }
+
+  /* Divider */
+  .pr-toolbar::after {
+    content: ''; width: 1px; height: 20px;
+    background: var(--border); flex-shrink: 0;
+  }
+
+  /* Sort */
+  .pr-sort-wrap {
+    display: flex; align-items: center; gap: 8px;
+    flex-shrink: 0; position: relative;
+  }
+  .pr-sort-label {
+    font-size: 0.6rem; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--muted); white-space: nowrap;
+  }
+  .pr-sort {
+    appearance: none; -webkit-appearance: none;
+    background: transparent; border: 1px solid var(--border);
+    color: var(--text); font-size: 0.72rem;
+    font-family: 'DM Sans', sans-serif;
+    padding: 6px 28px 6px 10px; cursor: pointer; outline: none;
+    transition: border-color 0.2s;
+  }
+  .pr-sort:focus { border-color: var(--steel); }
+  .pr-sort-arrow {
+    position: absolute; right: 8px; top: 50%;
+    transform: translateY(-50%); pointer-events: none; color: var(--muted);
+  }
+  .pr-count {
+    font-size: 0.6rem; letter-spacing: 0.14em;
+    color: var(--muted); white-space: nowrap; margin-left: auto;
+  }
+
+  /* Filters */
+  .pr-filters {
+    display: flex; gap: 4px; flex-wrap: wrap;
+  }
+  .pr-filter {
+    display: inline-flex; align-items: center; gap: 7px;
+    padding: 7px 16px; font-size: 0.62rem; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    border: 1px solid var(--border); background: transparent;
+    color: var(--muted); cursor: pointer;
+    transition: border-color 0.25s, color 0.25s, background 0.25s;
+  }
+  .pr-filter-dot {
+    width: 5px; height: 5px; border-radius: 50%;
+    background: var(--border);
+    transition: background 0.25s;
+  }
+  .pr-filter:hover { border-color: var(--steel-lt); color: var(--text); }
+  .pr-filter:hover .pr-filter-dot { background: var(--steel-lt); }
+  .pr-filter.active {
+    border-color: var(--steel); color: var(--text);
+    background: rgba(74,98,120,0.07);
+  }
+  .pr-filter.active .pr-filter-dot {
+    background: var(--olive-lt);
+    box-shadow: 0 0 6px var(--olive);
+  }
+
+  /* Grid 4 col */
+  .pr-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  @media (max-width: 960px)  { .pr-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 700px)  { .pr-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 400px)  { .pr-grid { grid-template-columns: 1fr; } }
+
+  /* Card */
+  .pr-card {
+    position: relative; background: var(--bg-card);
+    overflow: hidden; display: flex; flex-direction: column;
+    transition: background 0.3s;
+  }
+  .pr-card.pr-hidden { display: none; }
+  .pr-card.pr-collapsed { display: none; } /* ver más */
+
+  .pr-card:hover {
+    background: color-mix(in srgb, var(--bg-card), var(--steel) 3%);
+    z-index: 1;
+  }
+  :root.dark .pr-card:hover { background: rgba(74,98,120,0.06); }
+
+  .pr-card-inner {
+    display: flex; flex-direction: column; flex: 1;
+    padding: 18px; gap: 14px;
+  }
+
+  .pr-card-top {
+    display: flex; align-items: center; justify-content: space-between;
+  }
+
+  /* Labels */
+  .pr-label {
+    font-size: 0.5rem; font-weight: 700;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 1px; flex-shrink: 0;
+  }
+  .pr-label-new   { background:rgba(74,98,120,0.1);  border:1px solid rgba(74,98,120,0.25);  color:var(--steel-lt); }
+  .pr-label-offer { background:rgba(107,124,85,0.1); border:1px solid rgba(107,124,85,0.25); color:var(--olive-lt); }
+
+  /* Wishlist */
+  .pr-wish {
+    width: 28px; height: 28px;
+    display: flex; align-items: center; justify-content: center;
+    background: transparent; border: 1px solid var(--border);
+    color: var(--muted); cursor: pointer; padding: 0;
+    transition: border-color 0.25s, color 0.25s;
+    flex-shrink: 0;
+  }
+  .pr-wish:hover { border-color: var(--steel-lt); color: var(--steel-lt); }
+  .pr-wish.saved { color: var(--steel); border-color: var(--steel); }
+  .pr-wish.saved svg path { fill: var(--steel); }
+
+  /* Image */
+  .pr-img-wrap {
+    position: relative; aspect-ratio: 4/3; overflow: hidden;
+    background: color-mix(in srgb, var(--bg), transparent 50%);
+  }
+  .pr-img {
+    width: 100%; height: 100%; object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.22,1,0.36,1);
+  }
+  .pr-card:hover .pr-img { transform: scale(1.05); }
+  .pr-img-fade {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 50%;
+    background: linear-gradient(to top, var(--bg-card) 0%, transparent 100%);
+    pointer-events: none;
+  }
+
+  /* Body */
+  .pr-card-body { display: flex; flex-direction: column; gap: 5px; flex: 1; }
+  .pr-card-meta {
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .pr-brand {
+    font-size: 0.56rem; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--steel-lt); font-weight: 500;
+  }
+  .pr-storage {
+    font-size: 0.55rem; letter-spacing: 0.12em; color: var(--muted);
+    background: var(--bg); border: 1px solid var(--border); padding: 2px 6px;
+  }
+  .pr-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.15rem; font-weight: 400;
+    line-height: 1.05; letter-spacing: -0.02em;
+    color: var(--text); margin: 4px 0 0;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .pr-name-out { color: transparent; -webkit-text-stroke: 1px rgba(10,10,10,0.28); }
+  .pr-spec {
+    font-size: 0.65rem; color: var(--muted);
+    margin: 3px 0 0; font-weight: 300;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+
+  /* Footer */
+  .pr-card-footer {
+    display: flex; align-items: center;
+    justify-content: space-between;
+    padding-top: 12px; border-top: 1px solid var(--border);
+    margin-top: auto; gap: 6px;
+  }
+  .pr-price-col { display: flex; flex-direction: column; gap: 1px; }
+  .pr-old {
+    font-size: 0.62rem; text-decoration: line-through;
+    color: var(--muted); opacity: 0.5; line-height: 1;
+  }
+  .pr-price {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.2rem; font-weight: 400;
+    color: var(--text); letter-spacing: -0.03em; line-height: 1;
+  }
+  .pr-btn {
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 7px 12px; font-size: 0.58rem; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    text-decoration: none;
+    background: var(--text); color: var(--bg);
+    transition: background 0.25s, box-shadow 0.25s, gap 0.25s;
+    white-space: nowrap; flex-shrink: 0;
+  }
+  .pr-btn:hover {
+    background: var(--steel); color: var(--white);
+    box-shadow: 0 4px 16px rgba(74,98,120,0.3); gap: 9px;
+  }
+
+  /* Bottom accent */
+  .pr-accent {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(to right, var(--olive), var(--steel));
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.45s cubic-bezier(0.4,0,0.2,1);
+  }
+  .pr-card:hover .pr-accent { transform: scaleX(1); }
+
+  /* Empty state */
+  .pr-empty {
+    display: flex; flex-direction: column; align-items: center;
+    gap: 16px; padding: 60px 20px;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--muted);
+  }
+  .pr-empty[hidden] { display: none; }
+  .pr-empty-text { font-size: 0.88rem; font-weight: 300; margin: 0; }
+  .pr-empty-reset {
+    font-size: 0.65rem; font-weight: 600; letter-spacing: 0.16em;
+    text-transform: uppercase; background: transparent;
+    border: 1px solid var(--border); color: var(--muted);
+    padding: 8px 20px; cursor: pointer;
+    transition: border-color 0.25s, color 0.25s;
+  }
+  .pr-empty-reset:hover { border-color: var(--steel); color: var(--text); }
+
+  /* Load more */
+  .pr-loadmore {
+    display: flex; align-items: center;
+    justify-content: space-between; gap: 24px; flex-wrap: wrap;
+    padding: 24px 0 0;
+  }
+  .pr-loadmore[hidden] { display: none; }
+  .pr-loadmore-info { display: flex; flex-direction: column; gap: 8px; flex: 1; min-width: 200px; }
+  .pr-showing {
+    font-size: 0.72rem; color: var(--muted); font-weight: 300;
+  }
+  .pr-showing strong { color: var(--text); font-weight: 600; }
+  .pr-progress-wrap {
+    height: 2px; background: var(--border);
+    overflow: hidden;
+  }
+  .pr-progress-bar {
+    height: 100%;
+    background: linear-gradient(to right, var(--olive), var(--steel));
+    transition: width 0.6s cubic-bezier(0.4,0,0.2,1);
+  }
+  .pr-load-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 28px; font-size: 0.68rem; font-weight: 600;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    border: 1px solid var(--border); background: transparent;
+    color: var(--muted); cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: border-color 0.25s, color 0.25s, background 0.25s, gap 0.25s;
+    flex-shrink: 0;
+  }
+  .pr-load-btn:hover {
+    border-color: var(--steel); color: var(--text);
+    background: rgba(74,98,120,0.05); gap: 12px;
+  }
+
+  /* Reveal */
+  [data-reveal] {
+    opacity: 0; transform: translateY(20px);
+    transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1), transform 0.75s cubic-bezier(0.22,1,0.36,1);
+  }
+  [data-reveal].visible { opacity: 1; transform: translateY(0); }
+  .pr-filters[data-reveal]  { transition-delay: 0.05s; }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
+
+<script>
+(function () {
+  /* ── REVEAL ── */
+  const revObs = new IntersectionObserver(
+    entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); revObs.unobserve(e.target); }
+    }), { threshold: 0.06, rootMargin: '0px 0px -30px 0px' }
+  );
+  document.querySelectorAll('[data-reveal]').forEach(el => revObs.observe(el));
+
+  /* ── STATE ── */
+  const INITIAL_SHOW = 8;
+  const LOAD_STEP    = 8;
+
+  const grid         = document.getElementById('prGrid')!;
+  const searchInput  = document.getElementById('prSearch')   as HTMLInputElement;
+  const searchClear  = document.getElementById('prSearchClear') as HTMLButtonElement;
+  const sortSel      = document.getElementById('prSort')     as HTMLSelectElement;
+  const countEl      = document.getElementById('prCount');
+  const emptyEl      = document.getElementById('prEmpty');
+  const loadMoreWrap = document.getElementById('prLoadMore');
+  const loadBtn      = document.getElementById('prLoadBtn');
+  const showingEl    = document.getElementById('prShowing');
+  const progressBar  = document.getElementById('prProgressBar');
+  const emptyReset   = document.getElementById('prEmptyReset');
+
+  const filterBtns   = document.querySelectorAll<HTMLButtonElement>('.pr-filter');
+
+  let activeFilter = 'all';
+  let searchQuery  = '';
+  let sortValue    = 'default';
+  let visibleCount = INITIAL_SHOW;
+
+  /* All cards as data */
+  const allCards = Array.from(grid.querySelectorAll<HTMLElement>('.pr-card'));
+
+  function getFiltered(): HTMLElement[] {
+    return allCards.filter(card => {
+      const matchCat    = activeFilter === 'all' || card.dataset.cat === activeFilter;
+      const matchSearch = !searchQuery || (card.dataset.name || '').includes(searchQuery);
+      return matchCat && matchSearch;
+    });
+  }
+
+  function getSorted(cards: HTMLElement[]): HTMLElement[] {
+    const copy = [...cards];
+    if (sortValue === 'price-asc')  return copy.sort((a,b) => +a.dataset.price! - +b.dataset.price!);
+    if (sortValue === 'price-desc') return copy.sort((a,b) => +b.dataset.price! - +a.dataset.price!);
+    if (sortValue === 'name-asc')   return copy.sort((a,b) => (a.dataset.name||'').localeCompare(b.dataset.name||''));
+    return copy.sort((a,b) => +a.dataset.order! - +b.dataset.order!);
+  }
+
+  function render() {
+    const filtered = getSorted(getFiltered());
+    const total    = filtered.length;
+    const showing  = Math.min(visibleCount, total);
+
+    /* Hide/show all */
+    allCards.forEach(c => { c.classList.add('pr-hidden'); c.classList.remove('pr-collapsed'); });
+    filtered.forEach((c, i) => {
+      c.classList.remove('pr-hidden');
+      if (i >= visibleCount) c.classList.add('pr-collapsed');
+    });
+
+    /* Count */
+    if (countEl) countEl.textContent = `${total} producto${total !== 1 ? 's' : ''}`;
+
+    /* Empty */
+    if (emptyEl) emptyEl.hidden = total > 0;
+
+    /* Load more */
+    if (loadMoreWrap) {
+      loadMoreWrap.hidden = total <= INITIAL_SHOW;
+      if (showingEl) showingEl.innerHTML = `Mostrando <strong>${showing}</strong> de <strong>${total}</strong> productos`;
+      if (progressBar) progressBar.style.width = total > 0 ? `${(showing / total) * 100}%` : '0%';
+      if (loadBtn) (loadBtn as HTMLButtonElement).disabled = showing >= total;
+      if (loadBtn) loadBtn.hidden = showing >= total;
+    }
+
+    /* Search clear btn */
+    if (searchClear) searchClear.hidden = !searchQuery;
+  }
+
+  /* ── FILTERS ── */
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected','true');
+      activeFilter = btn.dataset.filter || 'all';
+      visibleCount = INITIAL_SHOW;
+      render();
+    });
+  });
+
+  /* ── SEARCH ── */
+  searchInput?.addEventListener('input', () => {
+    searchQuery  = searchInput.value.trim().toLowerCase();
+    visibleCount = INITIAL_SHOW;
+    render();
+  });
+  searchClear?.addEventListener('click', () => {
+    searchInput.value = '';
+    searchQuery = '';
+    visibleCount = INITIAL_SHOW;
+    render();
+    searchInput.focus();
+  });
+
+  /* ── SORT ── */
+  sortSel?.addEventListener('change', () => {
+    sortValue    = sortSel.value;
+    visibleCount = INITIAL_SHOW;
+    render();
+  });
+
+  /* ── LOAD MORE ── */
+  loadBtn?.addEventListener('click', () => {
+    visibleCount += LOAD_STEP;
+    render();
+  });
+
+  /* ── EMPTY RESET ── */
+  emptyReset?.addEventListener('click', () => {
+    activeFilter = 'all';
+    searchQuery  = '';
+    sortValue    = 'default';
+    visibleCount = INITIAL_SHOW;
+    if (searchInput) searchInput.value = '';
+    if (sortSel)     sortSel.value     = 'default';
+    filterBtns.forEach((b,i) => {
+      b.classList.toggle('active', i === 0);
+      b.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+    });
+    render();
+  });
+
+  /* ── WISHLIST ── */
+  document.querySelectorAll('.pr-wish').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      btn.classList.toggle('saved');
+      btn.setAttribute('aria-pressed', btn.classList.contains('saved') ? 'true' : 'false');
+    });
+  });
+
+  /* Initial render */
+  render();
+})();
+</script>

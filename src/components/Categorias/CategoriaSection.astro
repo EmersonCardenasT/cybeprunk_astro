@@ -1,0 +1,669 @@
+---
+// CategoriesSection.astro — v3 · Imágenes full · Previews · Novedades · FAQ · Marcas
+---
+
+<section id="categorias" class="cs-section">
+  <div class="cs-bg" aria-hidden="true">
+    <div class="cs-grain"></div>
+    <div class="cs-line cs-line-top"></div>
+    <div class="cs-line cs-line-bottom"></div>
+  </div>
+
+  <div class="cs-inner">
+
+    <!-- ══ HEADER ══ -->
+    <div class="cs-header" data-reveal>
+      <div class="cs-header-left">
+        <p class="cs-eyebrow"><span class="eyebrow-pip"></span>Explorar</p>
+        <h2 class="cs-title">Todas nuestras<br/><span class="title-outline">categorías.</span></h2>
+      </div>
+      <div class="cs-header-right">
+        <p class="cs-sub">Desde el último iPhone hasta los mejores audífonos. Todo con garantía oficial, precio transparente y entrega en 24 h.</p>
+        <div class="cs-stats-row">
+          <div class="cs-stat">
+            <span class="cs-stat-n" data-target="430">0</span><span class="cs-stat-s">+</span>
+            <span class="cs-stat-l">Productos</span>
+          </div>
+          <div class="cs-stat-div"></div>
+          <div class="cs-stat">
+            <span class="cs-stat-n" data-target="6">0</span><span class="cs-stat-s"></span>
+            <span class="cs-stat-l">Categorías</span>
+          </div>
+          <div class="cs-stat-div"></div>
+          <div class="cs-stat">
+            <span class="cs-stat-n" data-target="12">0</span><span class="cs-stat-s"></span>
+            <span class="cs-stat-l">Marcas</span>
+          </div>
+          <div class="cs-stat-div"></div>
+          <div class="cs-stat">
+            <span class="cs-stat-n" data-target="24">0</span><span class="cs-stat-s">h</span>
+            <span class="cs-stat-l">Entrega</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ BENTO GRID ══ -->
+    <div class="cs-bento">
+
+      <!-- [A] FEATURED — Celulares (left, tall 2-row) -->
+      <a href="#productos?cat=celulares" class="cs-card cs-card-a" data-reveal data-delay="0">
+        <div class="cs-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1000&q=80&auto=format&fit=crop"
+            alt="Celulares" class="cs-img" loading="lazy"/>
+          <div class="cs-overlay"></div>
+          <div class="cs-overlay-color cs-overlay-blue"></div>
+        </div>
+        <div class="cs-card-body">
+          <div class="cs-card-header-row">
+            <span class="cs-idx">01</span>
+            <span class="cs-hot-badge cs-badge-offer">Hasta 20% OFF</span>
+          </div>
+          <div class="cs-card-icon">
+            <svg width="24" height="24" viewBox="0 0 30 30" fill="none">
+              <rect x="8" y="2" width="14" height="26" rx="3" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="15" cy="24" r="1.2" fill="currentColor" opacity=".7"/>
+              <line x1="11" y1="5.5" x2="19" y2="5.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity=".5"/>
+            </svg>
+          </div>
+          <div class="cs-card-text-block">
+            <h3 class="cs-name">Celulares</h3>
+            <p class="cs-desc">iPhone, Samsung, Xiaomi y Motorola. Los mejores smartphones con garantía oficial y stock permanente en todos los modelos y colores.</p>
+          </div>
+          <!-- Mini product previews -->
+          <div class="cs-mini-products">
+            <div class="cs-mini-product">
+              <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=80&q=70&auto=format&fit=crop" alt="iPhone 17 Pro" class="cs-mini-img"/>
+              <span class="cs-mini-name">iPhone 17 Pro</span>
+              <span class="cs-mini-price">$1.149</span>
+            </div>
+            <div class="cs-mini-product">
+              <img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=80&q=70&auto=format&fit=crop" alt="Galaxy S25 Ultra" class="cs-mini-img"/>
+              <span class="cs-mini-name">Galaxy S25 Ultra</span>
+              <span class="cs-mini-price">$1.249</span>
+            </div>
+            <div class="cs-mini-product">
+              <img src="https://images.unsplash.com/photo-1551355738-a7f40c0f2d18?w=80&q=70&auto=format&fit=crop" alt="Xiaomi 14 Ultra" class="cs-mini-img"/>
+              <span class="cs-mini-name">Xiaomi 14 Ultra</span>
+              <span class="cs-mini-price">$1.099</span>
+            </div>
+          </div>
+          <div class="cs-card-footer">
+            <div class="cs-brand-chips">
+              <span class="cs-bchip">Apple</span>
+              <span class="cs-bchip">Samsung</span>
+              <span class="cs-bchip">Xiaomi</span>
+              <span class="cs-bchip">+5</span>
+            </div>
+            <span class="cs-count-badge">+120 modelos</span>
+          </div>
+        </div>
+        <div class="cs-accent"></div>
+      </a>
+
+      <!-- Right 2×2 grid -->
+      <div class="cs-right-col">
+
+        <!-- Row 1 -->
+        <div class="cs-right-row">
+
+          <!-- [B] Smartwatch -->
+          <a href="#productos?cat=smartwatch" class="cs-card cs-card-sm" data-reveal data-delay="1">
+            <div class="cs-img-wrap">
+              <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=700&q=75&auto=format&fit=crop" alt="Smartwatch" class="cs-img" loading="lazy"/>
+              <div class="cs-overlay"></div>
+              <div class="cs-overlay-color cs-overlay-green"></div>
+            </div>
+            <div class="cs-card-body">
+              <div class="cs-card-header-row"><span class="cs-idx">02</span></div>
+              <div class="cs-card-icon cs-card-icon-sm">
+                <svg width="18" height="18" viewBox="0 0 30 30" fill="none">
+                  <rect x="9" y="7" width="12" height="16" rx="3" stroke="currentColor" stroke-width="1.4"/>
+                  <line x1="12" y1="4" x2="12" y2="7" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+                  <line x1="18" y1="4" x2="18" y2="7" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+                  <line x1="12" y1="23" x2="12" y2="26" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+                  <line x1="18" y1="23" x2="18" y2="26" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+                  <path d="M13 13h2.5l1 2 1-4 1 2H21" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity=".5"/>
+                </svg>
+              </div>
+              <h3 class="cs-name cs-name-sm">Smartwatch</h3>
+              <p class="cs-desc cs-desc-sm">Apple Watch, Galaxy Watch y más. Salud, GPS y notificaciones en tu muñeca.</p>
+              <div class="cs-card-footer"><span class="cs-count-badge">+30 modelos</span></div>
+            </div>
+            <div class="cs-accent"></div>
+          </a>
+
+          <!-- [C] Audífonos -->
+          <a href="#productos?cat=audifonos" class="cs-card cs-card-sm" data-reveal data-delay="2">
+            <div class="cs-img-wrap">
+              <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=700&q=75&auto=format&fit=crop" alt="Audífonos" class="cs-img" loading="lazy"/>
+              <div class="cs-overlay"></div>
+              <div class="cs-overlay-color cs-overlay-steel"></div>
+            </div>
+            <div class="cs-card-body">
+              <div class="cs-card-header-row"><span class="cs-idx">03</span><span class="cs-hot-badge cs-badge-hot">🔥 Tendencia</span></div>
+              <div class="cs-card-icon cs-card-icon-sm">
+                <svg width="18" height="18" viewBox="0 0 30 30" fill="none">
+                  <path d="M8 18v-3a7 7 0 0 1 14 0v3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                  <rect x="6" y="17" width="4" height="6" rx="2" stroke="currentColor" stroke-width="1.3"/>
+                  <rect x="20" y="17" width="4" height="6" rx="2" stroke="currentColor" stroke-width="1.3"/>
+                </svg>
+              </div>
+              <h3 class="cs-name cs-name-sm">Audífonos</h3>
+              <p class="cs-desc cs-desc-sm">AirPods, Galaxy Buds, Sony WH-1000XM5. Cancelación de ruido activa.</p>
+              <div class="cs-card-footer"><span class="cs-count-badge">+25 modelos</span></div>
+            </div>
+            <div class="cs-accent"></div>
+          </a>
+
+        </div><!-- /row1 -->
+
+        <!-- Row 2 -->
+        <div class="cs-right-row">
+
+          <!-- [D] Macs -->
+          <a href="#productos?cat=macs" class="cs-card cs-card-sm" data-reveal data-delay="3">
+            <div class="cs-img-wrap">
+              <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=700&q=75&auto=format&fit=crop" alt="Macs" class="cs-img" loading="lazy"/>
+              <div class="cs-overlay"></div>
+              <div class="cs-overlay-color cs-overlay-dark"></div>
+            </div>
+            <div class="cs-card-body">
+              <div class="cs-card-header-row"><span class="cs-idx">04</span></div>
+              <div class="cs-card-icon cs-card-icon-sm">
+                <svg width="18" height="18" viewBox="0 0 30 30" fill="none">
+                  <rect x="4" y="5" width="22" height="15" rx="2" stroke="currentColor" stroke-width="1.4"/>
+                  <path d="M10 24h10M15 20v4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+                  <circle cx="15" cy="12" r="3" stroke="currentColor" stroke-width="1" opacity=".4"/>
+                </svg>
+              </div>
+              <h3 class="cs-name cs-name-sm">Macs</h3>
+              <p class="cs-desc cs-desc-sm">MacBook Air/Pro, iMac, Mac mini. Chip Apple Silicon M4 para trabajo y creatividad.</p>
+              <div class="cs-card-footer"><span class="cs-count-badge">+18 modelos</span></div>
+            </div>
+            <div class="cs-accent"></div>
+          </a>
+
+          <!-- [E] PC -->
+          <a href="#productos?cat=pc" class="cs-card cs-card-sm" data-reveal data-delay="4">
+            <div class="cs-img-wrap">
+              <img src="https://images.unsplash.com/photo-1593640408182-31c228c41e3e?w=700&q=75&auto=format&fit=crop" alt="PC" class="cs-img" loading="lazy"/>
+              <div class="cs-overlay"></div>
+              <div class="cs-overlay-color cs-overlay-steel"></div>
+            </div>
+            <div class="cs-card-body">
+              <div class="cs-card-header-row"><span class="cs-idx">05</span></div>
+              <div class="cs-card-icon cs-card-icon-sm">
+                <svg width="18" height="18" viewBox="0 0 30 30" fill="none">
+                  <rect x="3" y="5" width="24" height="16" rx="2" stroke="currentColor" stroke-width="1.4"/>
+                  <rect x="10" y="22" width="10" height="3" rx="1" stroke="currentColor" stroke-width="1.3"/>
+                  <line x1="8" y1="25" x2="22" y2="25" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+                  <rect x="7" y="9" width="5" height="4" rx="1" stroke="currentColor" stroke-width="1" opacity=".4"/>
+                  <rect x="16" y="9" width="7" height="4" rx="1" stroke="currentColor" stroke-width="1" opacity=".4"/>
+                </svg>
+              </div>
+              <h3 class="cs-name cs-name-sm">PC</h3>
+              <p class="cs-desc cs-desc-sm">Lenovo, HP, Dell Windows. Trabajo, estudio y gaming con garantía oficial.</p>
+              <div class="cs-card-footer"><span class="cs-count-badge">+40 modelos</span></div>
+            </div>
+            <div class="cs-accent"></div>
+          </a>
+
+        </div><!-- /row2 -->
+      </div><!-- /cs-right-col -->
+
+      <!-- [F] WIDE — Covers (bottom full-width) -->
+      <a href="#productos?cat=covers" class="cs-card cs-card-f" data-reveal data-delay="5">
+        <div class="cs-img-wrap">
+          <img src="https://images.unsplash.com/photo-1583573636842-5cee1c94a85e?w=1400&q=80&auto=format&fit=crop&crop=center" alt="Covers y Accesorios" class="cs-img" loading="lazy"/>
+          <div class="cs-overlay cs-overlay-light"></div>
+          <div class="cs-overlay-color cs-overlay-olive"></div>
+        </div>
+        <div class="cs-card-body cs-card-body-row">
+          <div class="cs-covers-left">
+            <div class="cs-card-header-row"><span class="cs-idx">06</span><span class="cs-hot-badge cs-badge-olive">+200 opciones</span></div>
+            <div class="cs-card-icon cs-card-icon-sm">
+              <svg width="18" height="18" viewBox="0 0 30 30" fill="none">
+                <rect x="8" y="2" width="14" height="26" rx="3" stroke="currentColor" stroke-width="1.4" opacity=".4"/>
+                <rect x="6" y="1" width="18" height="28" rx="4" stroke="currentColor" stroke-width="1.4"/>
+                <path d="M12 4h6" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity=".5"/>
+              </svg>
+            </div>
+            <h3 class="cs-name cs-name-sm">Covers & Accesorios</h3>
+            <p class="cs-desc cs-desc-sm">Fundas, vidrios templados, cargadores MagSafe y más. Para todos los modelos y marcas.</p>
+          </div>
+          <div class="cs-covers-tags-grid">
+            <span class="cs-ctag">Fundas silicona</span>
+            <span class="cs-ctag">MagSafe</span>
+            <span class="cs-ctag">Vidrios templados</span>
+            <span class="cs-ctag">Cargadores originales</span>
+            <span class="cs-ctag">Cables USB-C / Lightning</span>
+            <span class="cs-ctag">Soportes de auto</span>
+            <span class="cs-ctag">Power banks</span>
+            <span class="cs-ctag">Auriculares con cable</span>
+          </div>
+        </div>
+        <div class="cs-accent"></div>
+      </a>
+
+    </div><!-- /cs-bento -->
+
+    <!-- ══ NOVEDADES STRIP ══ -->
+    <div class="cs-news" data-reveal>
+      <p class="cs-news-label"><span class="eyebrow-pip"></span>Últimas novedades por categoría</p>
+      <div class="cs-news-grid">
+        <div class="cs-news-card">
+          <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=300&q=70&auto=format&fit=crop" alt="iPhone 17 Pro Max" class="cs-news-img" loading="lazy"/>
+          <div class="cs-news-info">
+            <span class="cs-news-cat">Celulares · Apple</span>
+            <p class="cs-news-name">iPhone 17 Pro Max</p>
+            <span class="cs-news-price">Desde $1.399</span>
+          </div>
+          <div class="cs-news-arrow">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <div class="cs-news-card">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&q=70&auto=format&fit=crop" alt="Apple Watch S10" class="cs-news-img" loading="lazy"/>
+          <div class="cs-news-info">
+            <span class="cs-news-cat">Smartwatch · Apple</span>
+            <p class="cs-news-name">Apple Watch Series 10</p>
+            <span class="cs-news-price">Desde $499</span>
+          </div>
+          <div class="cs-news-arrow"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </div>
+        <div class="cs-news-card">
+          <img src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=300&q=70&auto=format&fit=crop" alt="AirPods Pro 2" class="cs-news-img" loading="lazy"/>
+          <div class="cs-news-info">
+            <span class="cs-news-cat">Audífonos · Apple</span>
+            <p class="cs-news-name">AirPods Pro 2 USB-C</p>
+            <span class="cs-news-price">Desde $279</span>
+          </div>
+          <div class="cs-news-arrow"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </div>
+        <div class="cs-news-card">
+          <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=300&q=70&auto=format&fit=crop" alt="MacBook Pro M4" class="cs-news-img" loading="lazy"/>
+          <div class="cs-news-info">
+            <span class="cs-news-cat">Macs · Apple</span>
+            <p class="cs-news-name">MacBook Pro M4 14"</p>
+            <span class="cs-news-price">Desde $1.799</span>
+          </div>
+          <div class="cs-news-arrow"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ FAQ RÁPIDA ══ -->
+    <div class="cs-faq" data-reveal>
+      <div class="cs-faq-left">
+        <p class="cs-eyebrow"><span class="eyebrow-pip"></span>Preguntas frecuentes</p>
+        <h3 class="cs-faq-title">Lo que querés saber<br/><span class="cs-faq-outline">antes de comprar.</span></h3>
+        <a href="#contacto" class="cs-faq-cta">
+          Hacer una consulta
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="cs-faq-list">
+        <details class="cs-faq-item">
+          <summary class="cs-faq-q">
+            ¿Todos los productos tienen garantía oficial?
+            <svg class="cs-faq-chevron" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <p class="cs-faq-a">Sí. Todos los equipos nuevos tienen garantía oficial de fábrica (12 meses Apple, 12 meses Samsung, etc.) más nuestra garantía adicional escrita. Los productos Open Box incluyen garantía CellTech de 6 meses.</p>
+        </details>
+        <details class="cs-faq-item">
+          <summary class="cs-faq-q">
+            ¿Cuánto tarda el envío?
+            <svg class="cs-faq-chevron" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <p class="cs-faq-a">Para CABA y GBA, el envío express llega el mismo día o al día siguiente. Para el interior del país, trabajamos con Andreani con un plazo de 2 a 5 días hábiles dependiendo de la zona.</p>
+        </details>
+        <details class="cs-faq-item">
+          <summary class="cs-faq-q">
+            ¿Puedo pagar en cuotas sin interés?
+            <svg class="cs-faq-chevron" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <p class="cs-faq-a">Sí. Aceptamos hasta 12 cuotas sin interés con tarjetas Visa, Mastercard y American Express. También aceptamos transferencia bancaria, Mercado Pago y efectivo en local.</p>
+        </details>
+        <details class="cs-faq-item">
+          <summary class="cs-faq-q">
+            ¿Qué diferencia hay entre un equipo nuevo y Open Box?
+            <svg class="cs-faq-chevron" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <p class="cs-faq-a">Un equipo Open Box fue abierto (a veces sólo para revisión) pero nunca usado de forma sostenida. Pasan por nuestro control de calidad, se clasifican en Grado A o B, y tienen garantía CellTech escrita. Ofrecen un ahorro de hasta el 35%.</p>
+        </details>
+        <details class="cs-faq-item">
+          <summary class="cs-faq-q">
+            ¿Hacen envíos al interior del país?
+            <svg class="cs-faq-chevron" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <p class="cs-faq-a">Sí, enviamos a todo el país a través de Andreani y OCA. El costo de envío se calcula al momento del checkout según la dirección de destino. Para compras mayores a $150.000, el envío es sin cargo.</p>
+        </details>
+      </div>
+    </div>
+
+    <!-- ══ PROMO STRIP ══ -->
+    <div class="cs-promo" data-reveal>
+      <div class="cs-promo-left">
+        <span class="cs-promo-pip"></span>
+        <div>
+          <p class="cs-promo-title">¿No encontrás lo que buscás?</p>
+          <p class="cs-promo-sub">Consultanos por WhatsApp y te conseguimos el modelo que necesitás en menos de 24 hs. Sin costo de asesoramiento.</p>
+        </div>
+      </div>
+      <div class="cs-promo-actions">
+        <a href="https://wa.me/541112345678" target="_blank" rel="noopener" class="cs-promo-wa">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          Consultar por WhatsApp
+        </a>
+        <a href="#productos" class="cs-promo-link">Ver catálogo completo →</a>
+      </div>
+    </div>
+
+    <!-- ══ BRANDS CAROUSEL ══ -->
+    <div class="cs-brands" data-reveal>
+      <div class="cs-brands-hdr">
+        <p class="cs-brands-lbl"><span class="eyebrow-pip"></span>Marcas oficiales · Stock permanente</p>
+        <span class="cs-brands-sub">Distribuidores autorizados · Garantía de fábrica</span>
+      </div>
+      <div class="cs-track-wrap">
+        <div class="cs-fade cs-fade-l"></div>
+        <div class="cs-fade cs-fade-r"></div>
+        <div class="cs-track">
+          <div class="cs-b"><span class="cs-bn">Apple</span></div><div class="cs-bsep"></div>
+          <div class="cs-b"><span class="cs-bn">Samsung</span></div><div class="cs-bsep"></div>
+          <div class="cs-b"><span class="cs-bn">Xiaomi</span></div><div class="cs-bsep"></div>
+          <div class="cs-b"><span class="cs-bn">Motorola</span></div><div class="cs-bsep"></div>
+          <div class="cs-b"><span class="cs-bn">Sony</span></div><div class="cs-bsep"></div>
+          <div class="cs-b"><span class="cs-bn">Dell</span></div><div class="cs-bsep"></div>
+          <div class="cs-b"><span class="cs-bn">HP</span></div><div class="cs-bsep"></div>
+          <div class="cs-b"><span class="cs-bn">Lenovo</span></div><div class="cs-bsep"></div>
+          <div class="cs-b"><span class="cs-bn">Redmi</span></div><div class="cs-bsep"></div>
+          <div class="cs-b"><span class="cs-bn">OnePlus</span></div><div class="cs-bsep"></div>
+          <div class="cs-b"><span class="cs-bn">Huawei</span></div><div class="cs-bsep"></div>
+          <div class="cs-b"><span class="cs-bn">Oppo</span></div><div class="cs-bsep"></div>
+          <!-- duplicate -->
+          <div class="cs-b" aria-hidden="true"><span class="cs-bn">Apple</span></div><div class="cs-bsep" aria-hidden="true"></div>
+          <div class="cs-b" aria-hidden="true"><span class="cs-bn">Samsung</span></div><div class="cs-bsep" aria-hidden="true"></div>
+          <div class="cs-b" aria-hidden="true"><span class="cs-bn">Xiaomi</span></div><div class="cs-bsep" aria-hidden="true"></div>
+          <div class="cs-b" aria-hidden="true"><span class="cs-bn">Motorola</span></div><div class="cs-bsep" aria-hidden="true"></div>
+          <div class="cs-b" aria-hidden="true"><span class="cs-bn">Sony</span></div><div class="cs-bsep" aria-hidden="true"></div>
+          <div class="cs-b" aria-hidden="true"><span class="cs-bn">Dell</span></div><div class="cs-bsep" aria-hidden="true"></div>
+          <div class="cs-b" aria-hidden="true"><span class="cs-bn">HP</span></div><div class="cs-bsep" aria-hidden="true"></div>
+          <div class="cs-b" aria-hidden="true"><span class="cs-bn">Lenovo</span></div><div class="cs-bsep" aria-hidden="true"></div>
+          <div class="cs-b" aria-hidden="true"><span class="cs-bn">Redmi</span></div><div class="cs-bsep" aria-hidden="true"></div>
+          <div class="cs-b" aria-hidden="true"><span class="cs-bn">OnePlus</span></div><div class="cs-bsep" aria-hidden="true"></div>
+          <div class="cs-b" aria-hidden="true"><span class="cs-bn">Huawei</span></div><div class="cs-bsep" aria-hidden="true"></div>
+          <div class="cs-b" aria-hidden="true"><span class="cs-bn">Oppo</span></div><div class="cs-bsep" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  :root{--steel:#4a6278;--steel-lt:#7a98ae;--olive:#6b7c55;--olive-lt:#8fa070;--white:#f4f3ef;--black:#0a0a0a}
+
+  .cs-section{
+    --bg:#f4f3ef;--bg-card:#ffffff;--text:#0a0a0a;
+    --muted:rgba(10,10,10,0.42);--border:rgba(10,10,10,0.08);
+    background:var(--bg);color:var(--text);
+    position:relative;padding:120px 0 100px;
+    font-family:'DM Sans','Helvetica Neue',sans-serif;
+    overflow:hidden;transition:background .4s,color .4s;
+  }
+  :root.dark .cs-section{--bg:#0c0c0c;--bg-card:#111111;--text:#f4f3ef;--muted:rgba(244,243,239,0.38);--border:rgba(244,243,239,0.07)}
+  :root.dark .title-outline{-webkit-text-stroke:1px rgba(244,243,239,0.28)!important}
+  :root.dark .cs-faq-outline{-webkit-text-stroke:1px rgba(244,243,239,0.25)!important}
+
+  .cs-bg{position:absolute;inset:0;pointer-events:none}
+  .cs-grain{position:absolute;inset:0;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");background-size:256px}
+  .cs-line{position:absolute;left:0;right:0;height:1px;background:var(--border)}
+  .cs-line-top{top:0}.cs-line-bottom{bottom:0}
+
+  /* Inner */
+  .cs-inner{max-width:1280px;margin:0 auto;padding:0 44px;display:flex;flex-direction:column;gap:56px;position:relative;z-index:1}
+  @media(max-width:640px){.cs-inner{padding:0 20px;gap:40px}}
+
+  /* ── HEADER ── */
+  .cs-header{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end}
+  @media(max-width:860px){.cs-header{grid-template-columns:1fr;gap:20px}}
+  .cs-header-left{display:flex;flex-direction:column;gap:14px}
+  .cs-eyebrow{display:flex;align-items:center;gap:10px;font-size:.65rem;letter-spacing:.26em;text-transform:uppercase;color:var(--steel-lt);margin:0}
+  .eyebrow-pip{width:7px;height:7px;background:var(--olive-lt);border-radius:50%;box-shadow:0 0 8px var(--olive);flex-shrink:0}
+  .cs-title{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:400;line-height:.93;letter-spacing:-.035em;color:var(--text);margin:0}
+  .title-outline{color:transparent;-webkit-text-stroke:1px rgba(10,10,10,0.35)}
+  .cs-header-right{display:flex;flex-direction:column;gap:20px}
+  .cs-sub{font-size:.88rem;color:var(--muted);line-height:1.75;margin:0;font-weight:300}
+
+  /* Stats */
+  .cs-stats-row{display:flex;align-items:center;border:1px solid var(--border);background:var(--bg-card);width:fit-content}
+  .cs-stat{display:flex;flex-direction:column;gap:3px;padding:14px 22px;align-items:center;text-align:center}
+  .cs-stat-n{font-family:'DM Serif Display',serif;font-size:1.4rem;font-weight:400;color:var(--text);letter-spacing:-.04em;line-height:1;display:inline}
+  .cs-stat-s{font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--olive-lt);line-height:1}
+  .cs-stat-l{font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+  .cs-stat-div{width:1px;background:var(--border);align-self:stretch}
+
+  /* ══ BENTO ══ */
+  .cs-bento{display:grid;grid-template-columns:400px 1fr;grid-template-rows:auto auto;gap:2px;background:var(--border);border:1px solid var(--border)}
+  .cs-card-a{grid-column:1;grid-row:1/2}
+  .cs-right-col{grid-column:2;grid-row:1;display:flex;flex-direction:column;gap:2px;background:var(--border)}
+  .cs-right-row{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border)}
+  .cs-card-f{grid-column:1/-1;grid-row:2}
+  @media(max-width:1100px){.cs-bento{grid-template-columns:340px 1fr}}
+  @media(max-width:860px){
+    .cs-bento{grid-template-columns:1fr}
+    .cs-card-a{grid-column:auto;grid-row:auto}
+    .cs-right-col{grid-column:auto;grid-row:auto}
+    .cs-card-f{grid-column:auto;grid-row:auto}
+  }
+  @media(max-width:500px){.cs-right-row{grid-template-columns:1fr}}
+
+  /* Card */
+  .cs-card{position:relative;overflow:hidden;background:var(--bg-card);text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:background .3s}
+  .cs-card-a{min-height:560px}
+  @media(max-width:860px){.cs-card-a{min-height:360px}}
+  .cs-card-sm{min-height:210px}
+  .cs-card-f{min-height:200px}
+
+  /* Image */
+  .cs-img-wrap{position:absolute;inset:0}
+  .cs-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.22,1,.36,1),filter .5s;filter:saturate(.8) brightness(.72)}
+  .cs-card:hover .cs-img{transform:scale(1.07);filter:saturate(1.05) brightness(.78)}
+  .cs-overlay{position:absolute;inset:0;background:linear-gradient(160deg,rgba(6,6,6,.05) 0%,rgba(6,6,6,.82) 100%);transition:opacity .4s}
+  .cs-overlay-light{background:linear-gradient(90deg,rgba(6,6,6,.82) 0%,rgba(6,6,6,.3) 100%)}
+  .cs-card:hover .cs-overlay{opacity:.92}
+  /* Color tint overlays */
+  .cs-overlay-color{position:absolute;inset:0;opacity:0;transition:opacity .5s;mix-blend-mode:multiply}
+  .cs-overlay-blue{background:rgba(74,98,120,0.3)}
+  .cs-overlay-green{background:rgba(107,124,85,0.25)}
+  .cs-overlay-steel{background:rgba(74,98,120,0.2)}
+  .cs-overlay-dark{background:rgba(20,20,30,0.3)}
+  .cs-overlay-olive{background:rgba(107,124,85,0.2)}
+  .cs-card:hover .cs-overlay-color{opacity:1}
+
+  /* Card body */
+  .cs-card-body{position:relative;z-index:1;padding:20px;display:flex;flex-direction:column;gap:12px;flex:1;justify-content:flex-end}
+  .cs-card-a .cs-card-body{padding:28px;gap:16px}
+  .cs-card-f .cs-card-body{padding:28px}
+  .cs-card-body-row{flex-direction:row;align-items:flex-end;gap:28px;flex-wrap:wrap}
+  .cs-covers-left{display:flex;flex-direction:column;gap:10px;flex:1;min-width:200px}
+
+  /* Header row */
+  .cs-card-header-row{display:flex;align-items:center;justify-content:space-between;position:absolute;top:20px;left:20px;right:20px}
+  .cs-card-a .cs-card-header-row,.cs-card-f .cs-card-header-row{top:28px;left:28px;right:28px}
+  .cs-idx{font-size:.55rem;font-weight:700;letter-spacing:.22em;color:rgba(244,243,239,0.35);transition:color .25s}
+  .cs-card:hover .cs-idx{color:rgba(244,243,239,0.65)}
+
+  /* Badges */
+  .cs-hot-badge{font-size:.5rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:3px 9px;backdrop-filter:blur(6px)}
+  .cs-badge-offer{color:var(--olive-lt);background:rgba(107,124,85,0.2);border:1px solid rgba(107,124,85,0.35)}
+  .cs-badge-hot{color:#f4d06f;background:rgba(200,150,50,0.18);border:1px solid rgba(200,150,50,0.3)}
+  .cs-badge-olive{color:var(--olive-lt);background:rgba(107,124,85,0.18);border:1px solid rgba(107,124,85,0.3)}
+
+  /* Icon */
+  .cs-card-icon{width:46px;height:46px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(244,243,239,0.2);color:rgba(244,243,239,0.8);background:rgba(244,243,239,0.06);backdrop-filter:blur(4px);transition:border-color .3s,background .3s,transform .4s cubic-bezier(.22,1,.36,1)}
+  .cs-card-icon-sm{width:36px;height:36px}
+  .cs-card:hover .cs-card-icon{border-color:rgba(244,243,239,0.4);background:rgba(244,243,239,0.12);transform:translateY(-3px)}
+
+  /* Text */
+  .cs-name{font-family:'DM Serif Display',serif;color:rgba(244,243,239,0.95);margin:0;letter-spacing:-.02em;line-height:1.05}
+  .cs-card-a .cs-name{font-size:clamp(1.7rem,3vw,2.3rem);font-weight:400}
+  .cs-name-sm{font-size:1.1rem;font-weight:400}
+  .cs-desc{font-size:.8rem;color:rgba(244,243,239,0.5);margin:0;font-weight:300;line-height:1.7}
+  .cs-desc-sm{font-size:.72rem}
+
+  /* Mini products */
+  .cs-mini-products{display:flex;flex-direction:column;gap:0;border:1px solid rgba(244,243,239,0.1);background:rgba(244,243,239,0.04);backdrop-filter:blur(8px)}
+  .cs-mini-product{display:flex;align-items:center;gap:10px;padding:8px 12px;border-bottom:1px solid rgba(244,243,239,0.07);transition:background .2s}
+  .cs-mini-product:last-child{border-bottom:none}
+  .cs-mini-product:hover{background:rgba(244,243,239,0.08)}
+  .cs-mini-img{width:32px;height:32px;object-fit:cover;flex-shrink:0;filter:brightness(.9)}
+  .cs-mini-name{font-size:.68rem;color:rgba(244,243,239,0.7);flex:1;font-weight:300}
+  .cs-mini-price{font-size:.68rem;font-family:'DM Serif Display',serif;color:var(--olive-lt);font-weight:400;letter-spacing:-.01em;flex-shrink:0}
+
+  /* Footer row */
+  .cs-card-footer{display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid rgba(244,243,239,0.1);margin-top:2px}
+  .cs-count-badge{font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,243,239,0.4)}
+  .cs-brand-chips{display:flex;gap:4px;flex-wrap:wrap}
+  .cs-bchip{font-size:.5rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:2px 7px;border:1px solid rgba(244,243,239,0.14);color:rgba(244,243,239,0.45);background:rgba(244,243,239,0.05)}
+
+  /* Covers tags */
+  .cs-covers-tags-grid{display:flex;flex-wrap:wrap;gap:5px;align-content:flex-end;justify-content:flex-end;max-width:340px}
+  .cs-ctag{font-size:.5rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:4px 10px;border:1px solid rgba(244,243,239,0.14);color:rgba(244,243,239,0.45);background:rgba(244,243,239,0.05);white-space:nowrap;transition:border-color .2s,background .2s,color .2s}
+  .cs-card:hover .cs-ctag{border-color:rgba(244,243,239,0.22);color:rgba(244,243,239,0.6);background:rgba(244,243,239,0.08)}
+
+  .cs-accent{position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(to right,var(--olive),var(--steel));transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.4,0,.2,1);z-index:2}
+  .cs-card:hover .cs-accent{transform:scaleX(1)}
+
+  /* ══ NOVEDADES ══ */
+  .cs-news{display:flex;flex-direction:column;gap:16px}
+  .cs-news-label{display:flex;align-items:center;gap:10px;font-size:.65rem;letter-spacing:.26em;text-transform:uppercase;color:var(--steel-lt);margin:0}
+  .cs-news-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
+  @media(max-width:860px){.cs-news-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:500px){.cs-news-grid{grid-template-columns:1fr}}
+
+  .cs-news-card{background:var(--bg-card);display:flex;align-items:center;gap:14px;padding:16px;transition:background .25s;position:relative;overflow:hidden;cursor:pointer;text-decoration:none;color:inherit}
+  .cs-news-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(to right,var(--olive),var(--steel));transform:scaleX(0);transform-origin:left;transition:transform .4s}
+  .cs-news-card:hover{background:color-mix(in srgb,var(--bg-card),var(--steel) 4%)}
+  :root.dark .cs-news-card:hover{background:rgba(74,98,120,0.06)}
+  .cs-news-card:hover::after{transform:scaleX(1)}
+  .cs-news-img{width:52px;height:52px;object-fit:cover;flex-shrink:0;filter:saturate(.9)}
+  .cs-news-info{flex:1;display:flex;flex-direction:column;gap:3px}
+  .cs-news-cat{font-size:.55rem;letter-spacing:.16em;text-transform:uppercase;color:var(--steel-lt);font-weight:500}
+  .cs-news-name{font-family:'DM Serif Display',serif;font-size:.95rem;color:var(--text);margin:0;line-height:1.1;letter-spacing:-.01em}
+  .cs-news-price{font-size:.65rem;color:var(--olive-lt);font-weight:500}
+  .cs-news-arrow{color:var(--muted);flex-shrink:0;transition:color .25s,transform .25s}
+  .cs-news-card:hover .cs-news-arrow{color:var(--steel-lt);transform:translateX(3px)}
+
+  /* ══ FAQ ══ */
+  .cs-faq{display:grid;grid-template-columns:340px 1fr;gap:60px;align-items:start}
+  @media(max-width:900px){.cs-faq{grid-template-columns:1fr;gap:28px}}
+  .cs-faq-left{display:flex;flex-direction:column;gap:16px;position:sticky;top:100px}
+  @media(max-width:900px){.cs-faq-left{position:static}}
+  .cs-faq-title{font-family:'DM Serif Display',serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:400;line-height:.95;letter-spacing:-.03em;color:var(--text);margin:0}
+  .cs-faq-outline{color:transparent;-webkit-text-stroke:1px rgba(10,10,10,0.32)}
+  .cs-faq-cta{display:inline-flex;align-items:center;gap:8px;margin-top:8px;padding:11px 22px;font-size:.68rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;background:var(--text);color:var(--bg);border:1px solid var(--text);transition:background .25s,gap .25s;width:fit-content}
+  .cs-faq-cta:hover{background:var(--steel);border-color:var(--steel);color:var(--white);gap:12px}
+
+  .cs-faq-list{display:flex;flex-direction:column;gap:0;border:1px solid var(--border)}
+  .cs-faq-item{border-bottom:1px solid var(--border)}
+  .cs-faq-item:last-child{border-bottom:none}
+  .cs-faq-q{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;font-size:.82rem;font-weight:500;color:var(--text);cursor:pointer;list-style:none;user-select:none;transition:background .2s;background:var(--bg-card)}
+  .cs-faq-q::-webkit-details-marker{display:none}
+  .cs-faq-q:hover{background:color-mix(in srgb,var(--bg-card),var(--steel) 4%)}
+  :root.dark .cs-faq-q:hover{background:rgba(74,98,120,0.06)}
+  .cs-faq-chevron{color:var(--muted);flex-shrink:0;transition:transform .3s}
+  .cs-faq-item[open] .cs-faq-chevron{transform:rotate(180deg)}
+  .cs-faq-item[open] .cs-faq-q{background:color-mix(in srgb,var(--bg-card),var(--steel) 4%)}
+  :root.dark .cs-faq-item[open] .cs-faq-q{background:rgba(74,98,120,0.06)}
+  .cs-faq-a{font-size:.78rem;color:var(--muted);line-height:1.8;margin:0;padding:0 20px 18px;font-weight:300;background:var(--bg-card)}
+
+  /* ══ PROMO ══ */
+  .cs-promo{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:24px 32px;border:1px solid var(--border);background:var(--bg-card);position:relative;overflow:hidden}
+  .cs-promo::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,var(--olive),var(--steel))}
+  .cs-promo-left{display:flex;align-items:flex-start;gap:16px}
+  .cs-promo-pip{width:8px;height:8px;border-radius:50%;background:var(--olive-lt);box-shadow:0 0 10px var(--olive);flex-shrink:0;margin-top:5px}
+  .cs-promo-title{font-family:'DM Serif Display',serif;font-size:1.05rem;font-weight:400;color:var(--text);letter-spacing:-.01em;margin:0 0 4px}
+  .cs-promo-sub{font-size:.75rem;color:var(--muted);font-weight:300;line-height:1.6;margin:0;max-width:400px}
+  .cs-promo-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .cs-promo-wa{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;background:rgba(107,124,85,0.1);color:var(--olive-lt);border:1px solid rgba(107,124,85,0.3);transition:background .25s,border-color .25s,gap .25s}
+  .cs-promo-wa:hover{background:rgba(107,124,85,0.18);border-color:var(--olive-lt);gap:12px}
+  .cs-promo-link{font-size:.65rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--muted);transition:color .2s}
+  .cs-promo-link:hover{color:var(--steel-lt)}
+
+  /* ══ BRANDS ══ */
+  .cs-brands{display:flex;flex-direction:column;gap:18px;padding:28px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+  .cs-brands-hdr{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .cs-brands-lbl{display:flex;align-items:center;gap:10px;font-size:.65rem;letter-spacing:.26em;text-transform:uppercase;color:var(--steel-lt);margin:0}
+  .cs-brands-sub{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:300}
+  .cs-track-wrap{position:relative;overflow:hidden;height:40px}
+  .cs-fade{position:absolute;top:0;bottom:0;width:120px;z-index:2;pointer-events:none}
+  .cs-fade-l{left:0;background:linear-gradient(to right,var(--bg),transparent)}
+  .cs-fade-r{right:0;background:linear-gradient(to left,var(--bg),transparent)}
+  @media(max-width:500px){.cs-fade{width:50px}}
+  .cs-track{display:flex;align-items:center;width:max-content;animation:csScroll 30s linear infinite;will-change:transform}
+  .cs-track:hover{animation-play-state:paused}
+  @keyframes csScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @media(prefers-reduced-motion:reduce){.cs-track{animation:none}.cs-track-wrap{overflow-x:auto;scrollbar-width:none}.cs-track-wrap::-webkit-scrollbar{display:none}}
+  .cs-b{display:flex;align-items:center;padding:0 32px}
+  .cs-bn{font-size:.82rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);opacity:.5;white-space:nowrap;transition:opacity .3s,color .3s;cursor:default}
+  .cs-b:hover .cs-bn{opacity:1;color:var(--text)}
+  .cs-bsep{width:1px;height:18px;background:var(--border);flex-shrink:0}
+
+  /* ── REVEAL ── */
+  [data-reveal]{opacity:0;transform:translateY(22px);transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1)}
+  [data-reveal].visible{opacity:1;transform:translateY(0)}
+  [data-delay="0"]{transition-delay:.00s}[data-delay="1"]{transition-delay:.07s}
+  [data-delay="2"]{transition-delay:.14s}[data-delay="3"]{transition-delay:.21s}
+  [data-delay="4"]{transition-delay:.28s}[data-delay="5"]{transition-delay:.35s}
+  .cs-news[data-reveal]{transition-delay:.05s}
+  .cs-faq[data-reveal]{transition-delay:.06s}
+  .cs-promo[data-reveal]{transition-delay:.04s}
+  .cs-brands[data-reveal]{transition-delay:.06s}
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
+
+<script>
+(function(){
+  /* Reveal */
+  const obs=new IntersectionObserver(entries=>entries.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}
+  }),{threshold:.06,rootMargin:'0px 0px -30px 0px'});
+  document.querySelectorAll('[data-reveal]').forEach(el=>obs.observe(el));
+
+  /* Animated counters */
+  const counters=document.querySelectorAll('.cs-stat-n');
+  const cObs=new IntersectionObserver(entries=>entries.forEach(e=>{
+    if(!e.isIntersecting)return;
+    const el=e.target as HTMLElement;
+    const target=parseInt(el.dataset.target||'0',10);
+    const dur=1600;const start=performance.now();
+    const tick=(now:number)=>{
+      const p=Math.min((now-start)/dur,1);
+      const ease=1-Math.pow(1-p,3);
+      el.textContent=Math.round(ease*target).toString();
+      if(p<1)requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+    cObs.unobserve(el);
+  }),{threshold:.5});
+  counters.forEach(c=>cObs.observe(c));
+
+  /* FAQ smooth open */
+  document.querySelectorAll('.cs-faq-item').forEach(item=>{
+    item.addEventListener('toggle',()=>{
+      if((item as HTMLDetailsElement).open){
+        document.querySelectorAll('.cs-faq-item').forEach(other=>{
+          if(other!==item)(other as HTMLDetailsElement).open=false;
+        });
+      }
+    });
+  });
+})();
+</script>
